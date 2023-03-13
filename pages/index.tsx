@@ -39,22 +39,7 @@ const Home = () => {
         </p>
       </div>
 
-      <div className='absolute top-[990px] left-0 -z-10'>
-        <Image
-          src='/node_icon.png'
-          width={180}
-          height={770}
-          alt=''
-        />
-      </div>
-
-      <div className='absolute -right-10 top-[260px] -z-10' >
-        <Image
-          src='/Brilho.png'
-          width={700}
-          height={700}
-          alt=''
-        />
+      <div className=' w-[550px] h-[550px] absolute top-[1000px] right-1/4 bg-[#0C009C] opacity-30 blur-[200px] -z-10' >
       </div>
     </div>
   );
