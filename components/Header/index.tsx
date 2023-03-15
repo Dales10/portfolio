@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
 import styles from '../../styles/header.module.scss';
@@ -6,7 +6,14 @@ import styles from '../../styles/header.module.scss';
 const Header = () => {
     const [menu, setMenu] = useState(false);
     const path = useRouter().pathname;
-    
+
+    useEffect(() => {
+        if (menu)
+            document.body.style.overflowY = 'hidden';
+        else
+            document.body.style.overflowY = 'auto';
+    }, [menu]);
+
     return (
         <header className='h-10 flex justify-between items-center mt-10 mx-8 md:mx-16 xl:mx-28 text-xl'>
             <h1 className={`${styles.name} text-base lg:text-xl`}>
@@ -125,7 +132,7 @@ const Header = () => {
                                 </ul>
 
                                 <div className='flex flex-col items-center my-5'>
-                                    <span className='block h-[1px] w-10/12 bg-zinc-900' />
+                                    <span className='block h-px w-10/12 bg-zinc-900' />
 
                                     <div className={`${styles.name} mt-5 text-base font-bold`}>
                                         Dário Matias

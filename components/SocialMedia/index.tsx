@@ -11,47 +11,56 @@ const SocialMedia = () => {
                 <li>
                     <a
                         href="https://www.linkedin.com/in/d%C3%A1rio-matias-dales-gamma-587785243/"
-                        className={`${styles.link} w-14 lg:w-[75px] h-14 lg:h-[75px] flex justify-center items-center rounded-full bg-white group`}
+                        target={'_blank'}
+                        className={`${styles.link} w-14 lg:w-4.7 h-14 lg:h-4.7 flex justify-center items-center rounded-full bg-white group`}
                     >
                         <FaLinkedinIn
                             className='w-8 lg:w-11 h-8 lg:h-11 text-background group-hover:text-white '
                         />
                     </a>
                 </li>
+
                 <li>
                     <a
                         href="https://github.com/Dales10"
-                        className={`${styles.link} w-14 lg:w-[75px] h-14 lg:h-[75px] flex justify-center items-center rounded-full bg-white transition duration-100 group`}
+                        target={'_blank'}
+                        className={`${styles.link} w-14 lg:w-4.7 h-14 lg:h-4.7 flex justify-center items-center rounded-full bg-white transition duration-100 group`}
                     >
                         <FiGithub
                             className='w-8 lg:w-11 h-8 lg:h-11 text-background group-hover:text-white'
                         />
                     </a>
                 </li>
+
                 <li>
                     <a
                         href="https://www.instagram.com/dario_delta10/?theme=dark"
-                        className={`${styles.link} w-14 lg:w-[75px] h-14 lg:h-[75px] flex justify-center items-center rounded-full bg-white transition duration-100 group`}
+                        target={'_blank'}
+                        className={`${styles.link} w-14 lg:w-4.7 h-14 lg:h-4.7 flex justify-center items-center rounded-full bg-white transition duration-100 group`}
                     >
                         <SiInstagram
                             className='w-8 lg:w-11 h-8 lg:h-11 text-background group-hover:text-white'
                         />
                     </a>
                 </li>
+
                 <li>
                     <a
                         href="https://wa.me/5583986404371"
-                        className={`${styles.link} w-14 lg:w-[75px] h-14 lg:h-[75px] flex justify-center items-center rounded-full bg-white transition duration-100 group`}
+                        target={'_blank'}
+                        className={`${styles.link} w-14 lg:w-4.7 h-14 lg:h-4.7 flex justify-center items-center rounded-full bg-white transition duration-100 group`}
                     >
                         <BsWhatsapp
                             className='w-8 lg:w-11 h-8 lg:h-11 text-background group-hover:text-white'
                         />
                     </a>
                 </li>
+                
                 <li>
                     <a
-                        href="" target={'_blank'}
-                        className={`${styles.link} w-14 lg:w-[75px] h-14 lg:h-[75px] flex justify-center items-center rounded-full bg-white transition duration-100 group`}
+                        href=""
+                        target={'_blank'}
+                        className={`${styles.link} w-14 lg:w-4.7 h-14 lg:h-4.7 flex justify-center items-center rounded-full bg-white transition duration-100 group`}
                     >
                         <BsTwitter
                             className='w-8 lg:w-11 h-8 lg:h-11 text-background group-hover:text-white'

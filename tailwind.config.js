@@ -7,17 +7,23 @@ module.exports = {
   ],
   theme: {
     extend: {
+      screens: {
+        'xs': '490px',
+      },
+      spacing: {
+        '4.7': '4.7rem',
+        '100': '25rem',
+        '125': '31.25rem',
+      },
+      inset: {
+        '250': '62.5rem',
+      },
       colors: {
         "background": "#000005",
       },
-    },
-    screens: {
-      'xs': '490px',
-      'sm': '640px',
-      'md': '768px',
-      'lg': '1024px',
-      'xl': '1280px',
-      '2xl': '1536px',
+      blur: {
+
+      }
     },
   },
   plugins: [],
