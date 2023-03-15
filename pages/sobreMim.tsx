@@ -2,7 +2,7 @@ import style from '../styles/title.module.scss';
 
 const sobreMim = () => {
     return (
-        <div className="mt-8 xs:mt-24 lg:mt-16 mx-8 md:mx-16 xl:ml-28">
+        <div className="mt-24 lg:mt-32 mx-8 md:mx-16 xl:ml-28">
             <span className='block w-[350px] sm:w-[500px] lg:w-[700px] h-[350px] sm:h-[500px] lg:h-[700px] absolute top-0 sm:-top-[20px] lg:-top-[120px] left-0 sm:-left-[20px] lg:-left-[155px] bg-[#0C009C] opacity-30 blur-[100px] sm:blur-[200px] -z-10' />
 
             <div className='w-full flex flex-col items-center md:items-start text-center md:text-left'>
@@ -10,7 +10,7 @@ const sobreMim = () => {
                     Sobre mim
                 </h1>
 
-                <p className='sm:w-[400px] md:w-[700px] lg:w-[800px] xl:w-[1100px] mt-12 lg:mt-28 text-[24px] md:text-[30px] lg:text-[40px] font-bold leading-tight'>
+                <p className='w-[400px] md:w-[600px] lg:w-[800px] xl:w-[900px] mt-12 lg:mt-20 text-[24px] md:text-[30px] lg:text-[40px] font-bold leading-tight'>
                     Bem vindo(a) ao meu portfólio, o meu nome é Dário Matias e tenho 18 anos. Então vamos lá saber quem eu sou?
                 </p>
             </div>

@@ -1,20 +1,12 @@
 import { useState } from 'react';
 import Link from 'next/link';
-import styles from '../../styles/header.module.scss';
 import { useRouter } from 'next/router';
+import styles from '../../styles/header.module.scss';
 
 const Header = () => {
     const [menu, setMenu] = useState(false);
     const path = useRouter().pathname;
-    const linkStyle = {
-        display: 'inline-block',
-        backgroundImage: 'linear-gradient(to right, #00DBDE, #4700BA)',
-        backgroundClip: 'text',
-        WebkitBackgroundClip: 'text',
-        color: 'transparent',
-        fontWeight: 'bold',
-    }
-
+    
     return (
         <header className='h-10 flex justify-between items-center mt-10 mx-8 md:mx-16 xl:mx-28 text-xl'>
             <h1 className={`${styles.name} text-base lg:text-xl`}>
@@ -26,35 +18,35 @@ const Header = () => {
                     <ul className='flex gap-10 font-semibold'>
                         <li>
                             <Link href='/' legacyBehavior>
-                                <a className={ path === '/' ? styles.pageName : styles.normal }>
+                                <a className={path === '/' ? styles.pageName : styles.normal}>
                                     Home
                                 </a>
                             </Link>
                         </li>
                         <li>
                             <Link href='/sobreMim' legacyBehavior>
-                                <a className={ path === '/sobreMim' ? styles.pageName : styles.normal }>
+                                <a className={path === '/sobreMim' ? styles.pageName : styles.normal}>
                                     Sobre Mim
                                 </a>
                             </Link>
                         </li>
                         <li>
                             <Link href='/skills' legacyBehavior>
-                                <a className={ path === '/skills' ? styles.pageName : styles.normal }>
+                                <a className={path === '/skills' ? styles.pageName : styles.normal}>
                                     Skills
                                 </a>
                             </Link>
                         </li>
                         <li>
                             <Link href='/projetos' legacyBehavior>
-                                <a className={ path === '/projetos' ? styles.pageName : styles.normal }>
+                                <a className={path === '/projetos' ? styles.pageName : styles.normal}>
                                     Projetos
                                 </a>
                             </Link>
                         </li>
                         <li>
                             <Link href='/contato' legacyBehavior>
-                                <a className={ path === '/contato' ? styles.pageName : styles.normal }>
+                                <a className={path === '/contato' ? styles.pageName : styles.normal}>
                                     Contato
                                 </a>
                             </Link>
@@ -82,35 +74,50 @@ const Header = () => {
                                 <ul className='flex flex-col gap-4 mt-4 ml-8 text-lg font-semibold'>
                                     <li>
                                         <Link href='/' legacyBehavior>
-                                            <a className={ path === '/' ? styles.pageName : styles.normal }>
+                                            <a
+                                                onClick={() => setMenu(false)}
+                                                className={path === '/' ? styles.pageName : styles.normal}
+                                            >
                                                 Home
                                             </a>
                                         </Link>
                                     </li>
                                     <li>
                                         <Link href='/sobreMim' legacyBehavior>
-                                            <a className={ path === '/sobreMim' ? styles.pageName : styles.normal }>
+                                            <a
+                                                onClick={() => setMenu(false)}
+                                                className={path === '/sobreMim' ? styles.pageName : styles.normal}
+                                            >
                                                 Sobre Mim
                                             </a>
                                         </Link>
                                     </li>
                                     <li>
                                         <Link href='/skills' legacyBehavior>
-                                            <a className={ path === '/skills' ? styles.pageName : styles.normal }>
+                                            <a
+                                                onClick={() => setMenu(false)}
+                                                className={path === '/skills' ? styles.pageName : styles.normal}
+                                            >
                                                 Skills
                                             </a>
                                         </Link>
                                     </li>
                                     <li>
                                         <Link href='/projetos' legacyBehavior>
-                                            <a className={ path === '/projetos' ? styles.pageName : styles.normal }>
+                                            <a
+                                                onClick={() => setMenu(false)}
+                                                className={path === '/projetos' ? styles.pageName : styles.normal}
+                                            >
                                                 Projetos
                                             </a>
                                         </Link>
                                     </li>
                                     <li>
                                         <Link href='/contato' legacyBehavior>
-                                            <a className={ path === '/contato' ? styles.pageName : styles.normal }>
+                                            <a
+                                                onClick={() => setMenu(false)}
+                                                className={path === '/contato' ? styles.pageName : styles.normal}
+                                            >
                                                 Contato
                                             </a>
                                         </Link>
