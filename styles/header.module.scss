@@ -10,3 +10,17 @@
 .menu {
     box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
 }
+
+.normal {
+    color: #FFFFFF;
+}
+
+.pageName,
+.normal:hover {
+    display: inline-block;
+    background-image: linear-gradient(to right, #00DBDE, #4700BA);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    transition: .3s ease-in-out;
+}

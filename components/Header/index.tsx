@@ -1,9 +1,19 @@
 import { useState } from 'react';
 import Link from 'next/link';
 import styles from '../../styles/header.module.scss';
+import { useRouter } from 'next/router';
 
 const Header = () => {
     const [menu, setMenu] = useState(false);
+    const path = useRouter().pathname;
+    const linkStyle = {
+        display: 'inline-block',
+        backgroundImage: 'linear-gradient(to right, #00DBDE, #4700BA)',
+        backgroundClip: 'text',
+        WebkitBackgroundClip: 'text',
+        color: 'transparent',
+        fontWeight: 'bold',
+    }
 
     return (
         <header className='h-10 flex justify-between items-center mt-10 mx-8 md:mx-16 xl:mx-28 text-xl'>
@@ -15,28 +25,38 @@ const Header = () => {
                 <nav>
                     <ul className='flex gap-10 font-semibold'>
                         <li>
-                            <Link href='/'>
-                                Home
+                            <Link href='/' legacyBehavior>
+                                <a className={ path === '/' ? styles.pageName : styles.normal }>
+                                    Home
+                                </a>
                             </Link>
                         </li>
                         <li>
-                            <Link href='/sobreMim'>
-                                Sobre Mim
+                            <Link href='/sobreMim' legacyBehavior>
+                                <a className={ path === '/sobreMim' ? styles.pageName : styles.normal }>
+                                    Sobre Mim
+                                </a>
                             </Link>
                         </li>
                         <li>
-                            <Link href='/skills'>
-                                Skills
+                            <Link href='/skills' legacyBehavior>
+                                <a className={ path === '/skills' ? styles.pageName : styles.normal }>
+                                    Skills
+                                </a>
                             </Link>
                         </li>
                         <li>
-                            <Link href='/projetos'>
-                                Projetos
+                            <Link href='/projetos' legacyBehavior>
+                                <a className={ path === '/projetos' ? styles.pageName : styles.normal }>
+                                    Projetos
+                                </a>
                             </Link>
                         </li>
                         <li>
-                            <Link href='/contato'>
-                                Contato
+                            <Link href='/contato' legacyBehavior>
+                                <a className={ path === '/contato' ? styles.pageName : styles.normal }>
+                                    Contato
+                                </a>
                             </Link>
                         </li>
                     </ul>
@@ -61,28 +81,38 @@ const Header = () => {
                             <nav className={`${styles.menu} absolute top-24 right-8 md:right-16 w-60 h-76 bg-background rounded-lg z-10`}>
                                 <ul className='flex flex-col gap-4 mt-4 ml-8 text-lg font-semibold'>
                                     <li>
-                                        <Link href='/'>
-                                            Home
+                                        <Link href='/' legacyBehavior>
+                                            <a className={ path === '/' ? styles.pageName : styles.normal }>
+                                                Home
+                                            </a>
                                         </Link>
                                     </li>
                                     <li>
-                                        <Link href='/sobreMim'>
-                                            Sobre Mim
+                                        <Link href='/sobreMim' legacyBehavior>
+                                            <a className={ path === '/sobreMim' ? styles.pageName : styles.normal }>
+                                                Sobre Mim
+                                            </a>
                                         </Link>
                                     </li>
                                     <li>
-                                        <Link href='/skills'>
-                                            Skills
+                                        <Link href='/skills' legacyBehavior>
+                                            <a className={ path === '/skills' ? styles.pageName : styles.normal }>
+                                                Skills
+                                            </a>
                                         </Link>
                                     </li>
                                     <li>
-                                        <Link href='/projetos'>
-                                            Projetos
+                                        <Link href='/projetos' legacyBehavior>
+                                            <a className={ path === '/projetos' ? styles.pageName : styles.normal }>
+                                                Projetos
+                                            </a>
                                         </Link>
                                     </li>
                                     <li>
-                                        <Link href='/contato'>
-                                            Contato
+                                        <Link href='/contato' legacyBehavior>
+                                            <a className={ path === '/contato' ? styles.pageName : styles.normal }>
+                                                Contato
+                                            </a>
                                         </Link>
                                     </li>
                                 </ul>
