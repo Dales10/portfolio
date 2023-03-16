@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import Image from 'next/image';
 import styles from '../../styles/hardSkills.module.scss';
 import style from '../../styles/title.module.scss';
@@ -33,7 +34,26 @@ const futureSoftSkills = [
     '.Net',
 ];
 
+const infos = {
+    'TypeScript': 'Se trata de uma ferramenta/ linguagem de programação que adiciona tipagem estática opcional ao JavaScript, tornando o desenvolvimento de projetos mais seguros, pela correção de erros de tipagem em tempo real. Lançado pela Microsft em 2012.',
+    'Firebase': 'O Firebase é um ORM frontend do Google conectado a um banco de dados do tipo NoSQL, com o objetivo de guardar dados de forma simples e rápida, e pode ser usado gratuitamente. Criado pelo Google em 2004.',
+    'React': 'É uma biblioteca JavaScript usado para criar interfaces de usuário (UI) em aplicativos web. Ele é fácil de usar, altamente flexível e escalável, e é usado por muitas empresas de tecnologia, incluindo o Facebook, Instagram e Airbnb. Foi criado pelo Facebook atual Meta em 2013.',
+    'TailwindCSS': 'Framework CSS que permite criar layouts de forma rápida e simples, usando uma estrutura CSS pronto em formato de várias classes utilitárias, opinativas e de propósito único, que podem ser usadas diretamente dentro da marcação de um texto para projetar um elemento. Criado em 2017 por Adam Wathan.',
+};
+
 const hardSkills = () => {
+    const [showInfoTechnologie, setShowInfoTechnologie] = useState({
+        technologie: 'TypeScript',
+        info: infos.TypeScript,
+    });
+
+    const setInfoTechnologie = (technologie: string) => {
+        setShowInfoTechnologie({
+            technologie,
+            info: infos[technologie as keyof typeof infos],
+        });
+    };
+
     return (
         <div className="mt-24 lg:mt-32 mx-10 md:mx-16 xl:ml-28">
             <span className='block w-[350px] sm:w-125 lg:w-[700px] h-[350px] sm:h-125 lg:h-[700px] absolute top-0 sm:-top-5 lg:-top-32 left-0 sm:-left-5 lg:-left-[155px] bg-[#0C009C] opacity-30 blur-[100px] sm:blur-[200px] -z-10' />
@@ -53,12 +73,14 @@ const hardSkills = () => {
                     Minhas Hard Skills
                 </h2>
 
-                <div className='max-w-[800px] flex flex-col gap-2 font-extrabold'>
+                <div
+                    className='max-w-[800px] flex flex-col gap-3 mt-24 font-extrabold'
+                >
                     <h2 className='text-5xl '>
-                        Firebase
+                        {showInfoTechnologie.technologie}
                     </h2>
                     <p className='text-2xl'>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam eum cupiditate perspiciatis error fuga ipsum accusamus incidunt voluptates architecto, ad corrupti. Sequi corporis est maiores nisi vero commodi, qui vitae?
+                        {showInfoTechnologie.info}
                     </p>
                 </div>
 
@@ -68,6 +90,7 @@ const hardSkills = () => {
                             return (
                                 <div
                                     key={technologie}
+                                    onClick={() => setInfoTechnologie(technologie)}
                                     className={`${styles.card} flex justify-center items-center w-36 h-36 bg-background border border-[#00DBDE] rounded-[5px] mx-auto transition duration-300`}
                                 >
                                     <div className='flex flex-col justify-between items-center gap-2 py-1'>

@@ -21,13 +21,13 @@ const Skills = () => {
                     Escolha logo abaixo por qual quer começar:
                 </h2>
 
-                <div className='flex justify-center gap-44 mt-24 mb-40'>
-                    <h3 className={`${style.title} text-3xl font-extrabold`}>
+                <div className='flex justify-center gap-12 md:gap-28 lg:gap-44 mt-24 mb-40 text-2xl md:text-3xl font-extrabold'>
+                    <h3 className={style.title}>
                         <Link href='/skills/softSkills'>
                             Soft Skills
                         </Link>
                     </h3>
-                    <h3 className={`${style.title} text-3xl font-extrabold`}>
+                    <h3 className={style.title}>
                         <Link href='/skills/hardSkills'>
                             Hard Skills
                         </Link>
@@ -35,13 +35,18 @@ const Skills = () => {
                 </div>
             </div>
 
+            <span className='w-[300px] lg:w-[600px] h-[200px] absolute top-[1000px] lg:top-[900px] right-1/4 bg-[#0C009C] opacity-30 blur-[100px] lg:blur-[200px] -z-10' />
+
             <h2 className='text-4xl md:text-5xl font-extrabold'>
                 Conclusão
             </h2>
 
-            <p className='text-xl md:text-2xl text-justify font-bold mt-14 md:mt-32 lg:mr-52 mb-44 indent-10 leading-tight'>
+            <p className='text-xl md:text-2xl text-justify font-bold mt-20 lg:mt-32 lg:mr-52 mb-24 lg:mb-44 indent-10 leading-tight'>
                 O mundo da tecnologia é muito amplo, todos os anos surgem novas ferramentas que deixam a criação de sites e softwares mais simples e eficiente. Citei apenas as que achei de maior relevância, como as principais bibliotecas por exemplo, mas estou sempre disposto em estudar ainda mais, desde que o momento permita.
             </p>
+
+
+            <span className='w-[300px] lg:w-[400px] h-[200px] lg:h-[300px] absolute top-[1800px] sm:top-[1900px] lg:top-[1800px] -left-10 bg-[#0C009C] opacity-30 blur-[100px] lg:blur-[200px] -z-10' />
         </div>
     );
 };

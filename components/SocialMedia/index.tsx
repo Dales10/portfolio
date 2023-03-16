@@ -12,7 +12,7 @@ const SocialMedia = () => {
                     <a
                         href="https://www.linkedin.com/in/d%C3%A1rio-matias-dales-gamma-587785243/"
                         target={'_blank'}
-                        className={`${styles.link} w-14 lg:w-4.7 h-14 lg:h-4.7 flex justify-center items-center rounded-full bg-white group`}
+                        className={`${styles.link} w-14 lg:w-4.7 h-14 lg:h-4.7 flex justify-center items-center rounded-full bg-white group focus:scale-95`}
                     >
                         <FaLinkedinIn
                             className='w-8 lg:w-11 h-8 lg:h-11 text-background group-hover:text-white'
@@ -24,7 +24,7 @@ const SocialMedia = () => {
                     <a
                         href="https://github.com/Dales10"
                         target={'_blank'}
-                        className={`${styles.link} w-14 lg:w-4.7 h-14 lg:h-4.7 flex justify-center items-center rounded-full bg-white transition duration-100 group`}
+                        className={`${styles.link} w-14 lg:w-4.7 h-14 lg:h-4.7 flex justify-center items-center rounded-full bg-white transition duration-100 group focus:scale-95`}
                     >
                         <FiGithub
                             className='w-8 lg:w-11 h-8 lg:h-11 text-background group-hover:text-white'
@@ -36,7 +36,7 @@ const SocialMedia = () => {
                     <a
                         href="https://www.instagram.com/dario_delta10/?theme=dark"
                         target={'_blank'}
-                        className={`${styles.link} w-14 lg:w-4.7 h-14 lg:h-4.7 flex justify-center items-center rounded-full bg-white transition duration-100 group`}
+                        className={`${styles.link} w-14 lg:w-4.7 h-14 lg:h-4.7 flex justify-center items-center rounded-full bg-white transition duration-100 group focus:scale-95`}
                     >
                         <SiInstagram
                             className='w-8 lg:w-11 h-8 lg:h-11 text-background group-hover:text-white'
@@ -48,7 +48,7 @@ const SocialMedia = () => {
                     <a
                         href="https://wa.me/5583986404371"
                         target={'_blank'}
-                        className={`${styles.link} w-14 lg:w-4.7 h-14 lg:h-4.7 flex justify-center items-center rounded-full bg-white transition duration-100 group`}
+                        className={`${styles.link} w-14 lg:w-4.7 h-14 lg:h-4.7 flex justify-center items-center rounded-full bg-white transition duration-100 group focus:scale-95`}
                     >
                         <BsWhatsapp
                             className='w-8 lg:w-11 h-8 lg:h-11 text-background group-hover:text-white'
@@ -60,7 +60,7 @@ const SocialMedia = () => {
                     <a
                         href=""
                         target={'_blank'}
-                        className={`${styles.link} w-14 lg:w-4.7 h-14 lg:h-4.7 flex justify-center items-center rounded-full bg-white transition duration-100 group`}
+                        className={`${styles.link} w-14 lg:w-4.7 h-14 lg:h-4.7 flex justify-center items-center rounded-full bg-white transition duration-100 group focus:scale-95`}
                     >
                         <BsTwitter
                             className='w-8 lg:w-11 h-8 lg:h-11 text-background group-hover:text-white'
