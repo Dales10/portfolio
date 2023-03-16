@@ -39,7 +39,7 @@ const Header = () => {
                         </li>
                         <li>
                             <Link href='/skills' legacyBehavior>
-                                <a className={path === '/skills' ? styles.pageName : styles.normal}>
+                                <a className={path.includes('/skills') ? styles.pageName : styles.normal}>
                                     Skills
                                 </a>
                             </Link>

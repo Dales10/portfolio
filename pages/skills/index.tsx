@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import style from '../../styles/title.module.scss';
 
 const Skills = () => {
@@ -22,10 +23,14 @@ const Skills = () => {
 
                 <div className='flex justify-center gap-44 mt-24 mb-40'>
                     <h3 className={`${style.title} text-3xl font-extrabold`}>
-                        Soft Skills
+                        <Link href='/skills/softSkills'>
+                            Soft Skills
+                        </Link>
                     </h3>
                     <h3 className={`${style.title} text-3xl font-extrabold`}>
-                        Hard Skills
+                        <Link href='/skills/hardSkills'>
+                            Hard Skills
+                        </Link>
                     </h3>
                 </div>
             </div>
