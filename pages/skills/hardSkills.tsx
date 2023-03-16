@@ -41,7 +41,7 @@ const infos = {
     "TailwindCSS": "Framework CSS que permite criar layouts de forma rápida e simples, usando uma estrutura CSS pronto em formato de várias classes utilitárias, opinativas e de propósito único, que podem ser usadas diretamente dentro da marcação de um texto para projetar um elemento. Criado em 2017 por Adam Wathan.",
 };
 
-const hardSkills = () => {
+const HardSkills = () => {
     const [showInfoTechnologie, setShowInfoTechnologie] = useState({
         technologie: 'TypeScript',
         info: infos.TypeScript,
@@ -159,4 +159,4 @@ const hardSkills = () => {
     );
 };
 
-export default hardSkills;
+export default HardSkills;
