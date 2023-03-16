@@ -74,12 +74,12 @@ const HardSkills = () => {
                 </h2>
 
                 <div
-                    className='max-w-[800px] flex flex-col gap-3 mt-24 font-extrabold'
+                    className='max-w-[700px] flex flex-col gap-3 mt-24 font-extrabold'
                 >
-                    <h2 className='text-5xl '>
+                    <h2 className='text-3xl md:text-4xl text-center xs:text-start'>
                         {showInfoTechnologie.technologie}
                     </h2>
-                    <p className='text-2xl'>
+                    <p className='text-lg xs:text-xl text-justify xs:text-start'>
                         {showInfoTechnologie.info}
                     </p>
                 </div>

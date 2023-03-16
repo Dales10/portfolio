@@ -1,4 +1,4 @@
-import styles from '../../styles/social_media.module.scss';
+import styles from '../../styles/socialMedia.module.scss';
 import { BsWhatsapp, BsTwitter } from 'react-icons/bs';
 import { SiInstagram } from 'react-icons/si';
 import { FiGithub } from 'react-icons/fi';
