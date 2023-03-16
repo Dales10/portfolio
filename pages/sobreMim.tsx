@@ -1,6 +1,6 @@
 import style from '../styles/title.module.scss';
 
-const sobreMim = () => {
+const SobreMim = () => {
     return (
         <div className="mt-24 lg:mt-32 mx-10 md:mx-16 xl:ml-28">
             <span className='block w-[350px] sm:w-125 lg:w-[700px] h-[350px] sm:h-125 lg:h-[700px] absolute top-0 sm:-top-5 lg:-top-32 left-0 sm:-left-5 lg:-left-[155px] bg-[#0C009C] opacity-30 blur-[100px] sm:blur-[200px] -z-10' />
@@ -15,7 +15,7 @@ const sobreMim = () => {
                 </p>
             </div>
 
-            <span className='inline-block w-full lg:w-[calc(100%_-_200px)] h-1 bg-[#090909] mt-40 xs:mt-52 md:mt-72 mb-28' />
+            <span className='inline-block w-full lg:w-[calc(100%_-_200px)] h-1 bg-zinc-900 mt-40 xs:mt-52 md:mt-72 mb-28' />
 
             <h2 className='text-4xl md:text-5xl font-extrabold'>
                 Quem eu sou?
@@ -38,4 +38,4 @@ const sobreMim = () => {
     );
 };
 
-export default sobreMim;
+export default SobreMim;
