@@ -6,11 +6,11 @@ const SoftSkills = () => {
             <span className='block w-[350px] sm:w-125 lg:w-[700px] h-[350px] sm:h-125 lg:h-[700px] absolute top-0 sm:-top-5 lg:-top-32 left-0 sm:-left-5 lg:-left-[155px] bg-[#0C009C] opacity-30 blur-[100px] sm:blur-[200px] -z-10' />
 
             <div className='w-full flex flex-col items-center md:items-start text-center md:text-left'>
-                <h1 className={`${style.title} text-[80px] font-black leading-tight`}>
+                <h1 className={`${style.title} text-5xl sm:text-6xl md:text-7xl lg:text-[80px] font-black leading-tight`}>
                     Soft Skills
                 </h1>
 
-                <p className='max-w-[500px] md:max-w-[700px] lg:max-w-[800px] xl:max-w-[900px] mt-12 lg:mt-20 text-2xl md:text-3xl lg:text-4xl font-bold leading-tight'>
+                <p className='max-w-[500px] md:max-w-[700px] lg:max-w-[800px] xl:max-w-[900px] mt-12 lg:mt-20 text-xl sm:text-2xl md:text-3xl lg:text-4xl text-justify lg:text-start font-bold leading-tight'>
                     As soft skills é a interação com outras pessoas e consigo mesmo, o modo que age e interage com todos em sua volta em situações diversas.
                 </p>
             </div>

@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, MouseEvent } from 'react';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
 import styles from '../../styles/header.module.scss';
@@ -6,6 +6,12 @@ import styles from '../../styles/header.module.scss';
 const Header = () => {
     const [menu, setMenu] = useState(false);
     const path = useRouter().pathname;
+
+    const changeMenuStatus = (e: MouseEvent<HTMLDivElement, globalThis.MouseEvent>) => {
+        const tagName = (e.target as Element).classList[0];
+        if (tagName === 'popup-wrapper')
+            setMenu(false);
+    }
 
     useEffect(() => {
         if (menu)
@@ -76,7 +82,10 @@ const Header = () => {
 
                 {
                     menu && (
-                        <div className='w-screen h-screen absolute top-0 left-0 bg-background bg-opacity-50 z-20'>
+                        <div
+                            onClick={e => changeMenuStatus(e)}
+                            className='popup-wrapper w-screen h-screen absolute top-0 left-0 bg-background bg-opacity-50 z-20'
+                        >
                             <nav className={`${styles.menu} absolute top-24 right-8 md:right-16 w-60 h-76 bg-background rounded-lg z-10`}>
                                 <ul className='flex flex-col gap-4 mt-4 ml-8 text-lg font-semibold'>
                                     <li>
@@ -103,7 +112,7 @@ const Header = () => {
                                         <Link href='/skills' legacyBehavior>
                                             <a
                                                 onClick={() => setMenu(false)}
-                                                className={path === '/skills' ? styles.pageName : styles.normal}
+                                                className={path.includes('/skills') ? styles.pageName : styles.normal}
                                             >
                                                 Skills
                                             </a>
