@@ -21,7 +21,9 @@ const SoftSkills = () => {
                     Assim sendo, posso citar as minhas seguintes soft skills:
                 </h2>
 
-                <div className='w-[calc(100%_-_200px)] flex flex-col justify-center gap-5 text-2xl md:text-2xl text-justify font-bold mt-14 md:mt-32 leading-tight'>
+                <span className='w-[400px] h-[400px] absolute top-[1100px] right-1/4 bg-[#0C009C] opacity-30 blur-[100px] lg:blur-[200px] -z-10' />
+
+                <div className='w-full lg:w-[calc(100%_-_200px)] flex flex-col justify-center gap-5 text-2xl md:text-2xl text-justify font-bold mt-14 md:mt-32 leading-tight'>
                     <p>
                         <span className={`${style.title} font-extrabold`}>
                             Comunicação
@@ -54,6 +56,8 @@ const SoftSkills = () => {
                     </p>
                 </div>
             </div>
+
+            <span className='w-[400px] h-[400px] absolute top-[2500px] xs:top-[1800px] right-2/4 bg-[#0C009C] opacity-30 blur-[100px] lg:blur-[200px] -z-10' />
         </div>
     );
 };

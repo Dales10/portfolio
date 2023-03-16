@@ -68,7 +68,7 @@ const hardSkills = () => {
                 </p>
             </div>
 
-            <div className='w-full lg:w-[calc(100%_-_100px)] border-t-4 border-zinc-900 pt-44 xs:mt-52 md:mt-72 mb-36'>
+            <div className='w-full lg:w-[calc(100%_-_100px)] border-t-4 border-zinc-900 pt-44 xs:mt-20 mt-32 md:mt-72 mb-36'>
                 <h2 className='text-4xl md:text-5xl text-center font-extrabold'>
                     Minhas Hard Skills
                 </h2>
@@ -83,6 +83,8 @@ const hardSkills = () => {
                         {showInfoTechnologie.info}
                     </p>
                 </div>
+
+                <span className='w-[400px] h-[400px] absolute top-[1100px] -left-[10%] bg-[#0C009C] opacity-30 blur-[100px] lg:blur-[200px] -z-10' />
 
                 <div className='flex flex-wrap justify-between gap-6 mt-44 pb-28 border-b-4 border-zinc-900'>
                     {
@@ -149,6 +151,10 @@ const hardSkills = () => {
                     }
                 </div>
             </div>
+
+            <span className='w-[350px] h-[350px] absolute top-[2700px] -left-[10%] bg-[#0C009C] opacity-30 blur-[100px] lg:blur-[200px] -z-10' />
+
+            <span className='w-[300px] sm:w-[350px] h-[300px] sm:h-[350px] absolute top-[3400px] sm:top-[2700px] left-1/4 sm:left-[40%] bg-[#0C009C] opacity-30 blur-[100px] lg:blur-[200px] -z-10' />
         </div>
     );
 };
