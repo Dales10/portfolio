@@ -15,7 +15,7 @@ const SocialMedia = () => {
                         className={`${styles.link} w-14 lg:w-4.7 h-14 lg:h-4.7 flex justify-center items-center rounded-full bg-white group`}
                     >
                         <FaLinkedinIn
-                            className='w-8 lg:w-11 h-8 lg:h-11 text-background group-hover:text-white '
+                            className='w-8 lg:w-11 h-8 lg:h-11 text-background group-hover:text-white'
                         />
                     </a>
                 </li>
