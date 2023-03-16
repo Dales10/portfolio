@@ -35,10 +35,10 @@ const futureSoftSkills = [
 ];
 
 const infos = {
-    'TypeScript': 'Se trata de uma ferramenta/ linguagem de programação que adiciona tipagem estática opcional ao JavaScript, tornando o desenvolvimento de projetos mais seguros, pela correção de erros de tipagem em tempo real. Lançado pela Microsft em 2012.',
-    'Firebase': 'O Firebase é um ORM frontend do Google conectado a um banco de dados do tipo NoSQL, com o objetivo de guardar dados de forma simples e rápida, e pode ser usado gratuitamente. Criado pelo Google em 2004.',
-    'React': 'É uma biblioteca JavaScript usado para criar interfaces de usuário (UI) em aplicativos web. Ele é fácil de usar, altamente flexível e escalável, e é usado por muitas empresas de tecnologia, incluindo o Facebook, Instagram e Airbnb. Foi criado pelo Facebook atual Meta em 2013.',
-    'TailwindCSS': 'Framework CSS que permite criar layouts de forma rápida e simples, usando uma estrutura CSS pronto em formato de várias classes utilitárias, opinativas e de propósito único, que podem ser usadas diretamente dentro da marcação de um texto para projetar um elemento. Criado em 2017 por Adam Wathan.',
+    "TypeScript": "Se trata de uma ferramenta/ linguagem de programação que adiciona tipagem estática opcional ao JavaScript, tornando o desenvolvimento de projetos mais seguros, pela correção de erros de tipagem em tempo real. Lançado pela Microsft em 2012.",
+    "Firebase": "O Firebase é um ORM frontend do Google conectado a um banco de dados do tipo NoSQL, com o objetivo de guardar dados de forma simples e rápida, e pode ser usado gratuitamente. Criado pelo Google em 2004.",
+    "React": "É uma biblioteca JavaScript usado para criar interfaces de usuário (UI) em aplicativos web. Ele é fácil de usar, altamente flexível e escalável, e é usado por muitas empresas de tecnologia, incluindo o Facebook, Instagram e Airbnb. Foi criado pelo Facebook atual Meta em 2013.",
+    "TailwindCSS": "Framework CSS que permite criar layouts de forma rápida e simples, usando uma estrutura CSS pronto em formato de várias classes utilitárias, opinativas e de propósito único, que podem ser usadas diretamente dentro da marcação de um texto para projetar um elemento. Criado em 2017 por Adam Wathan.",
 };
 
 const hardSkills = () => {
