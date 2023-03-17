@@ -7,9 +7,9 @@ import { yupResolver } from '@hookform/resolvers/yup';
 import emailjs from '@emailjs/browser';
 
 const schema = yup.object({
-    name: yup.string().required('O nome é obrigatório.').min(5, 'O mínimo de caracteres é 5.').max(100, 'O máximo de caracteres é 100.'),
+    name: yup.string().required('O nome é obrigatório.').min(5, 'O mínimo de caracteres é 5.').max(50, 'O máximo de caracteres é 50.'),
     email: yup.string().required('O email é obrigatório.').email('O email deve conter um @, assim como caracteres antes e depois do mesmo. Logo após o @ deve existir um ponto seguido de caracteres.'),
-    subject: yup.string().required('O assunto/título do email é obrigatório.').min(5, 'O mínimo de caracteres é 5.').max(100, 'O máximo de caracteres é 100.'),
+    subject: yup.string().required('O assunto/título do email é obrigatório.').min(5, 'O mínimo de caracteres é 5.').max(50, 'O máximo de caracteres é 50.'),
     message: yup.string().required('A mensagem/conteúdo do email é obrigatória.').min(5, 'O mínimo de caracteres é 5.').max(1024, 'O máximo de caracteres é 1024.'),
 }).required('Todos os campos são obrigatórios.');
 
@@ -54,9 +54,9 @@ const Contato = () => {
 
             <form
                 onSubmit={handleSubmit(sendEmail)}
-                className='max-w-[700px] flex flex-col gap-3 my-36'
+                className='max-w-[700px] flex flex-col gap-3 mb-20 sm:mb-24 mt-36'
             >
-                <div className='flex gap-3'>
+                <div className='flex flex-col md:flex-row gap-3'>
                     <div className='w-full'>
                         <div className={styles.input}>
                             <input
@@ -102,7 +102,7 @@ const Contato = () => {
                             id='subject'
                             type='text'
                             {...register('subject')}
-                            placeholder='Estudar'
+                            placeholder='Aprender mais'
                             className='h-14 bg-[#11111B] border border-[#00DBDE] pt-2 pl-4 outline-none'
                         />
                         <label htmlFor="subject">
@@ -121,7 +121,7 @@ const Contato = () => {
                             id='message'
                             placeholder='Vamos estudar programação.'
                             {...register('message')}
-                            className='h-44 w-full bg-[#11111B] border border-[#00DBDE] pt-5 pl-4 placeholder:font-medium placeholder:text-[#757575] outline-none'
+                            className='h-44 w-full bg-[#11111B] border border-[#00DBDE] pt-5 pl-4 placeholder:font-medium placeholder:text-[#757575] resize-none outline-none'
                         />
                         <label htmlFor="message">
                             Mensagem:
@@ -139,6 +139,8 @@ const Contato = () => {
                     </button>
                 </div>
             </form>
+
+            <span className='block w-[300px] sm:w-100 lg:w-[400px] h-125 sm:h-[200px] lg:h-[450px] absolute top-[600px] sm:top-[800px] left-1/4 md:left-2/4 bg-[#0C009C] opacity-30 blur-[100px] sm:blur-[150px] -z-10' />
         </div>
     );
 };
