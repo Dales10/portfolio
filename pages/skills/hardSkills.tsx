@@ -1,56 +1,22 @@
 import { useState } from 'react';
-import Image from 'next/image';
-import styles from '../../styles/hardSkills.module.scss';
 import style from '../../styles/title.module.scss';
 
-const currentSoftSkills = [
-    'TypeScript',
-    'React',
-    'Next.js',
-    'Firebase',
-    'TailwindCSS',
-    'SASS',
-    'Node.js',
-    'Prisma',
-    'MySQL',
-    'PostgreSQL',
-    'SQLite',
-    'Git',
-    'GitHub',
-    'Express.js',
-    'Fastify',
-];
+import TecnologiesCard from '@/components/TecnologiesCard';
 
-const futureSoftSkills = [
-    'C#',
-    'C++',
-    'Python',
-    'Kotlin',
-    'Lua',
-    'Nest.js',
-    'React Native',
-    'Mongodb',
-    'GraphQL',
-    '.Net',
-];
-
-const infos = {
-    "TypeScript": "Se trata de uma ferramenta/ linguagem de programação que adiciona tipagem estática opcional ao JavaScript, tornando o desenvolvimento de projetos mais seguros, pela correção de erros de tipagem em tempo real. Lançado pela Microsft em 2012.",
-    "Firebase": "O Firebase é um ORM frontend do Google conectado a um banco de dados do tipo NoSQL, com o objetivo de guardar dados de forma simples e rápida, e pode ser usado gratuitamente. Criado pelo Google em 2004.",
-    "React": "É uma biblioteca JavaScript usado para criar interfaces de usuário (UI) em aplicativos web. Ele é fácil de usar, altamente flexível e escalável, e é usado por muitas empresas de tecnologia, incluindo o Facebook, Instagram e Airbnb. Foi criado pelo Facebook atual Meta em 2013.",
-    "TailwindCSS": "Framework CSS que permite criar layouts de forma rápida e simples, usando uma estrutura CSS pronto em formato de várias classes utilitárias, opinativas e de propósito único, que podem ser usadas diretamente dentro da marcação de um texto para projetar um elemento. Criado em 2017 por Adam Wathan.",
-};
+import { currentSoftSkills, futureSoftSkills, infos, technologiesGradient } from '../../constants';
 
 const HardSkills = () => {
     const [showInfoTechnologie, setShowInfoTechnologie] = useState({
         technologie: 'TypeScript',
-        info: infos.TypeScript,
+        ...infos.TypeScript,
+        gradient: technologiesGradient.TypeScript,
     });
 
     const setInfoTechnologie = (technologie: string) => {
         setShowInfoTechnologie({
             technologie,
-            info: infos[technologie as keyof typeof infos],
+            ...infos[technologie as keyof typeof infos],
+            gradient: technologiesGradient[technologie as keyof typeof technologiesGradient],
         });
     };
 
@@ -68,56 +34,57 @@ const HardSkills = () => {
                 </p>
             </div>
 
-            <div className='w-full lg:w-[calc(100%_-_100px)] border-t-4 border-zinc-900 pt-44 xs:mt-20 mt-32 md:mt-72 mb-36'>
-                <h2 className='text-4xl md:text-5xl text-center font-extrabold'>
+            <div id='title' className='w-full lg:w-[calc(100%_-_100px)] border-t-4 border-zinc-900 pt-44 xs:mt-20 mt-32 md:mt-72 mb-36'>
+                <h2 className='text-3xl xs:text-4xl md:text-5xl text-center font-extrabold'>
                     Minhas Hard Skills
                 </h2>
 
-                <div
-                    className='max-w-[700px] flex flex-col gap-3 mt-24 font-extrabold'
-                >
-                    <h2 className='text-3xl md:text-4xl text-center xs:text-start'>
-                        {showInfoTechnologie.technologie}
+                <div className='max-w-[700px] flex flex-col gap-3 mt-24 font-normal'>
+                    <h2 className='text-2xl xs:text-3xl md:text-4xl text-center xs:text-start font-extrabold'>
+                        <span
+                            style={{
+                                display: 'inline-block',
+                                backgroundImage: `linear-gradient(to right, ${showInfoTechnologie.gradient})`,
+                                backgroundClip: 'text',
+                                WebkitBackgroundClip: 'text',
+                                color: 'transparent',
+                            }}
+                        >
+                            {showInfoTechnologie.technologie}
+                        </span>
                     </h2>
-                    <p className='text-lg xs:text-xl text-justify xs:text-start'>
+                    <p className='text-base xs:text-lg text-justify xs:text-start'>
                         {showInfoTechnologie.info}
+                    </p>
+                    <p>
+                        <span className='font-bold'>Criado por:</span> {showInfoTechnologie.createdBy}.
+                    </p>
+                    <p>
+                        <span className='font-bold'>Lançado em:</span> {showInfoTechnologie.created}.
                     </p>
                 </div>
 
                 <span className='w-[400px] h-[400px] absolute top-[1100px] -left-[10%] bg-[#0C009C] opacity-30 blur-[100px] lg:blur-[200px] -z-10' />
 
-                <div className='flex flex-wrap justify-between gap-6 mt-44 pb-28 border-b-4 border-zinc-900'>
+                <div className='flex flex-wrap justify-between gap-6 mt-24 sm:mt-44 pb-28 border-b-4 border-zinc-900'>
                     {
                         currentSoftSkills.map(technologie => {
                             return (
-                                <div
+                                <a
                                     key={technologie}
-                                    onClick={() => setInfoTechnologie(technologie)}
-                                    className={`${styles.card} flex justify-center items-center w-36 h-36 bg-background border border-[#00DBDE] rounded-[5px] mx-auto transition duration-300`}
+                                    href="#title"
                                 >
-                                    <div className='flex flex-col justify-between items-center gap-2 py-1'>
-                                        <Image
-                                            src={`/icons/${technologie
-                                                .toLocaleLowerCase()
-                                                .replace(' ', '_')
-                                                .replace('#', '_sharp')
-                                                .replace('.net', 'dot_net')
-                                                }.png`}
-                                            width={90}
-                                            height={90}
-                                            alt={`${technologie} icon.`}
-                                        />
-                                        <h2 className='text-xl font-semibold'>
-                                            {technologie}
-                                        </h2>
-                                    </div>
-                                </div>
+                                    <TecnologiesCard
+                                        technologie={technologie}
+                                        setInfoTechnologie={setInfoTechnologie}
+                                    />
+                                </a>
                             )
                         })
                     }
                 </div>
 
-                <h2 className='max-w-[1100px] text-4xl font-bold mt-36'>
+                <h2 className='max-w-[1100px] text-2xl xs:text-3xl sm:text-4xl text-justify sm:text-start font-bold mt-36'>
                     Mas também há as tecnologias que tenho interesse em aprender futuramente, ou quando tiver uma oportunidade, que são as seguintes:
                 </h2>
 
@@ -125,27 +92,15 @@ const HardSkills = () => {
                     {
                         futureSoftSkills.map(technologie => {
                             return (
-                                <div
+                                <a
                                     key={technologie}
-                                    className={`${styles.card} flex justify-center items-center w-36 h-36 bg-background border border-[#00DBDE] rounded-[5px] mx-auto transition duration-300`}
+                                    href="#title"
                                 >
-                                    <div className='flex flex-col justify-between items-center gap-2 py-1'>
-                                        <Image
-                                            src={`/icons/${technologie
-                                                .toLocaleLowerCase()
-                                                .replace(' ', '_')
-                                                .replace('#', '_sharp')
-                                                .replace('.net', 'dot_net')
-                                                }.png`}
-                                            width={90}
-                                            height={90}
-                                            alt={`${technologie} icon.`}
-                                        />
-                                        <h2 className='text-xl font-semibold'>
-                                            {technologie}
-                                        </h2>
-                                    </div>
-                                </div>
+                                    <TecnologiesCard
+                                        technologie={technologie}
+                                        setInfoTechnologie={setInfoTechnologie}
+                                    />
+                                </a>
                             )
                         })
                     }
@@ -154,7 +109,7 @@ const HardSkills = () => {
 
             <span className='w-[350px] h-[350px] absolute top-[2700px] -left-[10%] bg-[#0C009C] opacity-30 blur-[100px] lg:blur-[200px] -z-10' />
 
-            <span className='w-[300px] sm:w-[350px] h-[300px] sm:h-[350px] absolute top-[3400px] sm:top-[2700px] left-1/4 sm:left-[40%] bg-[#0C009C] opacity-30 blur-[100px] lg:blur-[200px] -z-10' />
+            <span className='w-[300px] sm:w-[350px] h-[300px] sm:h-[350px] absolute top-[3800px] xs:top-[3100px] sm:top-[2700px] left-1/4 sm:left-[40%] bg-[#0C009C] opacity-30 blur-[100px] lg:blur-[200px] -z-10' />
         </div>
     );
 };
