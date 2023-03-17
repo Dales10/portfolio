@@ -1,0 +1,22 @@
+.button {
+    position: relative;
+    border-radius: 25px;
+    background-image: linear-gradient(to right, #00DBDE, #4700BA);
+    font-weight: bold;
+    margin-left: 1rem;
+
+    &::after {
+        content: "";
+        position: absolute;
+        inset: -.08em;
+        filter: blur(.6rem);
+        background: linear-gradient(to right, #00DBDE, #4700BA);
+        border-radius: 25px;
+        z-index: -1;
+        transition: .1s ease-in-out;
+    }
+
+    &:hover::after {
+        inset: -.15em;
+    }
+}

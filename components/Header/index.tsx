@@ -84,7 +84,7 @@ const Header = () => {
                     menu && (
                         <div
                             onClick={e => changeMenuStatus(e)}
-                            className='popup-wrapper w-screen h-screen absolute top-0 left-0 bg-background bg-opacity-50 z-20'
+                            className='popup-wrapper w-screen h-screen absolute top-0 left-0 bg-background bg-opacity-50 z-20 backdrop-blur-sm'
                         >
                             <nav className={`${styles.menu} absolute top-24 right-8 md:right-16 w-60 h-76 bg-background rounded-lg z-10`}>
                                 <ul className='flex flex-col gap-4 mt-4 ml-8 text-lg font-semibold'>

@@ -9,7 +9,8 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "@next/font": "13.2.4",
+    "@emailjs/browser": "^3.10.0",
+    "@hookform/resolvers": "^2.9.11",
     "@types/node": "18.15.1",
     "@types/react": "18.0.28",
     "@types/react-dom": "18.0.11",
@@ -18,9 +19,11 @@
     "next": "13.2.4",
     "react": "18.2.0",
     "react-dom": "18.2.0",
+    "react-hook-form": "^7.43.6",
     "react-icons": "^4.8.0",
     "sass": "^1.59.2",
-    "typescript": "4.9.5"
+    "typescript": "4.9.5",
+    "yup": "^1.0.2"
   },
   "devDependencies": {
     "autoprefixer": "^10.4.14",

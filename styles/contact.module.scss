@@ -1,0 +1,33 @@
+.input {
+    position: relative;
+
+    input {
+        width: 100%;
+    }
+
+    input:focus~label,
+    input:not(:placeholder-shown)~label,
+    textarea:focus~label,
+    textarea:not(:placeholder-shown)~label {
+        top: 2px;
+        left: .2rem;
+        color: #FFFFFF;
+        font-size: .7rem;
+        padding: 0 5px;
+    }
+
+    input::placeholder,
+    textarea::placeholder {
+        opacity: 0;
+    }
+
+    label {
+        position: absolute;
+        top: 14px;
+        left: 14px;
+        color: #757575;
+        font-size: 1rem;
+        font-weight: 500;
+        transition: .2s ease-in-out;
+    }
+}
