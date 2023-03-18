@@ -2,9 +2,11 @@ import { useState, useEffect, MouseEvent } from 'react';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
 import styles from '../../styles/header.module.scss';
+import { MdKeyboardArrowDown } from 'react-icons/md';
 
 const Header = () => {
     const [menu, setMenu] = useState(false);
+    const [optionsSkills, setoptionsSkills] = useState(false);
     const path = useRouter().pathname;
 
     const changeMenuStatus = (e: MouseEvent<HTMLDivElement, globalThis.MouseEvent>) => {
@@ -36,6 +38,7 @@ const Header = () => {
                                 </a>
                             </Link>
                         </li>
+
                         <li>
                             <Link href='/sobreMim' legacyBehavior>
                                 <a className={path === '/sobreMim' ? styles.pageName : styles.normal}>
@@ -43,13 +46,53 @@ const Header = () => {
                                 </a>
                             </Link>
                         </li>
-                        <li>
-                            <Link href='/skills' legacyBehavior>
-                                <a className={path.includes('/skills') ? styles.pageName : styles.normal}>
-                                    Skills
-                                </a>
-                            </Link>
+
+                        <li className='relative'>
+                            <div className='flex gap-2'>
+                                <Link href='/skills' legacyBehavior>
+                                    <a className={path.includes('/skills') ? styles.pageName : styles.normal}>
+                                        Skills
+                                    </a>
+                                </Link>
+
+                                <MdKeyboardArrowDown
+                                    onClick={() => setoptionsSkills(!optionsSkills)}
+                                    style={optionsSkills ? { transform: 'rotate(180deg)' } : { transform: 'rotate(0)' }}
+                                    className='w-7 h-7 mt-px text-white'
+                                />
+                            </div>
+
+                            {
+                                optionsSkills && (
+                                    <div className={`${styles.menu} absolute top-8 right-1 w-32 py-4 bg-background text-center rounded-lg`}>
+                                        <ul>
+                                            <li>
+                                                <Link href='/skills/softSkills' legacyBehavior>
+                                                    <a
+                                                        onClick={() => setoptionsSkills(false)}
+                                                        className={path === '/skills/softSkills' ? styles.pageName : styles.normal}
+                                                    >
+                                                        Soft Skills
+                                                    </a>
+                                                </Link>
+                                            </li>
+
+                                            <li>
+                                                <Link href='/skills/hardSkills' legacyBehavior>
+                                                    <a
+                                                        onClick={() => setoptionsSkills(false)}
+                                                        className={path === '/skills/hardSkills' ? styles.pageName : styles.normal}
+                                                    >
+                                                        Hard Skills
+                                                    </a>
+                                                </Link>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                )
+                            }
                         </li>
+
                         <li>
                             <Link href='/projetos' legacyBehavior>
                                 <a className={path === '/projetos' ? styles.pageName : styles.normal}>
@@ -57,6 +100,7 @@ const Header = () => {
                                 </a>
                             </Link>
                         </li>
+
                         <li>
                             <Link href='/contato' legacyBehavior>
                                 <a className={path === '/contato' ? styles.pageName : styles.normal}>
@@ -98,6 +142,7 @@ const Header = () => {
                                             </a>
                                         </Link>
                                     </li>
+
                                     <li>
                                         <Link href='/sobreMim' legacyBehavior>
                                             <a
@@ -108,16 +153,56 @@ const Header = () => {
                                             </a>
                                         </Link>
                                     </li>
+
                                     <li>
-                                        <Link href='/skills' legacyBehavior>
-                                            <a
-                                                onClick={() => setMenu(false)}
-                                                className={path.includes('/skills') ? styles.pageName : styles.normal}
-                                            >
-                                                Skills
-                                            </a>
-                                        </Link>
+                                        <div className='flex gap-1'>
+                                            <Link href='/skills' legacyBehavior>
+                                                <a
+                                                    onClick={() => setMenu(false)}
+                                                    className={path.includes('/skills') ? styles.pageName : styles.normal}
+                                                >
+                                                    Skills
+                                                </a>
+                                            </Link>
+
+                                            <MdKeyboardArrowDown
+                                                onClick={() => setoptionsSkills(!optionsSkills)}
+                                                style={optionsSkills ? { transform: 'rotate(180deg)' } : { transform: 'rotate(0)' }}
+                                                className='w-6 h-6 mt-[3px] text-white'
+                                            />
+                                        </div>
+
+                                        {
+                                            optionsSkills && (
+                                                <div className='ml-4'>
+                                                    <ul>
+                                                        <li>
+                                                            <Link href='/skills/softSkills' legacyBehavior>
+                                                                <a
+                                                                    onClick={() => { setoptionsSkills(false); setMenu(false); }}
+                                                                    className={path === '/skills/softSkills' ? styles.pageName : styles.normal}
+                                                                >
+                                                                    Soft Skills
+                                                                </a>
+                                                            </Link>
+                                                        </li>
+
+                                                        <li>
+                                                            <Link href='/skills/hardSkills' legacyBehavior>
+                                                                <a
+                                                                    onClick={() => { setoptionsSkills(false); setMenu(false); }}
+                                                                    className={path === '/skills/hardSkills' ? styles.pageName : styles.normal}
+                                                                >
+                                                                    Hard Skills
+                                                                </a>
+                                                            </Link>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            )
+                                        }
                                     </li>
+
                                     <li>
                                         <Link href='/projetos' legacyBehavior>
                                             <a
@@ -128,6 +213,7 @@ const Header = () => {
                                             </a>
                                         </Link>
                                     </li>
+
                                     <li>
                                         <Link href='/contato' legacyBehavior>
                                             <a
