@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import style from '../../styles/title.module.scss';
 
 import TecnologiesCard from '@/components/TecnologiesCard';
@@ -6,19 +6,37 @@ import TecnologiesCard from '@/components/TecnologiesCard';
 import { currentSoftSkills, futureSoftSkills, infos, technologiesGradient } from '../../constants';
 
 const HardSkills = () => {
+    const [stateTechnologies, setStateTechnologie] = useState<boolean[]>([]);
+
     const [showInfoTechnologie, setShowInfoTechnologie] = useState({
         technologie: 'TypeScript',
         ...infos.TypeScript,
         gradient: technologiesGradient.TypeScript,
     });
 
-    const setInfoTechnologie = (technologie: string) => {
+    const setInfoTechnologie = (technologie: string, position: number) => {
         setShowInfoTechnologie({
             technologie,
             ...infos[technologie as keyof typeof infos],
             gradient: technologiesGradient[technologie as keyof typeof technologiesGradient],
         });
+
+        const amountOfActiveCards = (JSON.stringify(stateTechnologies).match(/true/g) || []).length;
+        if (amountOfActiveCards === 1 && !stateTechnologies[position]) {
+            const newState = Array(stateTechnologies.length).fill(false);
+            newState[position] = true;
+            setStateTechnologie(newState);
+        } else {
+            const newState = stateTechnologies;
+            newState[position] = !newState[position];
+            setStateTechnologie(newState);
+        }
     };
+
+    useEffect(() => {
+        if (stateTechnologies.length > 0)
+            setStateTechnologie(Array(currentSoftSkills.length).fill(false));
+    }, []);
 
     return (
         <div className="mt-24 lg:mt-32 mx-10 md:mx-16 xl:ml-28">
@@ -68,7 +86,7 @@ const HardSkills = () => {
 
                 <div className='flex flex-wrap justify-between gap-6 mt-24 sm:mt-44 pb-28 border-b-4 border-zinc-900'>
                     {
-                        currentSoftSkills.map(technologie => {
+                        currentSoftSkills.map((technologie, index) => {
                             return (
                                 <a
                                     key={technologie}
@@ -77,6 +95,8 @@ const HardSkills = () => {
                                     <TecnologiesCard
                                         technologie={technologie}
                                         setInfoTechnologie={setInfoTechnologie}
+                                        stateTechnologie={stateTechnologies[index]}
+                                        position={index}
                                     />
                                 </a>
                             )
@@ -90,7 +110,7 @@ const HardSkills = () => {
 
                 <div className='flex flex-wrap justify-between gap-6 mt-20'>
                     {
-                        futureSoftSkills.map(technologie => {
+                        futureSoftSkills.map((technologie, index) => {
                             return (
                                 <a
                                     key={technologie}
@@ -99,6 +119,8 @@ const HardSkills = () => {
                                     <TecnologiesCard
                                         technologie={technologie}
                                         setInfoTechnologie={setInfoTechnologie}
+                                        stateTechnologie={stateTechnologies[index]}
+                                        position={index}
                                     />
                                 </a>
                             )
