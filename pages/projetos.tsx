@@ -1,8 +1,6 @@
+import ProjectsCard from '@/components/ProjectsCard';
 import styleButton from '../styles/button.module.scss';
 import style from '../styles/title.module.scss';
-import Image from 'next/image';
-import { TfiWorld } from 'react-icons/tfi';
-import { BsGithub } from 'react-icons/bs';
 
 const Projetos = () => {
     return (
@@ -25,49 +23,16 @@ const Projetos = () => {
                 </button>
             </div>
 
-            <div className='w-full lg:w-[calc(100%_-_200px)] h-1 bg-[#090909] mt-44 mb-28' />
+            <div id='title' className='w-full lg:w-[calc(100%_-_100px)] border-t-4 border-zinc-900 pt-44 xs:mt-20 mt-32 md:mt-72 mb-36'>
 
-            <div>
-                <div className='w-80 bg-[#121219] rounded-md mb-6 overflow-hidden'>
-                    <Image
-                        src='/deinocheirus.jpg'
-                        width={300}
-                        height={300}
-                        alt='Image of Deinocheirus'
-                        className='w-full h-auto'
-                    />
-
-                    <h1 className='flex justify-between text-base font-bold mx-5 my-4'>
-                        Portfólio
-
-                        <div className='flex gap-3'>
-                            <a
-                                href='#'
-                            >
-                                <TfiWorld className='w-6 h-6' />
-                            </a>
-
-                            <a
-                                href='#'
-                            >
-                                <BsGithub className='w-6 h-6 text-white' />
-                            </a>
-                        </div>
-                    </h1>
-
-                    <div className='flex flex-wrap justify-center gap-3 text-xs font-bold border-t border-zinc-700 mt-5 py-3'>
-                        <div className='bg-[#272737] rounded-md mx-auto px-2 py-1'>
-                            TypeScript
-                        </div>
-
-                        <div className='bg-[#272737] rounded-md mx-auto px-2 py-1'>
-                            SASS
-                        </div>
-
-                        <div className='bg-[#272737] rounded-md mx-auto px-2 py-1'>
-                            Next.js
-                        </div>
-                    </div>
+                <div className='flex flex-wrap gap-10'>
+                    {
+                        Array.from({ length: 5 }).map((_, index) => {
+                            return (
+                                <ProjectsCard key={index} />
+                            )
+                        })
+                    }
                 </div>
             </div>
         </div>
