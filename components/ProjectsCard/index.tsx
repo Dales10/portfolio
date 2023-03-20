@@ -37,14 +37,12 @@ const ProjectsCard = () => {
 
                 <h1 className='flex justify-between text-base font-bold mx-5 my-4'>
                     Portfólio
-
                     <div className='links flex gap-3'>
                         <a
                             href='#'
                         >
                             <TfiWorld className='w-6 h-6' />
                         </a>
-
                         <a
                             href='#'
                         >
@@ -52,20 +50,6 @@ const ProjectsCard = () => {
                         </a>
                     </div>
                 </h1>
-
-                <div className='flex flex-wrap justify-center gap-3 text-xs font-bold border-t border-zinc-700 mt-5 py-3'>
-                    <div className='bg-[#272737] rounded-md mx-auto px-2 py-1'>
-                        TypeScript
-                    </div>
-
-                    <div className='bg-[#272737] rounded-md mx-auto px-2 py-1'>
-                        SASS
-                    </div>
-
-                    <div className='bg-[#272737] rounded-md mx-auto px-2 py-1'>
-                        Next.js
-                    </div>
-                </div>
             </div>
 
             {
