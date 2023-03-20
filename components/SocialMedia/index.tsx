@@ -12,7 +12,7 @@ const SocialMedia = () => {
                     <a
                         href="https://www.linkedin.com/in/d%C3%A1rio-matias-dales-gamma-587785243/"
                         target={'_blank'}
-                        className={`${styles.link} w-14 lg:w-4.7 h-14 lg:h-4.7 flex justify-center items-center rounded-full bg-white group focus:scale-95`}
+                        className={`${styles.link} w-14 lg:w-4.7 h-14 lg:h-4.7 flex justify-center items-center rounded-full bg-white group focus:scale-95 transition`}
                     >
                         <FaLinkedinIn
                             className='w-8 lg:w-11 h-8 lg:h-11 text-background group-hover:text-white'

@@ -5,9 +5,18 @@ import { BsGithub } from 'react-icons/bs';
 
 type Props = {
     setPopupProject: Dispatch<SetStateAction<boolean>>;
-}
+    projectData: {
+        name: string;
+        description: string;
+        technologies: string[];
+        links: {
+            demo: string;
+            code: string;
+        };
+    };
+};
 
-const PopupProject = ({ setPopupProject }: Props) => {
+const PopupProject = ({ setPopupProject, projectData }: Props) => {
     const positionTop = { top: `${window.pageYOffset}px` };
 
     const checkClick = (e: MouseEvent<HTMLDivElement, globalThis.MouseEvent>) => {
@@ -23,7 +32,7 @@ const PopupProject = ({ setPopupProject }: Props) => {
             onClick={ e => checkClick(e)}
             className="popup-wrapper absolute w-screen h-screen top-0 left-0 flex justify-center items-center bg-background bg-opacity-50 z-20 backdrop-blur-sm"
         >
-            <div className="w-[600px] bg-background border border-[#00DBDE] border-opacity-20 rounded-xl overflow-auto">
+            <div className="w-[500px] bg-background border border-[#00DBDE] border-opacity-20 rounded-xl text-sm overflow-auto">
                 <div className='relative'>
                     <Image
                         src='/deinocheirus.jpg'
@@ -33,63 +42,64 @@ const PopupProject = ({ setPopupProject }: Props) => {
                         className='w-full h-auto'
                     />
 
-                    <h2 className='absolute top-4 left-4 opacity-30 text-2xl font-black'>
-                        Portfólio
+                    <h2 className='absolute top-4 left-4 opacity-40 text-2xl font-black'>
+                        {projectData.name}
                     </h2>
                 </div>
 
-                <div className='mx-4 my-9'>
+                <div className='mx-4 my-5'>
                     <p className='text-zinc-100'>
-                        Exemplo de portifólio criado por teste, com o objetivo de testar e criar o design do portifólio original.
+                        {projectData.description}
                     </p>
 
-                    <div className='flex flex-col gap-1 mt-8'>
-                        <h2 className='flex items-center gap-2 text-xl font-semibold'>
+                    <div className='flex flex-col gap-1 mt-6'>
+                        <h2 className='flex items-center gap-2 text-lg font-semibold'>
                             <TfiWorld className='w-6 h-6' />
                             Acessar projeto
                         </h2>
 
                         <a
-                            href="https://github.com/Dales10/Estudos"
+                            href={projectData.links.demo}
                             target={'_blank'}
                             className='underline text-blue-700'
                         >
-                            https://github.com/Dales10/Estudos
+                            {projectData.links.demo}
                         </a>
                     </div>
 
-                    <div className='flex flex-col gap-1 mt-3 mb-8'>
-                        <h2 className='flex items-center gap-2 text-xl font-semibold'>
+                    <div className='flex flex-col gap-1 mt-2'>
+                        <h2 className='flex items-center gap-2 text-lg font-semibold'>
                             <BsGithub className='w-6 h-6' />
                             Código fonte
                         </h2>
 
                         <a
-                            href="https://github.com/Dales10/Estudos"
+                            href={projectData.links.code}
                             target={'_blank'}
                             className='underline text-blue-700'
                         >
-                            https://github.com/Dales10/Estudos
+                            {projectData.links.code}
                         </a>
                     </div>
+                </div>
 
-                    <h1 className='text-center'>
-                        Tecnologias usadas nesse projeto:
-                    </h1>
+                <h1 className='text-lg text-center font-bold'>
+                    Tecnologias usadas nesse projeto
+                </h1>
 
-                    <div className='flex flex-wrap justify-center gap-3 text-xs font-bold border-t border-zinc-700 mt-2 py-3'>
-                        <div className='bg-[#272737] rounded-md mx-auto px-2 py-1'>
-                            TypeScript
-                        </div>
-
-                        <div className='bg-[#272737] rounded-md mx-auto px-2 py-1'>
-                            SASS
-                        </div>
-
-                        <div className='bg-[#272737] rounded-md mx-auto px-2 py-1'>
-                            Next.js
-                        </div>
-                    </div>
+                <div className='flex flex-wrap justify-center gap-3 bg-[#0c0c0f] text-xs font-bold border-t border-zinc-700 mt-2 py-3'>
+                    {
+                        projectData.technologies.map(technologie => {
+                            return (
+                                <div
+                                    key={technologie}
+                                    className='bg-[#272737] rounded-md mx-auto px-2 py-1'
+                                >
+                                    {technologie}
+                                </div>
+                            )
+                        })
+                    }
                 </div>
             </div>
         </div>

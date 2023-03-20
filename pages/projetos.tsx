@@ -1,6 +1,7 @@
 import ProjectsCard from '@/components/ProjectsCard';
 import styleButton from '../styles/button.module.scss';
 import style from '../styles/title.module.scss';
+import projectsData from '@/constants/projects';
 
 const Projetos = () => {
     return (
@@ -25,11 +26,14 @@ const Projetos = () => {
 
             <div id='title' className='w-full lg:w-[calc(100%_-_100px)] border-t-4 border-zinc-900 pt-44 xs:mt-20 mt-32 md:mt-72 mb-36'>
 
-                <div className='flex flex-wrap gap-10'>
+                <div className='flex flex-wrap gap-2 justify-center'>
                     {
-                        Array.from({ length: 5 }).map((_, index) => {
+                        projectsData.map((projectData, index) => {
                             return (
-                                <ProjectsCard key={index} />
+                                <ProjectsCard
+                                    key={index}
+                                    projectData={projectData}
+                                />
                             )
                         })
                     }

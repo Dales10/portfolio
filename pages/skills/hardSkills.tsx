@@ -3,7 +3,7 @@ import style from '../../styles/title.module.scss';
 
 import TecnologiesCard from '@/components/TecnologiesCard';
 
-import { currentSoftSkills, futureSoftSkills, infos, technologiesGradient } from '../../constants';
+import { currentSoftSkills, futureSoftSkills, infos, technologiesGradient } from '../../constants/skills';
 
 const HardSkills = () => {
     const [stateTechnologies, setStateTechnologie] = useState<boolean[]>([]);
