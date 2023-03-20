@@ -1,7 +1,8 @@
-import { Dispatch, SetStateAction, MouseEvent } from 'react';
-import Image from 'next/image';
+import { useState, Dispatch, SetStateAction, MouseEvent } from 'react';
 import { TfiWorld } from 'react-icons/tfi';
 import { BsGithub } from 'react-icons/bs';
+import { MdArrowBackIos } from 'react-icons/md';
+import Image from 'next/image';
 
 type Props = {
     setPopupProject: Dispatch<SetStateAction<boolean>>;
@@ -16,7 +17,10 @@ type Props = {
     };
 };
 
+const arrayUrls = ['deinocheirus.jpg', 'wallpaper (1).jpg', 'wallpaper (2).jpg']
+
 const PopupProject = ({ setPopupProject, projectData }: Props) => {
+    const [positionImage, setPositionImage] = useState(0);
     const positionTop = { top: `${window.pageYOffset}px` };
 
     const checkClick = (e: MouseEvent<HTMLDivElement, globalThis.MouseEvent>) => {
@@ -29,20 +33,34 @@ const PopupProject = ({ setPopupProject, projectData }: Props) => {
     return (
         <div
             style={positionTop}
-            onClick={ e => checkClick(e)}
+            onClick={e => checkClick(e)}
             className="popup-wrapper absolute w-screen h-screen top-0 left-0 flex justify-center items-center bg-background bg-opacity-50 z-20 backdrop-blur-sm"
         >
             <div className="w-[500px] bg-background border border-[#00DBDE] border-opacity-20 rounded-xl text-sm overflow-auto">
                 <div className='relative'>
                     <Image
-                        src='/deinocheirus.jpg'
-                        width={600}
-                        height={600}
-                        alt='Image of Deinocheirus'
-                        className='w-full h-auto'
+                        src={`/${arrayUrls[positionImage]}`}
+                        width={500}
+                        height={500}
+                        alt=''
+                        className='transition duration-300'
                     />
 
-                    <h2 className='absolute top-4 left-4 opacity-40 text-2xl font-black'>
+                    <button
+                        onClick={() => positionImage === 0 ? setPositionImage(arrayUrls.length) : setPositionImage(positionImage - 1)}
+                        className='absolute top-2/4 left-2 w-7 h-7 bg-black pl-2 rounded-full opacity-50'
+                    >
+                        <MdArrowBackIos className='w-5 h-5'/>
+                    </button>
+
+                    <button
+                        onClick={() => positionImage === arrayUrls.length - 1 ? setPositionImage(0) : setPositionImage(positionImage + 1)}
+                        className='absolute top-2/4 right-2 w-7 h-7 bg-black pr-2 rounded-full opacity-50'
+                    >
+                        <MdArrowBackIos className='w-5 h-5 rotate-180' />
+                    </button>
+
+                    <h2 className='absolute top-4 left-4 opacity-40 text-xl font-black'>
                         {projectData.name}
                     </h2>
                 </div>
