@@ -40,7 +40,7 @@ const HardSkills = () => {
 
     return (
         <div className="mt-24 lg:mt-32 mx-10 md:mx-16 xl:ml-28">
-            <span className='block w-[350px] sm:w-125 lg:w-[700px] h-[350px] sm:h-125 lg:h-[700px] absolute top-0 sm:-top-5 lg:-top-32 left-0 sm:-left-5 lg:-left-[155px] bg-[#0C009C] opacity-30 blur-[100px] sm:blur-[200px] -z-10' />
+            <span className='block w-[350px] sm:w-125 lg:w-[700px] h-[350px] sm:h-125 lg:h-[700px] checked:n absolute top-0 sm:-top-5 lg:-top-32 left-0 sm:-left-5 lg:-left-[155px] bg-[#0C009C] opacity-30 blur-[100px] sm:blur-[200px] -z-10' />
 
             <div className='w-full flex flex-col items-center md:items-start text-center md:text-left'>
                 <h1 className={`${style.title} text-5xl sm:text-6xl md:text-7xl lg:text-[80px] font-black leading-tight`}>
