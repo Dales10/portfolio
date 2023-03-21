@@ -35,7 +35,7 @@ const ProjectsCard = ({ projectData }: Props) => {
         <>
             <div
                 onClick={e => checkClick(e)}
-                className='w-80 rounded-md overflow-hidden cursor-pointer'
+                className='w-80 bg-background font-black border-2 border-zinc-900 rounded-md overflow-hidden cursor-pointer'
             >
                 <Image
                     src='/deinocheirus.jpg'
@@ -44,6 +44,10 @@ const ProjectsCard = ({ projectData }: Props) => {
                     alt='Image of Deinocheirus'
                     className='w-full h-auto'
                 />
+
+                <h1 className='mt-2 mb-1 text-center'>
+                    {projectData.name}
+                </h1>
             </div>
 
             {

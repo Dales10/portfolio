@@ -1,7 +1,6 @@
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Autoplay, Navigation, Pagination, EffectFade } from 'swiper';
 import 'swiper/css/bundle';
-import { MdArrowBackIos } from 'react-icons/md';
 import 'swiper/css/effect-fade';
 import NavigationButtons from '../NavigationButtons';
 

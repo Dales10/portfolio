@@ -68,6 +68,16 @@ const infos: InfoProps = {
         created: 'Maio de 2009',
         createdBy: 'Ryan Dahl',
     },
+    Git: {
+        info: 'É um sistema de controle de versão. Sua função é ajudar no controle do histórico de projetos, mas pode ser usado com a mesma finalidade para qualquer tipo de arquivo. O Git deixa o processo de desenvolvimento mais flexível e seguro, isso porque caso não se lembre quais alterações fez no projeto, pode retornar a última versão salva no Git. Se trata de uma das principais ferramentas de um desenvolvedor.',
+        created: 'Abril de 2005',
+        createdBy: 'Linus Torvalds',
+    },
+    GitHub: {
+        info: 'Plataforma de hospedagem de código-fonte e arquivos com controle de versão usando o Git, a mesma permite o compartilhamento dos projetos guardados com outros desenvolvedores de forma simples. O GitHub facilita a colaboração no desenvolvimento de projetos com pessoas de outras regiões, ou até mesmo que estejam trabalhando de suas casas. É basicamente uma plataforma/"rede social" criada para programadores.',
+        created: 'Abril de 2008',
+        createdBy: 'Chris Wanstrath, J. Hyett, Tom Preston-Werner e Scott Chacon',
+    }
 };
 
 const technologiesGradient = {

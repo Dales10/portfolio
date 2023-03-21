@@ -30,6 +30,7 @@ const NavigationButtons = () => {
             >
                 <MdArrowBackIos className='w-3 h-3 pointer-events-none' />
             </div>
+            
             <div
                 onClick={() => clickButtonNext()}
                 style={styleButtonNext}
