@@ -35,7 +35,7 @@ const ProjectsCard = ({ projectData }: Props) => {
         <>
             <div
                 onClick={e => checkClick(e)}
-                className='w-80 rounded-md overflow-hidden'
+                className='w-80 rounded-md overflow-hidden cursor-pointer'
             >
                 <Image
                     src='/deinocheirus.jpg'

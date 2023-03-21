@@ -34,7 +34,7 @@ const PopupProject = ({ setPopupProject, projectData }: Props) => {
         >
             <div className="w-[500px] bg-background border border-zinc-400 border-opacity-20 rounded-xl text-sm overflow-auto">
                 <div className='relative border-b border-zinc-900'>
-                    <Slider />
+                    <Slider/>
 
                     <h2 className='absolute top-2 left-3 opacity-30 text-lg font-black z-10'>
                         {projectData.name}

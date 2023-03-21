@@ -21,8 +21,8 @@ module.exports = {
       colors: {
         "background": "#000005",
       },
-      blur: {
-
+      animation: {
+        'spin-slow': 'spin 2s linear infinite',
       }
     },
   },
