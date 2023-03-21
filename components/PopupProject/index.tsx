@@ -1,8 +1,7 @@
-import { useState, Dispatch, SetStateAction, MouseEvent } from 'react';
+import { Dispatch, SetStateAction, MouseEvent } from 'react';
 import { TfiWorld } from 'react-icons/tfi';
 import { BsGithub } from 'react-icons/bs';
-import { MdArrowBackIos } from 'react-icons/md';
-import Image from 'next/image';
+import Slider from '../Slider';
 
 type Props = {
     setPopupProject: Dispatch<SetStateAction<boolean>>;
@@ -17,10 +16,7 @@ type Props = {
     };
 };
 
-const arrayUrls = ['deinocheirus.jpg', 'wallpaper (1).jpg', 'wallpaper (2).jpg']
-
 const PopupProject = ({ setPopupProject, projectData }: Props) => {
-    const [positionImage, setPositionImage] = useState(0);
     const positionTop = { top: `${window.pageYOffset}px` };
 
     const checkClick = (e: MouseEvent<HTMLDivElement, globalThis.MouseEvent>) => {
@@ -36,31 +32,11 @@ const PopupProject = ({ setPopupProject, projectData }: Props) => {
             onClick={e => checkClick(e)}
             className="popup-wrapper absolute w-screen h-screen top-0 left-0 flex justify-center items-center bg-background bg-opacity-50 z-20 backdrop-blur-sm"
         >
-            <div className="w-[500px] bg-background border border-[#00DBDE] border-opacity-20 rounded-xl text-sm overflow-auto">
-                <div className='relative'>
-                    <Image
-                        src={`/${arrayUrls[positionImage]}`}
-                        width={500}
-                        height={500}
-                        alt=''
-                        className='transition duration-300'
-                    />
+            <div className="w-[500px] bg-background border border-zinc-400 border-opacity-20 rounded-xl text-sm overflow-auto">
+                <div className='relative border-b border-zinc-900'>
+                    <Slider />
 
-                    <button
-                        onClick={() => positionImage === 0 ? setPositionImage(arrayUrls.length) : setPositionImage(positionImage - 1)}
-                        className='absolute top-2/4 left-2 w-7 h-7 bg-black pl-2 rounded-full opacity-50'
-                    >
-                        <MdArrowBackIos className='w-5 h-5'/>
-                    </button>
-
-                    <button
-                        onClick={() => positionImage === arrayUrls.length - 1 ? setPositionImage(0) : setPositionImage(positionImage + 1)}
-                        className='absolute top-2/4 right-2 w-7 h-7 bg-black pr-2 rounded-full opacity-50'
-                    >
-                        <MdArrowBackIos className='w-5 h-5 rotate-180' />
-                    </button>
-
-                    <h2 className='absolute top-4 left-4 opacity-40 text-xl font-black'>
+                    <h2 className='absolute top-2 left-3 opacity-30 text-lg font-black z-10'>
                         {projectData.name}
                     </h2>
                 </div>
@@ -111,7 +87,7 @@ const PopupProject = ({ setPopupProject, projectData }: Props) => {
                             return (
                                 <div
                                     key={technologie}
-                                    className='bg-[#272737] rounded-md mx-auto px-2 py-1'
+                                    className='bg-[#1b1b27] rounded-md mx-auto px-2 py-1'
                                 >
                                     {technologie}
                                 </div>
