@@ -7,12 +7,12 @@ import { FaLinkedinIn } from 'react-icons/fa';
 const SocialMedia = () => {
     return (
         <div className='flex justify-center'>
-            <ul className='fixed flex lg:flex-col gap-4 lg:top-[18%] bottom-0 lg:right-4 bg-background bg-opacity-80 lg:bg-transparent border border-cyan-300 border-b-0 lg:border-0 rounded-tl-3xl rounded-tr-3xl pb-3 p-4 z-10'>
+            <ul className='fixed flex lg:flex-col gap-4 lg:top-[18%] lg:right-4 bottom-0 lg:bottom-[unset] bg-background bg-opacity-80 lg:bg-transparent pb-3 p-4 border border-cyan-300 border-b-0 lg:border-0 rounded-tl-3xl rounded-tr-3xl z-10'>
                 <li>
                     <a
                         href="https://www.linkedin.com/in/d%C3%A1rio-matias-dales-gamma-587785243/"
                         target={'_blank'}
-                        className={`${styles.link} w-14 lg:w-4.7 h-14 lg:h-4.7 flex justify-center items-center rounded-full bg-white group focus:scale-95 transition`}
+                        className={`${styles.link} w-14 lg:w-4.7 h-14 lg:h-4.7 flex justify-center items-center rounded-full bg-white group focus:scale-95`}
                     >
                         <FaLinkedinIn
                             className='w-8 lg:w-11 h-8 lg:h-11 text-background group-hover:text-white'
@@ -24,7 +24,7 @@ const SocialMedia = () => {
                     <a
                         href="https://github.com/Dales10"
                         target={'_blank'}
-                        className={`${styles.link} w-14 lg:w-4.7 h-14 lg:h-4.7 flex justify-center items-center rounded-full bg-white transition duration-100 group focus:scale-95`}
+                        className={`${styles.link} w-14 lg:w-4.7 h-14 lg:h-4.7 flex justify-center items-center rounded-full bg-white group focus:scale-95`}
                     >
                         <FiGithub
                             className='w-8 lg:w-11 h-8 lg:h-11 text-background group-hover:text-white'
@@ -36,7 +36,7 @@ const SocialMedia = () => {
                     <a
                         href="https://www.instagram.com/dario_delta10/?theme=dark"
                         target={'_blank'}
-                        className={`${styles.link} w-14 lg:w-4.7 h-14 lg:h-4.7 flex justify-center items-center rounded-full bg-white transition duration-100 group focus:scale-95`}
+                        className={`${styles.link} w-14 lg:w-4.7 h-14 lg:h-4.7 flex justify-center items-center rounded-full bg-white group focus:scale-95`}
                     >
                         <SiInstagram
                             className='w-8 lg:w-11 h-8 lg:h-11 text-background group-hover:text-white'
@@ -48,7 +48,7 @@ const SocialMedia = () => {
                     <a
                         href="https://wa.me/5583986404371"
                         target={'_blank'}
-                        className={`${styles.link} w-14 lg:w-4.7 h-14 lg:h-4.7 flex justify-center items-center rounded-full bg-white transition duration-100 group focus:scale-95`}
+                        className={`${styles.link} w-14 lg:w-4.7 h-14 lg:h-4.7 flex justify-center items-center rounded-full bg-white group focus:scale-95`}
                     >
                         <BsWhatsapp
                             className='w-8 lg:w-11 h-8 lg:h-11 text-background group-hover:text-white'
@@ -60,7 +60,7 @@ const SocialMedia = () => {
                     <a
                         href=""
                         target={'_blank'}
-                        className={`${styles.link} w-14 lg:w-4.7 h-14 lg:h-4.7 flex justify-center items-center rounded-full bg-white transition duration-100 group focus:scale-95`}
+                        className={`${styles.link} w-14 lg:w-4.7 h-14 lg:h-4.7 flex justify-center items-center rounded-full bg-white group focus:scale-95`}
                     >
                         <BsTwitter
                             className='w-8 lg:w-11 h-8 lg:h-11 text-background group-hover:text-white'

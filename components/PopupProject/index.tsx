@@ -20,7 +20,7 @@ const PopupProject = ({ setPopupProject, projectData }: Props) => {
         if (elementName === 'popup-wrapper')
             setPopupProject(false);
     };
-
+    console.log('oi')
     return (
         <div
             style={positionTop}
@@ -29,7 +29,7 @@ const PopupProject = ({ setPopupProject, projectData }: Props) => {
         >
             <div className="max-w-[500px] bg-background border border-zinc-400 border-opacity-20 rounded-xl text-sm overflow-auto">
                 <div className='relative border-b border-zinc-900'>
-                    <Slider imagesUrl={projectData.images} />
+                    <Slider files={projectData.files} />
 
                     <h2 className='absolute top-2 left-3 opacity-30 text-lg font-black z-10'>
                         {projectData.name}

@@ -6,10 +6,13 @@ import 'swiper/css/effect-fade';
 import NavigationButtons from '../NavigationButtons';
 
 type Props = {
-  imagesUrl: string[];
+  files: Array<{
+    type: string;
+    url: string;
+  }>;
 };
 
-const Slider = ({ imagesUrl }: Props) => {
+const Slider = ({ files }: Props) => {
   return (
     <Swiper
       pagination={{
@@ -20,22 +23,33 @@ const Slider = ({ imagesUrl }: Props) => {
         prevEl: '.prev',
         nextEl: '.next',
       }}
-      autoplay={{
-        delay: 5000,
-        disableOnInteraction: false,
-      }}
       effect='fade'
       className="relative border-r border-zinc-900 cursor-grab"
     >
       {
-        imagesUrl.map((imageUrl, index) => {
+        files.map((file, index) => {
           return (
             <SwiperSlide key={index}>
-              <img
-                src={imageUrl}
-                className='w-full h-auto'
-                alt=''
-              />
+              {
+                file.type === 'img' && (
+                  <img
+                    src={file.url}
+                    className='w-full h-auto'
+                    alt=''
+                  />
+                )
+              }
+
+              {
+                file.type === 'video' && (
+                  <video
+                    src={file.url}
+                    controls
+                    autoPlay
+                    className='w-full h-auto'
+                  />
+                )
+              }
             </SwiperSlide>
           );
         })

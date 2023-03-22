@@ -6,5 +6,8 @@ export type ProjectProps = {
         demo: string;
         code: string;
     };
-    images: string[];
+    files: Array<{
+        type: string;
+        url: string;
+    }>;
 };

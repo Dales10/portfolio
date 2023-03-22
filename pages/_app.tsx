@@ -8,11 +8,13 @@ import { DataProvider } from './../components/Context/index';
 
 export default function App({ Component, pageProps }: AppProps) {
   return (
-    <DataProvider>
+    <>
       <Header />
       <SocialMedia />
-      <Component {...pageProps} />
+      <DataProvider>
+        <Component {...pageProps} />
+      </DataProvider>
       <Footer />
-    </DataProvider>
+    </>
   );
 };

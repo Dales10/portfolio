@@ -41,6 +41,7 @@ export const DataProvider = ({ children }: DataProviderProps) => {
                 createdBy: skill.createdBy,
             };
         });
+
         setData({
             projects: collectProjectsData,
             skills: collectSkillsData,

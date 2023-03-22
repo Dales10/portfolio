@@ -57,7 +57,7 @@ const SoftSkills = () => {
                 </div>
             </div>
 
-            <span className='w-[400px] h-[400px] absolute top-[1200px] sm:top-[1500px] md:top-[1800px] right-2/4 bg-[#0C009C] opacity-30 blur-[200px] -z-10' />
+            <span className='w-[400px] h-[400px] absolute top-[1200px] sm:top-[1500px] md:top-[1700px] right-2/4 bg-[#0C009C] opacity-30 blur-[200px] -z-10' />
         </div>
     );
 };

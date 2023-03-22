@@ -20,9 +20,9 @@ const Footer = () => {
             <button
                 type='button'
                 onClick={returnToTop}
-                className='w-14 sm:w-16 h-14 sm:h-16 absolute top-9 sm:top-1/4 right-6 xs:right-8 flex justify-center items-center bg-[#0B0B0B] hover:bg-[#0e0e0e] text-zinc-600 hover:text-gray-400 transition duration-300'
+                className='w-14 sm:w-16 h-14 sm:h-16 absolute top-9 sm:top-1/4 right-6 xs:right-8 flex justify-center items-center bg-neutral-900 bg-opacity-50 hover:bg-zinc-900 text-zinc-600 hover:text-gray-400 transition duration-300'
             >
-                <MdArrowBackIos className='w-10 h-10 rotate-90 mt-4' />
+                <MdArrowBackIos className='w-10 h-10 rotate-90 mt-4 ' />
             </button>
         </footer>
     );

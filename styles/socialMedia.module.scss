@@ -1,3 +1,7 @@
+.link {
+    transition: 300ms ease-in-out;
+}
+
 .link:hover {
     background-image: linear-gradient(to right, #00DBDE, #4700BA);
     color: #FFFFFF;

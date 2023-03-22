@@ -29,10 +29,10 @@ const ProjectsCard = ({ projectData }: Props) => {
         <>
             <div
                 onClick={e => checkClick(e)}
-                className='w-80 bg-background font-black border-2 border-zinc-900 rounded-md overflow-hidden cursor-pointer'
+                className='w-80 bg-background font-black border-2 border-zinc-900 rounded-md overflow-hidden cursor-pointer hover:scale-105 transition duration-300 hover:shadow-[0_5px_10px_rgba(256,256,256,.1)]'
             >
                 <img
-                    src={projectData.images[0]}
+                    src={projectData.files[0].url}
                     alt={`Project main image ${projectData.name}.`}
                     className='w-full h-auto'
                 />
