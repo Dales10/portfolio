@@ -1,9 +1,11 @@
 import ProjectsCard from '@/components/ProjectsCard';
 import styleButton from '../styles/button.module.scss';
 import style from '../styles/title.module.scss';
-import projectsData from '@/constants/projects';
+import { useData } from '@/components/Context';
 
 const Projetos = () => {
+    const { data } = useData();
+
     return (
         <div className="mt-24 lg:mt-32 mx-10 md:mx-16 xl:ml-28">
             <span className='block w-[350px] sm:w-125 lg:w-[700px] h-[350px] sm:h-125 lg:h-[700px] absolute top-0 sm:-top-5 lg:-top-32 left-0 sm:-left-5 lg:-left-[155px] bg-[#0C009C] opacity-30 blur-[100px] sm:blur-[200px] -z-10' />
@@ -28,7 +30,7 @@ const Projetos = () => {
 
                 <div className='flex flex-wrap gap-2 justify-center'>
                     {
-                        projectsData.map((projectData, index) => {
+                        data.projects.map((projectData, index) => {
                             return (
                                 <ProjectsCard
                                     key={index}

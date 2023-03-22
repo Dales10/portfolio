@@ -3,21 +3,23 @@ import style from '../../styles/title.module.scss';
 
 import TecnologiesCard from '@/components/TecnologiesCard';
 
-import { currentSoftSkills, futureSoftSkills, infos, technologiesGradient } from '../../constants/skills';
+import { currentSoftSkills, futureSoftSkills, technologiesGradient } from '../../constants/skills';
+import { useData } from '@/components/Context';
 
 const HardSkills = () => {
     const [stateTechnologies, setStateTechnologie] = useState<boolean[]>([]);
+    const { data } = useData();
 
     const [showInfoTechnologie, setShowInfoTechnologie] = useState({
         technologie: 'TypeScript',
-        ...infos.TypeScript,
+        ...data.skills.TypeScript,
         gradient: technologiesGradient.TypeScript,
     });
 
     const setInfoTechnologie = (technologie: string, position: number) => {
         setShowInfoTechnologie({
             technologie,
-            ...infos[technologie as keyof typeof infos],
+            ...data.skills[technologie as keyof typeof data.skills],
             gradient: technologiesGradient[technologie as keyof typeof technologiesGradient],
         });
 

@@ -2,18 +2,11 @@ import { Dispatch, SetStateAction, MouseEvent } from 'react';
 import { TfiWorld } from 'react-icons/tfi';
 import { BsGithub } from 'react-icons/bs';
 import Slider from '../Slider';
+import { ProjectProps } from '@/@types/Project';
 
 type Props = {
     setPopupProject: Dispatch<SetStateAction<boolean>>;
-    projectData: {
-        name: string;
-        description: string;
-        technologies: string[];
-        links: {
-            demo: string;
-            code: string;
-        };
-    };
+    projectData: ProjectProps;
 };
 
 const PopupProject = ({ setPopupProject, projectData }: Props) => {
@@ -34,7 +27,7 @@ const PopupProject = ({ setPopupProject, projectData }: Props) => {
         >
             <div className="max-w-[500px] bg-background border border-zinc-400 border-opacity-20 rounded-xl text-sm overflow-auto">
                 <div className='relative border-b border-zinc-900'>
-                    <Slider/>
+                    <Slider imagesUrl={projectData.images} />
 
                     <h2 className='absolute top-2 left-3 opacity-30 text-lg font-black z-10'>
                         {projectData.name}

@@ -4,9 +4,11 @@ import 'swiper/css/bundle';
 import 'swiper/css/effect-fade';
 import NavigationButtons from '../NavigationButtons';
 
-const imagesName = ['deinocheirus.jpg', 'wallpaper (1).jpg', 'wallpaper (2).jpg'];
+type Props = {
+  imagesUrl: string[];
+};
 
-const Slider = () => {
+const Slider = ({ imagesUrl }: Props) => {
   return (
     <Swiper
       pagination={{
@@ -25,11 +27,11 @@ const Slider = () => {
       className="relative border-r border-zinc-900 cursor-grab"
     >
       {
-        imagesName.map((imageName, index) => {
+        imagesUrl.map((imageUrl, index) => {
           return (
             <SwiperSlide key={index}>
               <img
-                src={`/${imageName}`}
+                src={imageUrl}
                 className='w-full h-auto'
                 alt=''
               />
