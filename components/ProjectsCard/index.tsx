@@ -1,5 +1,7 @@
 import { MouseEvent, useState, useEffect } from 'react';
+
 import PopupProject from '../PopupProject';
+
 import { ProjectProps } from '@/@types/Project';
 
 type Props = {

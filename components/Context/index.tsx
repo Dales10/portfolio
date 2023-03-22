@@ -1,8 +1,10 @@
 import { useState, useEffect, useContext, createContext, ReactNode } from "react";
 import { db, collection, getDocs } from '../../services/firebase';
+
+import Loading from "../Loading";
+
 import { ProjectProps } from "@/@types/Project";
 import { SkillProps } from "@/@types/Skill";
-import Loading from "../Loading";
 
 type DataProps = {
     projects: ProjectProps[];

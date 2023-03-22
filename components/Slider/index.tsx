@@ -2,6 +2,7 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import { Autoplay, Navigation, Pagination, EffectFade } from 'swiper';
 import 'swiper/css/bundle';
 import 'swiper/css/effect-fade';
+
 import NavigationButtons from '../NavigationButtons';
 
 type Props = {

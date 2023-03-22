@@ -1,7 +1,9 @@
-import ProjectsCard from '@/components/ProjectsCard';
+import { useData } from '@/components/Context';
+
 import styleButton from '../styles/button.module.scss';
 import style from '../styles/title.module.scss';
-import { useData } from '@/components/Context';
+
+import ProjectsCard from '@/components/ProjectsCard';
 
 const Projetos = () => {
     const { data } = useData();

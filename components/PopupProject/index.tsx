@@ -1,7 +1,9 @@
 import { Dispatch, SetStateAction, MouseEvent } from 'react';
 import { TfiWorld } from 'react-icons/tfi';
 import { BsGithub } from 'react-icons/bs';
+
 import Slider from '../Slider';
+
 import { ProjectProps } from '@/@types/Project';
 
 type Props = {
