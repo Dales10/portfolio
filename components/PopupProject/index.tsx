@@ -24,7 +24,7 @@ const PopupProject = ({ setPopupProject, projectData }: Props) => {
             onClick={e => checkClick(e)}
             className="popup-wrapper fixed top-0 right-0 bottom-0 left-0 w-screen h-screen flex justify-center items-center bg-background bg-opacity-50 px-4 z-20 backdrop-blur-sm"
         >
-            <div className="max-w-[500px] bg-background border border-zinc-400 border-opacity-20 rounded-xl text-sm overflow-auto">
+            <div className="max-w-125 bg-background border border-zinc-400 border-opacity-20 rounded-xl text-sm overflow-auto">
                 <div className='relative border-b border-zinc-900'>
                     <Slider files={projectData.files} />
 

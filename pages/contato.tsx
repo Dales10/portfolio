@@ -16,21 +16,26 @@ const schema = yup.object({
 
 type DataProps = yup.InferType<typeof schema>;
 
+const borderCyan = { borderColor: '#00DBDE' };
+const borderRed = { borderColor: '#FF0000' };
+const borderGray = { borderColor: '#757575' };
+
 const Contato = () => {
     const { register, handleSubmit, formState: { errors }, reset, watch } = useForm<DataProps>({
         resolver: yupResolver(schema),
     });
 
-    const [styleInputName, setStyleInputName] = useState({ borderColor: '#757575' })
+
+    const [styleInputName, setStyleInputName] = useState(borderGray)
     let nameLength = watch('name')?.length || 0;
 
-    const [styleInputEmail, setStyleInputEmail] = useState({ borderColor: '#757575' })
+    const [styleInputEmail, setStyleInputEmail] = useState(borderGray)
     let emailLength = watch('email')?.length || 0;
 
-    const [styleInputSubject, setStyleInputSubject] = useState({ borderColor: '#757575' })
+    const [styleInputSubject, setStyleInputSubject] = useState(borderGray)
     let subjectLength = watch('subject')?.length || 0;
 
-    const [styleInputMessage, setStyleInputMessage] = useState({ borderColor: '#757575' })
+    const [styleInputMessage, setStyleInputMessage] = useState(borderGray)
     let messageLength = watch('message')?.length || 0;
 
     const sendEmail = (data: DataProps) => {
@@ -58,21 +63,21 @@ const Contato = () => {
 
     return (
         <div className='mt-24 lg:mt-32 mx-10 md:mx-16 xl:ml-28'>
-            <span className='block w-[350px] sm:w-125 lg:w-[700px] h-[350px] sm:h-125 lg:h-[700px] absolute top-0 sm:-top-5 lg:-top-32 left-0 sm:-left-5 lg:-left-[155px] bg-[#0C009C] opacity-30 blur-[100px] sm:blur-[200px] -z-10' />
+            <span className='w-87.5 sm:w-125 lg:w-175 h-87.5 sm:h-125 lg:h-175 absolute top-0 sm:-top-5 lg:-top-32 left-0 sm:-left-5 lg:-left-40 bg-darkBlue opacity-30 blur-25 sm:blur-50 -z-10' />
 
             <div className='w-full flex flex-col items-center md:items-start text-center md:text-left'>
-                <h1 className={`${styleTitle.title} text-5xl sm:text-6xl md:text-7xl lg:text-[80px] font-black leading-tight`}>
+                <h1 className={`${styleTitle.title} text-5xl sm:text-6xl md:text-7xl lg:text-7.5xl font-black leading-tight`}>
                     Contate-me
                 </h1>
 
-                <p className='max-w-[500px] md:max-w-[700px] lg:max-w-[800px] xl:max-w-[900px] mt-12 lg:mt-20 text-xl sm:text-2xl md:text-3xl lg:text-4xl text-justify lg:text-start font-bold leading-tight'>
+                <p className='max-w-125 md:max-w-175 lg:max-w-200 xl:max-w-225 mt-12 lg:mt-20 text-xl sm:text-2xl md:text-3xl lg:text-4xl text-justify lg:text-start font-bold leading-tight'>
                     Envie-me um e-mail com a proposta que tiver para podermos negociar.
                 </p>
             </div>
 
             <form
                 onSubmit={handleSubmit(sendEmail)}
-                className='max-w-[700px] flex flex-col gap-3 mb-20 sm:mb-24 mt-20 xs:mt-28'
+                className='max-w-175 flex flex-col gap-3 mb-20 sm:mb-24 mt-20 xs:mt-28'
             >
                 <div className='flex flex-col md:flex-row gap-3'>
                     <div className='w-full'>
@@ -82,9 +87,9 @@ const Contato = () => {
                                 type='text'
                                 placeholder='Dário Matias'
                                 {...register('name')}
-                                style={errors.name?.message ? { borderColor: '#FF0000' } : styleInputName}
-                                onFocus={() => setStyleInputName({ borderColor: '#00DBDE' })}
-                                onBlur={() => { if (nameLength === 0) setStyleInputName({ borderColor: '#757575' }) }}
+                                style={errors.name?.message ? borderRed : styleInputName}
+                                onFocus={() => setStyleInputName(borderCyan)}
+                                onBlur={() => { if (nameLength === 0) setStyleInputName(borderGray) }}
                                 className='w-full h-14 bg-[#11111B] border pt-2 pl-4 placeholder:font-medium placeholder:text-[#757575] outline-none'
                             />
                             <label htmlFor="name">
@@ -104,9 +109,9 @@ const Contato = () => {
                                 type='text'
                                 placeholder='seuemail@gmail.com'
                                 {...register('email')}
-                                style={errors.email?.message ? { borderColor: '#FF0000' } : styleInputEmail}
-                                onFocus={() => setStyleInputEmail({ borderColor: '#00DBDE' })}
-                                onBlur={() => { if (emailLength === 0) setStyleInputEmail({ borderColor: '#757575' }) }}
+                                style={errors.email?.message ? borderRed : styleInputEmail}
+                                onFocus={() => setStyleInputEmail(borderCyan)}
+                                onBlur={() => { if (emailLength === 0) setStyleInputEmail(borderGray) }}
                                 className='w-full h-14 bg-[#11111B] border pt-2 pl-4 placeholder:font-medium placeholder:text-[#757575] outline-none'
                             />
                             <label htmlFor="email">
@@ -127,9 +132,9 @@ const Contato = () => {
                             type='text'
                             placeholder='Aprender mais'
                             {...register('subject')}
-                            style={errors.subject?.message ? { borderColor: '#FF0000' } : styleInputSubject}
-                            onFocus={() => setStyleInputSubject({ borderColor: '#00DBDE' })}
-                            onBlur={() => { if (subjectLength === 0) setStyleInputSubject({ borderColor: '#757575' }) }}
+                            style={errors.subject?.message ? borderRed : styleInputSubject}
+                            onFocus={() => setStyleInputSubject(borderRed)}
+                            onBlur={() => { if (subjectLength === 0) setStyleInputSubject(borderGray) }}
                             className='w-full h-14 bg-[#11111B] border pt-2 pl-4 placeholder:font-medium placeholder:text-[#757575] outline-none'
                         />
                         <label htmlFor="subject">
@@ -148,9 +153,9 @@ const Contato = () => {
                             id='message'
                             placeholder='Vamos estudar programação.'
                             {...register('message')}
-                            style={errors.message?.message ? { borderColor: '#FF0000' } : styleInputMessage}
-                            onFocus={() => setStyleInputMessage({ borderColor: '#00DBDE' })}
-                            onBlur={() => { if (messageLength === 0) setStyleInputMessage({ borderColor: '#757575' }) }}
+                            style={errors.message?.message ? borderRed : styleInputMessage}
+                            onFocus={() => setStyleInputMessage(borderCyan)}
+                            onBlur={() => { if (messageLength === 0) setStyleInputMessage(borderGray) }}
                             className='h-44 w-full bg-[#11111B] border pt-5 pl-4 placeholder:font-medium placeholder:text-[#757575] resize-none outline-none'
                         />
                         <label htmlFor="message">
@@ -164,13 +169,13 @@ const Contato = () => {
                 </div>
 
                 <div className='w-full flex justify-end'>
-                    <button className={`${styleButton.button} w-56 sm:w-[250px] h-20 sm:h-20 mt-8 text-2xl sm:text-3xl`}>
+                    <button className={`${styleButton.button} w-56 sm:w-64 h-20 sm:h-20 mt-8 text-2xl sm:text-3xl`}>
                         Enviar
                     </button>
                 </div>
             </form>
 
-            <span className='block w-[300px] sm:w-100 h-125 sm:h-[200px] lg:h-[450px] absolute top-[600px] sm:top-[790px] left-1/4 md:left-2/4 bg-[#0C009C] opacity-30 blur-[100px] sm:blur-[150px] -z-10' />
+            <span className='block w-75 sm:w-100 h-125 sm:h-52 lg:h-[450px] absolute top-[600px] sm:top-[790px] left-1/4 md:left-2/4 bg-darkBlue opacity-30 blur-25 sm:blur-37.5 -z-10' />
         </div>
     );
 };

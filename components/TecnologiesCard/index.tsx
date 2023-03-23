@@ -20,7 +20,7 @@ const TecnologiesCard = ({ setInfoTechnologie, technologie, stateTechnologie, po
         <div
             onClick={() => setInfoTechnologie(technologie, position)}
             style={stateTechnologie ? styleCardClick : {}}
-            className='flex justify-center items-center w-36 h-36 bg-background border border-[#00DBDE] rounded-[5px] hover:scale-95 transition duration-300'
+            className='flex justify-center items-center w-36 h-36 bg-background border border-cyan rounded-md hover:scale-95 transition duration-300'
         >
             <div className='flex flex-col justify-between items-center gap-2 py-1'>
                 <Image

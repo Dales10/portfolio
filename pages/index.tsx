@@ -4,14 +4,14 @@ import styleButton from '../styles/button.module.scss';
 const Home = () => {
   return (
     <div className="mt-32 lg:mt-36 mx-8 md:mx-16 xl:ml-28">
-      <span className='w-[350px] sm:w-125 lg:w-[700px] h-[350px] sm:h-125 lg:h-[700px] absolute top-0 sm:-top-5 lg:-top-32 left-0 sm:-left-5 lg:-left-40 bg-[#0C009C] opacity-30 blur-[100px] sm:blur-[200px] -z-10' />
+      <span className='w-87.5 sm:w-125 lg:w-175 h-87.5 sm:h-125 lg:h-175 absolute top-0 sm:-top-5 lg:-top-32 left-0 sm:-left-5 lg:-left-40 bg-darkBlue opacity-30 blur-25 sm:blur-50 -z-10' />
 
       <h1 className={`${styles.title} flex flex-col text-4xl sm:text-5xl md:text-6xl lg:text-7xl text-center lg:text-left font-bold leading-none`}>
         <span>
           Oi, eu sou
         </span>
 
-        <span className="text-4xl sm:text-6xl md:text-7xl lg:text-[80px] font-black">
+        <span className="text-4xl sm:text-6xl md:text-7xl lg:text-7.5xl font-black">
           Dário Matias
         </span>
 
@@ -26,7 +26,7 @@ const Home = () => {
         </button>
       </div>
 
-      <div className='w-full lg:w-[calc(100%_-_200px)] h-1 bg-[#090909] mt-44 mb-28' />
+      <div className='w-full lg:w-line h-1 bg-zinc-900 mt-44 mb-28' />
 
       <h2 className='text-4xl md:text-5xl font-extrabold'>
         Mensagem
@@ -41,7 +41,7 @@ const Home = () => {
         </p>
       </div>
 
-      <span className='w-100 lg:w-[550px] h-100 lg:h-[550px] absolute top-[900px] md:top-250 right-1/4 bg-[#0C009C] opacity-30 blur-[200px] -z-10' />
+      <span className='w-100 lg:w-137 h-100 lg:h-[550px] absolute top-[900px] md:top-250 right-1/4 bg-darkBlue opacity-30 blur-50 -z-10' />
     </div>
   );
 };
