@@ -170,7 +170,7 @@ const Contato = () => {
                 </div>
             </form>
 
-            <span className='block w-[300px] sm:w-100 lg:w-[400px] h-125 sm:h-[200px] lg:h-[450px] absolute top-[600px] sm:top-[790px] left-1/4 md:left-2/4 bg-[#0C009C] opacity-30 blur-[100px] sm:blur-[150px] -z-10' />
+            <span className='block w-[300px] sm:w-100 h-125 sm:h-[200px] lg:h-[450px] absolute top-[600px] sm:top-[790px] left-1/4 md:left-2/4 bg-[#0C009C] opacity-30 blur-[100px] sm:blur-[150px] -z-10' />
         </div>
     );
 };

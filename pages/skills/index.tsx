@@ -35,7 +35,7 @@ const Skills = () => {
                 </div>
             </div>
 
-            <span className='w-[300px] lg:w-[600px] h-[200px] absolute top-[1000px] lg:top-[900px] right-1/4 bg-[#0C009C] opacity-30 blur-[100px] lg:blur-[200px] -z-10' />
+            <span className='w-[300px] lg:w-[600px] h-[200px] absolute top-[800px] lg:top-[900px] right-1/4 bg-[#0C009C] opacity-30 blur-[100px] lg:blur-[200px] -z-10' />
 
             <h2 className='text-4xl md:text-5xl font-extrabold'>
                 Conclusão
@@ -46,7 +46,7 @@ const Skills = () => {
             </p>
 
 
-            <span className='w-[300px] lg:w-[400px] h-[200px] lg:h-[300px] absolute top-[1800px] sm:top-[1900px] lg:top-[1800px] -left-10 bg-[#0C009C] opacity-30 blur-[100px] lg:blur-[200px] -z-10' />
+            <span className='w-[300px] lg:w-[400px] h-[200px] lg:h-[300px] absolute top-[1600px] md:top-[1600px] lg:top-[1800px] -left-10 bg-[#0C009C] opacity-30 blur-[100px] lg:blur-[200px] -z-10' />
         </div>
     );
 };

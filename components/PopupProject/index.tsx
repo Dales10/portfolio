@@ -12,26 +12,23 @@ type Props = {
 };
 
 const PopupProject = ({ setPopupProject, projectData }: Props) => {
-    const positionTop = { top: `${window.pageYOffset}px` };
-
     const checkClick = (e: MouseEvent<HTMLDivElement, globalThis.MouseEvent>) => {
         const elementName = (e.target as Element).classList[0];
 
         if (elementName === 'popup-wrapper')
             setPopupProject(false);
     };
-    console.log('oi')
+
     return (
         <div
-            style={positionTop}
             onClick={e => checkClick(e)}
-            className="popup-wrapper absolute w-screen h-screen top-0 left-0 flex justify-center items-center bg-background bg-opacity-50 px-4 z-20 backdrop-blur-sm"
+            className="popup-wrapper fixed top-0 right-0 bottom-0 left-0 w-screen h-screen flex justify-center items-center bg-background bg-opacity-50 px-4 z-20 backdrop-blur-sm"
         >
             <div className="max-w-[500px] bg-background border border-zinc-400 border-opacity-20 rounded-xl text-sm overflow-auto">
                 <div className='relative border-b border-zinc-900'>
                     <Slider files={projectData.files} />
 
-                    <h2 className='absolute top-2 left-3 opacity-30 text-lg font-black z-10'>
+                    <h2 className='absolute top-1 xs:top-2 left-2 xs:left-3 opacity-40 text-base xs:text-lg font-black z-10'>
                         {projectData.name}
                     </h2>
                 </div>

@@ -3,10 +3,14 @@ import { useData } from '@/components/Context';
 import styleButton from '../styles/button.module.scss';
 import styleTitle from '../styles/title.module.scss';
 
+import Loading from '@/components/Loading';
 import ProjectsCard from '@/components/ProjectsCard';
 
 const Projetos = () => {
     const { data } = useData();
+
+    if (JSON.stringify(data) === '{}')
+        return <Loading />;
 
     return (
         <div className="mt-24 lg:mt-32 mx-10 md:mx-16 xl:ml-28">
@@ -23,14 +27,19 @@ const Projetos = () => {
             </div>
 
             <div className='flex justify-center lg:justify-start'>
-                <button className={`${styleButton.button} w-64 sm:w-[300px] h-20 sm:h-20 mt-24 md:mt-20 lg:mt-24  text-2xl sm:text-3xl`}>
-                    Começar
+                <button className={`${styleButton.button} w-64 sm:w-[300px] h-20 sm:h-20 mt-24 md:mt-20 lg:mt-24 text-2xl sm:text-3xl`}>
+                    <a
+                        href="#lista"
+                        className='flex justify-center items-center w-full h-full rounded-3xl'
+                    >
+                        Começar
+                    </a>
                 </button>
             </div>
 
             <div id='title' className='w-full lg:w-[calc(100%_-_100px)] border-t-4 border-zinc-900 pt-44 xs:mt-20 mt-32 md:mt-72 mb-36'>
 
-                <div className='flex flex-wrap gap-2 justify-center'>
+                <div id='lista' className='flex flex-wrap gap-2 justify-center'>
                     {
                         data.projects.map((projectData, index) => {
                             return (
@@ -43,6 +52,8 @@ const Projetos = () => {
                     }
                 </div>
             </div>
+
+            <span className='block w-80 xs:w-100 h-80 xs:h-125 sm:h-[200px] lg:h-[450px] absolute top-[900px] xs:top-[800px] sm:top-[1100px] left-[5%] xs:left-[15%] md:left-1/4 bg-[#0C009C] opacity-30 blur-[150px] -z-10' />
         </div>
     );
 };
