@@ -175,7 +175,7 @@ const Header = () => {
                                         {
                                             optionsSkills && (
                                                 <div className='ml-4'>
-                                                    <ul>
+                                                    <ul className='flex flex-col gap-1'>
                                                         <li>
                                                             <Link href='/skills/softSkills' legacyBehavior>
                                                                 <a

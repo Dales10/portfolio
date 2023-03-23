@@ -133,7 +133,7 @@ const Contato = () => {
                             placeholder='Aprender mais'
                             {...register('subject')}
                             style={errors.subject?.message ? borderRed : styleInputSubject}
-                            onFocus={() => setStyleInputSubject(borderRed)}
+                            onFocus={() => setStyleInputSubject(borderCyan)}
                             onBlur={() => { if (subjectLength === 0) setStyleInputSubject(borderGray) }}
                             className='w-full h-14 bg-[#11111B] border pt-2 pl-4 placeholder:font-medium placeholder:text-[#757575] outline-none'
                         />
@@ -168,7 +168,7 @@ const Contato = () => {
                     </span>
                 </div>
 
-                <div className='w-full flex justify-end'>
+                <div className='w-full flex justify-center xs:justify-end'>
                     <button className={`${styleButton.button} w-56 sm:w-64 h-20 sm:h-20 mt-8 text-2xl sm:text-3xl`}>
                         Enviar
                     </button>
