@@ -1,7 +1,6 @@
 import { useState, useEffect } from 'react';
 import style from '../../styles/title.module.scss';
 
-import Loading from '@/components/Loading';
 import TecnologiesCard from '@/components/TecnologiesCard';
 
 import { currentSoftSkills, futureSoftSkills, technologiesGradient } from '../../constants/skills';
@@ -37,12 +36,9 @@ const HardSkills = () => {
     };
 
     useEffect(() => {
-        if (stateTechnologies.length > 0)
+        if (stateTechnologies.length)
             setStateTechnologie(Array(currentSoftSkills.length).fill(false));
     }, []);
-
-    if (JSON.stringify(data) === '{}')
-        return <Loading />;
 
     return (
         <div className="mt-24 lg:mt-32 mx-10 md:mx-16 xl:ml-28">

@@ -3,14 +3,10 @@ import { useData } from '@/components/Context';
 import styleButton from '../styles/button.module.scss';
 import styleTitle from '../styles/title.module.scss';
 
-import Loading from '@/components/Loading';
 import ProjectsCard from '@/components/ProjectsCard';
 
 const Projetos = () => {
     const { data } = useData();
-
-    if (JSON.stringify(data) === '{}')
-        return <Loading />;
 
     return (
         <div className="mt-24 lg:mt-32 mx-10 md:mx-16 xl:ml-28">
