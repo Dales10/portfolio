@@ -36,8 +36,7 @@ const HardSkills = () => {
     };
 
     useEffect(() => {
-        if (stateTechnologies.length)
-            setStateTechnologie(Array(currentSoftSkills.length).fill(false));
+        setStateTechnologie(Array(currentSoftSkills.length + futureSoftSkills.length).fill(false));
     }, []);
 
     return (
@@ -121,8 +120,8 @@ const HardSkills = () => {
                                     <TecnologiesCard
                                         technologie={technologie}
                                         setInfoTechnologie={setInfoTechnologie}
-                                        stateTechnologie={stateTechnologies[index]}
-                                        position={index}
+                                        stateTechnologie={stateTechnologies[index + currentSoftSkills.length]}
+                                        position={index + currentSoftSkills.length}
                                     />
                                 </a>
                             )
