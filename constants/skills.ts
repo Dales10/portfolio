@@ -21,11 +21,13 @@ const futureSoftSkills = [
     'C++',
     'Python',
     'Kotlin',
-    'Lua',
+    'Dart',
     'Nest.js',
     'React Native',
     'Mongodb',
     'GraphQL',
+    'Angular',
+    'Flutter',
     '.Net',
 ];
 
