@@ -1,3 +1,4 @@
+import { useState, useEffect } from 'react';
 import styles from '../styles/contact.module.scss';
 import styleTitle from '../styles/title.module.scss';
 import styleButton from '../styles/button.module.scss';
@@ -5,7 +6,7 @@ import { useForm } from 'react-hook-form';
 import * as yup from 'yup';
 import { yupResolver } from '@hookform/resolvers/yup';
 import emailjs from '@emailjs/browser';
-import { useState } from 'react';
+import EmailSentSuccessfully from '@/components/EmailSentSuccessfully';
 
 const schema = yup.object({
     name: yup.string().required('O nome é obrigatório.').min(5, 'O mínimo de caracteres é 5.').max(50, 'O máximo de caracteres é 50.'),
@@ -21,10 +22,11 @@ const borderRed = { borderColor: '#FF0000' };
 const borderGray = { borderColor: '#757575' };
 
 const Contato = () => {
+    const [popupSucess, setPopupSucess] = useState(false);
+
     const { register, handleSubmit, formState: { errors }, reset, watch } = useForm<DataProps>({
         resolver: yupResolver(schema),
     });
-
 
     const [styleInputName, setStyleInputName] = useState(borderGray)
     let nameLength = watch('name')?.length || 0;
@@ -53,13 +55,24 @@ const Contato = () => {
             process.env.NEXT_PUBLIC_PUBLIC_KEY!,
         )
             .then(() => {
-                alert('Email enviado com sucesso!');
+                setPopupSucess(true);
                 reset();
             })
             .catch(err => {
                 console.log(err);
             });
     };
+
+    const popupTime = () => {
+        setTimeout(() => {
+            setPopupSucess(false);
+        }, 3600);
+    };
+
+    useEffect(() => {
+        if (popupSucess)
+            popupTime();
+    }, [popupSucess]);
 
     return (
         <div className='mt-24 lg:mt-32 mx-10 md:mx-16 xl:ml-28'>
@@ -176,6 +189,14 @@ const Contato = () => {
             </form>
 
             <span className='block w-75 sm:w-100 h-125 sm:h-52 lg:h-[450px] absolute top-[600px] sm:top-[790px] left-1/4 md:left-2/4 bg-darkBlue opacity-30 blur-25 sm:blur-37.5 -z-10' />
+
+            {
+                popupSucess && (
+                    <EmailSentSuccessfully
+                        setPopupSucess={setPopupSucess}
+                    />
+                )
+            }
         </div>
     );
 };
