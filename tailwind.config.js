@@ -36,6 +36,9 @@ module.exports = {
         "background": "#000005",
         'darkBlue': '#0C009C',
         'cyan': '#00DBDE',
+        'lightGray': '#bdbdbd',
+        'gray': '#757575',
+        'darkGray': '#11111B',
       },
       blur: {
         '25': '6.25rem',

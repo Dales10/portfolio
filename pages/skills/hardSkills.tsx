@@ -76,10 +76,10 @@ const HardSkills = () => {
                         {showInfoTechnologie.info}
                     </p>
                     <p>
-                        <span className='font-bold'>Criado por:</span> {showInfoTechnologie.createdBy}.
+                        <span className='font-bold'>Criado(a) por:</span> {showInfoTechnologie.createdBy}.
                     </p>
                     <p>
-                        <span className='font-bold'>Lançado em:</span> {showInfoTechnologie.created}.
+                        <span className='font-bold'>Lançado(a) em:</span> {showInfoTechnologie.created}.
                     </p>
                 </div>
 

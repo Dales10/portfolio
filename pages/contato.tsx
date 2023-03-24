@@ -17,9 +17,7 @@ const schema = yup.object({
 
 type DataProps = yup.InferType<typeof schema>;
 
-const borderCyan = { borderColor: '#00DBDE' };
 const borderRed = { borderColor: '#FF0000' };
-const borderGray = { borderColor: '#757575' };
 
 const messagesContents = {
     success: {
@@ -35,21 +33,9 @@ const messagesContents = {
 const Contato = () => {
     const [showMessage, setShowMessage] = useState({ status: false, type: '' });
 
-    const { register, handleSubmit, formState: { errors }, reset, watch } = useForm<DataProps>({
+    const { register, handleSubmit, formState: { errors }, reset } = useForm<DataProps>({
         resolver: yupResolver(schema),
     });
-
-    const [styleInputName, setStyleInputName] = useState(borderGray)
-    let nameLength = watch('name')?.length || 0;
-
-    const [styleInputEmail, setStyleInputEmail] = useState(borderGray)
-    let emailLength = watch('email')?.length || 0;
-
-    const [styleInputSubject, setStyleInputSubject] = useState(borderGray)
-    let subjectLength = watch('subject')?.length || 0;
-
-    const [styleInputMessage, setStyleInputMessage] = useState(borderGray)
-    let messageLength = watch('message')?.length || 0;
 
     const sendEmail = (data: DataProps) => {
         const template_params = {
@@ -59,12 +45,13 @@ const Contato = () => {
             message: data.message,
         };
 
-        emailjs.send(
-            process.env.NEXT_PUBLIC_SERVICE_ID!,
-            process.env.NEXT_PUBLIC_TEMPLATE_ID!,
-            template_params,
-            process.env.NEXT_PUBLIC_PUBLIC_KEY!,
-        )
+        emailjs
+            .send(
+                process.env.NEXT_PUBLIC_SERVICE_ID!,
+                process.env.NEXT_PUBLIC_TEMPLATE_ID!,
+                template_params,
+                process.env.NEXT_PUBLIC_PUBLIC_KEY!,
+            )
             .then(() => {
                 setShowMessage({ status: true, type: 'success' });
                 reset({
@@ -73,11 +60,6 @@ const Contato = () => {
                     subject: '',
                     message: '',
                 });
-
-                setStyleInputName(borderGray);
-                setStyleInputEmail(borderGray);
-                setStyleInputSubject(borderGray);
-                setStyleInputMessage(borderGray);
             })
             .catch(err => {
                 setShowMessage({ status: true, type: 'error' });
@@ -122,10 +104,8 @@ const Contato = () => {
                                 type='text'
                                 placeholder='Dário Matias'
                                 {...register('name')}
-                                style={errors.name?.message ? borderRed : styleInputName}
-                                onFocus={() => setStyleInputName(borderCyan)}
-                                onBlur={() => { if (nameLength === 0) setStyleInputName(borderGray) }}
-                                className='w-full h-14 bg-[#11111B] border pt-2 pl-4 placeholder:font-medium placeholder:text-[#757575] outline-none'
+                                style={errors.name?.message ? borderRed : {}}
+                                className='w-full h-14 bg-darkGray border pt-2 pl-4 placeholder:font-medium border-gray placeholder:text-gray hover:border-lightGray focus:border-cyan transition duration-300 outline-none'
                             />
                             <label htmlFor="name">
                                 Nome:
@@ -144,10 +124,8 @@ const Contato = () => {
                                 type='text'
                                 placeholder='seuemail@gmail.com'
                                 {...register('email')}
-                                style={errors.email?.message ? borderRed : styleInputEmail}
-                                onFocus={() => setStyleInputEmail(borderCyan)}
-                                onBlur={() => { if (emailLength === 0) setStyleInputEmail(borderGray) }}
-                                className='w-full h-14 bg-[#11111B] border pt-2 pl-4 placeholder:font-medium placeholder:text-[#757575] outline-none'
+                                style={errors.email?.message ? borderRed : {}}
+                                className='w-full h-14 bg-darkGray border pt-2 pl-4 placeholder:font-medium border-gray placeholder:text-gray hover:border-lightGray focus:border-cyan transition duration-300 outline-none'
                             />
                             <label htmlFor="email">
                                 Email:
@@ -167,10 +145,8 @@ const Contato = () => {
                             type='text'
                             placeholder='Aprender mais'
                             {...register('subject')}
-                            style={errors.subject?.message ? borderRed : styleInputSubject}
-                            onFocus={() => setStyleInputSubject(borderCyan)}
-                            onBlur={() => { if (subjectLength === 0) setStyleInputSubject(borderGray) }}
-                            className='w-full h-14 bg-[#11111B] border pt-2 pl-4 placeholder:font-medium placeholder:text-[#757575] outline-none'
+                            style={errors.subject?.message ? borderRed : {}}
+                            className='w-full h-14 bg-darkGray border pt-2 pl-4 placeholder:font-medium border-gray placeholder:text-gray hover:border-lightGray focus:border-cyan transition duration-300 outline-none'
                         />
                         <label htmlFor="subject">
                             Assunto:
@@ -188,10 +164,8 @@ const Contato = () => {
                             id='message'
                             placeholder='Vamos estudar programação.'
                             {...register('message')}
-                            style={errors.message?.message ? borderRed : styleInputMessage}
-                            onFocus={() => setStyleInputMessage(borderCyan)}
-                            onBlur={() => { if (messageLength === 0) setStyleInputMessage(borderGray) }}
-                            className='h-44 w-full bg-[#11111B] border pt-5 pl-4 placeholder:font-medium placeholder:text-[#757575] resize-none outline-none'
+                            style={errors.message?.message ? borderRed : {}}
+                            className='h-44 w-full bg-darkGray border pt-5 pl-4 placeholder:font-medium border-gray placeholder:text-gray hover:border-lightGray focus:border-cyan transition duration-300 outline-none'
                         />
                         <label htmlFor="message">
                             Mensagem:

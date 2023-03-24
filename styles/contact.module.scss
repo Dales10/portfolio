@@ -5,6 +5,11 @@
         width: 100%;
     }
 
+    input:not(:placeholder-shown),
+    textarea:not(:placeholder-shown) {
+        border-color: #00DBDE;
+    }
+
     input:focus~label,
     input:not(:placeholder-shown)~label,
     textarea:focus~label,
