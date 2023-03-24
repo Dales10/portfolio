@@ -21,8 +21,19 @@ const borderCyan = { borderColor: '#00DBDE' };
 const borderRed = { borderColor: '#FF0000' };
 const borderGray = { borderColor: '#757575' };
 
+const messagesContents = {
+    success: {
+        title: 'Sucesso',
+        message: 'O email foi enviado com sucesso.',
+    },
+    error: {
+        title: 'Ocorreu um erro',
+        message: 'Por favor, tente novamente ou volte mais tarde',
+    },
+};
+
 const Contato = () => {
-    const [popupSucess, setPopupSucess] = useState(false);
+    const [showMessage, setShowMessage] = useState({ status: false, type: '' });
 
     const { register, handleSubmit, formState: { errors }, reset, watch } = useForm<DataProps>({
         resolver: yupResolver(schema),
@@ -55,24 +66,35 @@ const Contato = () => {
             process.env.NEXT_PUBLIC_PUBLIC_KEY!,
         )
             .then(() => {
-                setPopupSucess(true);
-                reset();
+                setShowMessage({ status: true, type: 'success' });
+                reset({
+                    name: '',
+                    email: '',
+                    subject: '',
+                    message: '',
+                });
+
+                setStyleInputName(borderGray);
+                setStyleInputEmail(borderGray);
+                setStyleInputSubject(borderGray);
+                setStyleInputMessage(borderGray);
             })
             .catch(err => {
+                setShowMessage({ status: true, type: 'error' });
                 console.log(err);
             });
     };
 
     const popupTime = () => {
         setTimeout(() => {
-            setPopupSucess(false);
-        }, 3600);
+            setShowMessage({ status: false, type: '' });
+        }, 4600);
     };
 
     useEffect(() => {
-        if (popupSucess)
+        if (showMessage.status)
             popupTime();
-    }, [popupSucess]);
+    }, [showMessage]);
 
     return (
         <div className='mt-24 lg:mt-32 mx-10 md:mx-16 xl:ml-28'>
@@ -191,9 +213,11 @@ const Contato = () => {
             <span className='block w-75 sm:w-100 h-125 sm:h-52 lg:h-[450px] absolute top-[600px] sm:top-[790px] left-1/4 md:left-2/4 bg-darkBlue opacity-30 blur-25 sm:blur-37.5 -z-10' />
 
             {
-                popupSucess && (
+                showMessage.status && (
                     <EmailSentSuccessfully
-                        setPopupSucess={setPopupSucess}
+                        type={showMessage.type}
+                        contents={messagesContents[showMessage.type as keyof typeof messagesContents]}
+                        setShowMessage={setShowMessage}
                     />
                 )
             }
