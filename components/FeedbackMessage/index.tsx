@@ -1,5 +1,6 @@
 import { useState, useEffect, Dispatch, SetStateAction } from 'react';
 import Image from 'next/image';
+import { TbAlertOctagon } from 'react-icons/tb';
 import { IoCloseSharp } from 'react-icons/io5';
 
 type Props = {
@@ -27,7 +28,7 @@ const colors = {
     },
 };
 
-const EmailSentSuccessfully = ({ type, contents, setShowMessage }: Props) => {
+const FeedbackMessage = ({ type, contents, setShowMessage }: Props) => {
     const [width, setWidth] = useState(0);
 
     const color = colors[type as keyof typeof colors];
@@ -56,17 +57,28 @@ const EmailSentSuccessfully = ({ type, contents, setShowMessage }: Props) => {
             className='fixed top-4 left-2/4 w-[340px] flex -translate-x-2/4 rounded-sm'
         >
             <div>
-                <div className='flex gap-4 p-4'>
-                    <Image
-                        src='/icons/ok.svg'
-                        width={20}
-                        height={20}
-                        alt='Ok icon'
-                    />
+                <div className='flex items-center gap-4 p-4'>
+                    {
+                        type === 'success' && (
+                            <Image
+                                src='/icons/ok.svg'
+                                width={20}
+                                height={20}
+                                alt='Ok icon'
+                            />
+                        )
+                    }
+
+                    {
+                        type === 'error' && (
+                            <TbAlertOctagon className='w-10 h-10 text-white' />
+                        )
+                    }
                     <div>
                         <h1 className="text-xl font-bold">
                             {contents.title}
                         </h1>
+
                         <p>
                             {contents.message}
                         </p>
@@ -93,4 +105,4 @@ const EmailSentSuccessfully = ({ type, contents, setShowMessage }: Props) => {
     );
 };
 
-export default EmailSentSuccessfully;
+export default FeedbackMessage;

@@ -6,7 +6,7 @@ import { useForm } from 'react-hook-form';
 import * as yup from 'yup';
 import { yupResolver } from '@hookform/resolvers/yup';
 import emailjs from '@emailjs/browser';
-import EmailSentSuccessfully from '@/components/EmailSentSuccessfully';
+import FeedbackMessage from '@/components/FeedbackMessage';
 
 const schema = yup.object({
     name: yup.string().required('O nome é obrigatório.').min(5, 'O mínimo de caracteres é 5.').max(50, 'O máximo de caracteres é 50.'),
@@ -28,7 +28,7 @@ const messagesContents = {
     },
     error: {
         title: 'Ocorreu um erro',
-        message: 'Por favor, tente novamente ou volte mais tarde',
+        message: 'Por favor, tente novamente ou volte mais tarde.',
     },
 };
 
@@ -214,7 +214,7 @@ const Contato = () => {
 
             {
                 showMessage.status && (
-                    <EmailSentSuccessfully
+                    <FeedbackMessage
                         type={showMessage.type}
                         contents={messagesContents[showMessage.type as keyof typeof messagesContents]}
                         setShowMessage={setShowMessage}
