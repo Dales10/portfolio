@@ -21,7 +21,7 @@ const Home = () => {
       </h1>
 
       <div className='flex justify-center lg:justify-start'>
-        <button className={`${styleButton.button} w-64 sm:w-[300px] h-20 sm:h-20 mt-24 md:mt-20 lg:mt-24  text-2xl sm:text-3xl`}>
+        <button className={`${styleButton.button} w-60 sm:w-[300px] h-20 sm:h-24 mt-24 md:mt-20 lg:mt-24  text-2xl sm:text-3xl`}>
           Download CV
         </button>
       </div>
