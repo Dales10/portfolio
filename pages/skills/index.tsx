@@ -46,14 +46,19 @@ const Skills = () => {
 
             <span className='w-75 lg:w-[600px] h-52 absolute top-[800px] lg:top-[900px] right-1/4 bg-darkBlue opacity-30 blur-25 lg:blur-50 -z-10' />
 
-            <div data-aos='fade-up'>
-                <h2 className='text-4xl md:text-5xl font-extrabold'>
-                    Conclusão
-                </h2>
-                <p className='text-xl md:text-2xl text-justify font-bold mt-20 lg:mt-32 lg:mr-52 mb-24 lg:mb-44 indent-10 leading-tight'>
-                    O mundo da tecnologia é muito amplo, todos os anos surgem novas ferramentas que deixam a criação de sites e softwares mais simples e eficiente. Citei apenas as que achei de maior relevância, como as principais bibliotecas por exemplo, mas estou sempre disposto em estudar ainda mais, desde que o momento permita.
-                </p>
-            </div>
+            <h2
+                data-aos='fade-up'
+                className='text-4xl md:text-5xl font-extrabold'
+            >
+                Conclusão
+            </h2>
+
+            <p
+                data-aos='fade-up'
+                className='text-xl md:text-2xl text-justify font-bold mt-20 lg:mt-32 lg:mr-52 mb-24 lg:mb-44 indent-10 leading-tight'
+            >
+                O mundo da tecnologia é muito amplo, todos os anos surgem novas ferramentas que deixam a criação de sites e softwares mais simples e eficiente. Citei apenas as que achei de maior relevância, como as principais bibliotecas por exemplo, mas estou sempre disposto em estudar ainda mais, desde que o momento permita.
+            </p>
 
             <span className='w-75 lg:w-100 h-52 lg:h-75 absolute top-[1600px] md:top-[1600px] lg:top-[1800px] -left-10 bg-darkBlue opacity-30 blur-25 lg:blur-50 -z-10' />
         </div>
