@@ -22,7 +22,7 @@ const SocialMedia = () => {
 
                 <li>
                     <a
-                        href="https://github.com/Dales10"
+                        href="https://github.com/dariomatias-dev"
                         target={'_blank'}
                         className={`${styles.link} w-14 lg:w-4.7 h-14 lg:h-4.7 flex justify-center items-center rounded-full bg-white group focus:scale-95`}
                     >
@@ -58,7 +58,7 @@ const SocialMedia = () => {
 
                 <li>
                     <a
-                        href=""
+                        href="https://twitter.com/matiasdario752"
                         target={'_blank'}
                         className={`${styles.link} w-14 lg:w-4.7 h-14 lg:h-4.7 flex justify-center items-center rounded-full bg-white group focus:scale-95`}
                     >

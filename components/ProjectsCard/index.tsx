@@ -1,3 +1,5 @@
+import "aos/dist/aos.css";
+
 import { MouseEvent, useState, useEffect } from 'react';
 
 import PopupProject from '../PopupProject';
@@ -29,6 +31,7 @@ const ProjectsCard = ({ projectData }: Props) => {
         <>
             <div
                 onClick={e => checkClick(e)}
+                data-aos='fade-up'
                 className='w-80 bg-background font-black border-2 border-zinc-900 rounded-md overflow-hidden cursor-pointer hover:scale-105 transition duration-300 hover:shadow-[0_5px_10px_rgba(256,256,256,.1)]'
             >
                 <img

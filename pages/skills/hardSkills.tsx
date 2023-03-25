@@ -1,3 +1,5 @@
+import "aos/dist/aos.css";
+
 import { useState, useEffect } from 'react';
 import style from '../../styles/title.module.scss';
 
@@ -43,7 +45,10 @@ const HardSkills = () => {
         <div className="mt-24 lg:mt-32 mx-10 md:mx-16 xl:ml-28">
             <span className='w-87.5 sm:w-125 lg:w-175 h-87.5 sm:h-125 lg:h-175 absolute top-0 sm:-top-5 lg:-top-32 left-0 sm:-left-5 lg:-left-40 bg-darkBlue opacity-30 blur-25 sm:blur-50 -z-10' />
 
-            <div className='w-full flex flex-col items-center md:items-start text-center md:text-left'>
+            <div
+                data-aos='fade-right'
+                className='w-full flex flex-col items-center md:items-start text-center md:text-left'
+            >
                 <h1 className={`${style.title} text-5xl sm:text-6xl md:text-7xl lg:text-7.5xl font-black leading-tight`}>
                     Hard Skills
                 </h1>
@@ -54,11 +59,17 @@ const HardSkills = () => {
             </div>
 
             <div id='title' className='w-full lg:w-line border-t-4 border-zinc-900 pt-44 xs:mt-20 mt-32 md:mt-72 mb-36'>
-                <h2 className='text-3xl xs:text-4xl md:text-5xl text-center font-extrabold'>
+                <h2
+                    data-aos='fade-up'
+                    className='text-3xl xs:text-4xl md:text-5xl text-center font-extrabold'
+                >
                     Minhas Hard Skills
                 </h2>
 
-                <div className='max-w-175 flex flex-col gap-3 mt-24 font-normal'>
+                <div
+                    data-aos='fade-right'
+                    className='max-w-175 flex flex-col gap-3 mt-24 font-normal'
+                >
                     <h2 className='text-2xl xs:text-3xl md:text-4xl text-center xs:text-start font-extrabold'>
                         <span
                             style={{
@@ -92,6 +103,7 @@ const HardSkills = () => {
                                 <a
                                     key={technologie}
                                     href="#title"
+                                    data-aos='fade-up'
                                 >
                                     <TecnologiesCard
                                         technologie={technologie}
@@ -105,7 +117,10 @@ const HardSkills = () => {
                     }
                 </div>
 
-                <h2 className='max-w-[1100px] text-2xl xs:text-3xl sm:text-4xl text-justify sm:text-start font-bold mt-36'>
+                <h2
+                    data-aos='fade-up'
+                    className='max-w-[1100px] text-2xl xs:text-3xl sm:text-4xl text-justify sm:text-start font-bold mt-36'
+                >
                     Mas também há as tecnologias que tenho interesse em aprender futuramente, ou quando tiver uma oportunidade, que são as seguintes:
                 </h2>
 
@@ -116,6 +131,7 @@ const HardSkills = () => {
                                 <a
                                     key={technologie}
                                     href="#title"
+                                    data-aos='fade-up'
                                 >
                                     <TecnologiesCard
                                         technologie={technologie}

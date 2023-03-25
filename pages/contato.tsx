@@ -1,11 +1,15 @@
+import "aos/dist/aos.css";
+
 import { useState, useEffect } from 'react';
 import styles from '../styles/contact.module.scss';
 import styleTitle from '../styles/title.module.scss';
 import styleButton from '../styles/button.module.scss';
+
 import { useForm } from 'react-hook-form';
 import * as yup from 'yup';
 import { yupResolver } from '@hookform/resolvers/yup';
 import emailjs from '@emailjs/browser';
+
 import FeedbackMessage from '@/components/FeedbackMessage';
 
 const schema = yup.object({
@@ -82,7 +86,10 @@ const Contato = () => {
         <div className='mt-24 lg:mt-32 mx-10 md:mx-16 xl:ml-28'>
             <span className='w-87.5 sm:w-125 lg:w-175 h-87.5 sm:h-125 lg:h-175 absolute top-0 sm:-top-5 lg:-top-32 left-0 sm:-left-5 lg:-left-40 bg-darkBlue opacity-30 blur-25 sm:blur-50 -z-10' />
 
-            <div className='w-full flex flex-col items-center md:items-start text-center md:text-left'>
+            <div
+                data-aos='fade-right'
+                className='w-full flex flex-col items-center md:items-start text-center md:text-left'
+            >
                 <h1 className={`${styleTitle.title} text-5xl sm:text-6xl md:text-7xl lg:text-7.5xl font-black leading-tight`}>
                     Contate-me
                 </h1>
@@ -94,6 +101,7 @@ const Contato = () => {
 
             <form
                 onSubmit={handleSubmit(sendEmail)}
+                data-aos='fade-up'
                 className='max-w-175 flex flex-col gap-3 mb-20 sm:mb-24 mt-20 xs:mt-28'
             >
                 <div className='flex flex-col md:flex-row gap-3'>

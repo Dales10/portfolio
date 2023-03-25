@@ -1,3 +1,5 @@
+import AOS from 'aos';
+
 import { useState, useEffect, useContext, createContext, ReactNode } from "react";
 import { db, collection, getDocs } from '../../services/firebase';
 
@@ -49,6 +51,9 @@ export const DataProvider = ({ children }: DataProviderProps) => {
     };
 
     useEffect(() => {
+        AOS.init({
+            duration: 1200,
+        });
         readDataFromDatabase();
     }, []);
 
