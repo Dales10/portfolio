@@ -1,38 +1,79 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Portfólio
 
-## Getting Started
+<div style="display: inline_block">
+  <img src="https://img.shields.io/badge/license-mit-green" />
+  <img src="https://img.shields.io/badge/status%20-active-blue" />
+</div>
 
-First, run the development server:
+## Projeto
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-```
+### O que irá encontrar em cada página:
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+<p>
+• Home - página principal do portfólio, onde poderá fazer o download do meu currículo.
+<p>
+• Sobre mim - nessa página encontrará uma breve explicação de quem sou.
+<p>
+• Skills - decidi dividir as skills em Soft Skills e Hard Skills para poder explicar e exemplificar cada uma adequadamente, concluindo com uma mensagem a respeito das skills.
+<p>
+• Projetos - nessa página estará os meus principais projetos criados até então.
+<p>
+• Contato - caso queira, poderá enviar-me um e-mail com a proposta que tiver.
+<p>
 
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
+## Link de acesso
+Veja esse projeto em execução: [demo](https://portfolio-dales10.vercel.app/).
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
+## Screenshots
+<h3>Desktop</h3>
+<img style="width: 50%" src="./screenshots/desktop.png" alt="My photo"/>
+<h3>Mobile</h3>
+<img style="width: 50%;" src="./screenshots/mobile.png" width="100px;" alt="My photo"/>
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+## 🛠 Tecnologias
 
-## Learn More
+As seguintes ferramentas foram usadas na construção desse projeto:
 
-To learn more about Next.js, take a look at the following resources:
+- [TypeScript](https://www.typescriptlang.org/)
+- [Next.js](https://nextjs.org/)
+- [TailwindCSS](https://tailwindcss.com/)
+- [SASS](https://sass-lang.com/)
+- [Firebase](https://firebase.google.com/)
+- [React hook form](https://react-hook-form.com/api/useform/)
+- [Swiper](https://swiperjs.com/)
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+<br />
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+## Autor
 
-## Deploy on Vercel
+<img style="border-radius: 50%;" src="./assets/my-photo" width="100px;" alt="My photo"/>
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+<sub>
+  <b>Dário Matias</b>
+</sub>
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+<br/>
+Entre em contato!
+<br/>
+<br/>
+
+<a href="https://www.linkedin.com/in/d%C3%A1rio-matias-dales-gamma-587785243/" target="_blank">
+  <img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white" />
+</a>
+
+<a href="https://www.instagram.com/dario_delta10/?theme=dark" target="_blank">
+  <img src="https://img.shields.io/badge/-Instagram-%23E4405F?style=for-the-badge&logo=instagram&logoColor=white" />
+</a>
+
+<a href="https://wa.me/5583986404371">
+  <img src="https://img.shields.io/badge/WhatsApp-25D366?style=for-the-badge&logo=whatsapp&logoColor=white" />
+</a>
+
+<a href="https://twitter.com/matiasdario752" target="_blank">
+  <img src="https://img.shields.io/badge/Twitter-1DA1F2?style=for-the-badge&logo=twitter&logoColor=white" />
+</a>
+
+<a href="https://portfolio-dales10.vercel.app/" target="_blank">
+  <img src="https://img.shields.io/badge/website-000000?style=for-the-badge&logo=About.me&logoColor=white" />
+</a>
