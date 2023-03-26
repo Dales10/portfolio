@@ -24,7 +24,7 @@ const futureSoftSkills = [
     'Dart',
     'Nest.js',
     'React Native',
-    'Mongodb',
+    'MongoDB',
     'GraphQL',
     'Angular',
     'Flutter',
