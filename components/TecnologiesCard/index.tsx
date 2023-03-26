@@ -24,7 +24,7 @@ const TecnologiesCard = ({ setInfoTechnologie, technologie, stateTechnologie, po
         size = 60;
     else if (technologie === 'Node.js' || technologie === 'SQLite')
         size = 110;
-    else if (technologie === 'Mongodb')
+    else if (technologie === 'MongoDB')
         size = 35;
     else if (technologie === 'Flutter')
         size = 60;

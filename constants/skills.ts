@@ -54,8 +54,10 @@ const technologiesGradient = {
     Lua: '#7A7EBF, #000081',
     'Nest.js': '#EE05F2, #F20505',
     'React Native': '#05F2DB, #7E84F2',
-    Mongodb: '#A3D9B6, #1D9B52',
+    MongoDB: '#A3D9B6, #1D9B52',
     GraphQL: '#EE05F2, #F20587',
+    Angular: '#A60F0F, #F2F2F2',
+    Flutter: '#035AA6, #35D0F2',
     '.Net': '#5CD7F2, #079DD9',
 };
 

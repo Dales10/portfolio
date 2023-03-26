@@ -66,37 +66,39 @@ const HardSkills = () => {
                     Minhas Hard Skills
                 </h2>
 
-                <div
-                    data-aos='fade-right'
-                    className='max-w-175 flex flex-col gap-3 mt-24 font-normal'
-                >
-                    <h2 className='text-2xl xs:text-3xl md:text-4xl text-center xs:text-start font-extrabold'>
-                        <span
-                            style={{
-                                display: 'inline-block',
-                                backgroundImage: `linear-gradient(to right, ${showInfoTechnologie.gradient})`,
-                                backgroundClip: 'text',
-                                WebkitBackgroundClip: 'text',
-                                color: 'transparent',
-                            }}
-                        >
-                            {showInfoTechnologie.technologie}
-                        </span>
-                    </h2>
-                    <p className='text-base xs:text-lg text-justify xs:text-start'>
-                        {showInfoTechnologie.info}
-                    </p>
-                    <p>
-                        <span className='font-bold'>Criado(a) por:</span> {showInfoTechnologie.createdBy}.
-                    </p>
-                    <p>
-                        <span className='font-bold'>Lançado(a) em:</span> {showInfoTechnologie.created}.
-                    </p>
+                <div className='h-75'>
+                    <div
+                        data-aos='fade-right'
+                        className='max-w-175 flex flex-col gap-3 mt-24 font-normal'
+                    >
+                        <h2 className='text-2xl xs:text-3xl md:text-4xl text-center xs:text-start font-extrabold'>
+                            <span
+                                style={{
+                                    display: 'inline-block',
+                                    backgroundImage: `linear-gradient(to right, ${showInfoTechnologie.gradient})`,
+                                    backgroundClip: 'text',
+                                    WebkitBackgroundClip: 'text',
+                                    color: 'transparent',
+                                }}
+                            >
+                                {showInfoTechnologie.technologie}
+                            </span>
+                        </h2>
+                        <p className='text-base xs:text-lg text-justify xs:text-start'>
+                            {showInfoTechnologie.info}
+                        </p>
+                        <p>
+                            <span className='font-bold'>Criado(a) por:</span> {showInfoTechnologie.createdBy}.
+                        </p>
+                        <p>
+                            <span className='font-bold'>Lançado(a) em:</span> {showInfoTechnologie.created}.
+                        </p>
+                    </div>
                 </div>
 
                 <span className='w-100 h-100 absolute top-[1100px] -left-[10%] bg-darkBlue opacity-30 blur-25 lg:blur-50 -z-10' />
 
-                <div className='flex flex-wrap justify-between gap-6 mt-24 sm:mt-44 pb-28 border-b-4 border-zinc-900'>
+                <div className='flex flex-wrap justify-between gap-6 mt-32 sm:mt-28 pb-28 border-b-4 border-zinc-900'>
                     {
                         currentSoftSkills.map((technologie, index) => {
                             return (
