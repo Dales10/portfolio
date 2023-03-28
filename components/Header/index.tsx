@@ -13,7 +13,18 @@ const Header = () => {
         const tagName = (e.target as Element).classList[0];
         if (tagName === 'popup-wrapper')
             setMenu(false);
-    }
+    };
+
+    const styleArrow = () => {
+        if (optionsSkills) {
+            return { transform: 'rotate(180deg)', color: '#FFFFFF' };
+        } else {
+            if (path === '/skills/softSkills' || path === '/skills/hardSkills')
+                return { color: '#FFFFFF'};
+            else
+                return { transform: 'rotate(0)', color: '#a1a1aa' };
+        }
+    };
 
     useEffect(() => {
         if (menu)
@@ -23,7 +34,7 @@ const Header = () => {
     }, [menu]);
 
     return (
-        <header className='h-10 flex justify-between items-center mt-10 mx-8 md:mx-16 xl:mx-28 text-xl text-zinc-300'>
+        <header className='h-10 flex justify-between items-center mt-10 mx-8 md:mx-16 xl:mx-28 text-xl'>
             <Link href='/' legacyBehavior>
                 <a className={path === '/' ? styles.pageName : styles.normal}>
                     <h1 className={`${styles.name} text-base lg:text-xl`}>
@@ -53,8 +64,8 @@ const Header = () => {
 
                                 <MdKeyboardArrowDown
                                     onClick={() => setoptionsSkills(!optionsSkills)}
-                                    style={optionsSkills ? { transform: 'rotate(180deg)' } : { transform: 'rotate(0)' }}
-                                    className='w-7 h-7 mt-px text-white'
+                                    style={styleArrow()}
+                                    className='w-7 h-7 mt-px text-zinc-400 transition duration-200'
                                 />
                             </div>
 
@@ -128,17 +139,6 @@ const Header = () => {
                         >
                             <nav className={`${styles.menu} absolute top-24 right-8 md:right-16 w-60 h-76 bg-background rounded-lg z-10`}>
                                 <ul className='flex flex-col gap-4 mt-4 ml-8 text-lg font-semibold'>
-                                    <li>
-                                        <Link href='/' legacyBehavior>
-                                            <a
-                                                onClick={() => setMenu(false)}
-                                                className={path === '/' ? styles.pageName : styles.normal}
-                                            >
-                                                Home
-                                            </a>
-                                        </Link>
-                                    </li>
-
                                     <li>
                                         <Link href='/sobreMim' legacyBehavior>
                                             <a

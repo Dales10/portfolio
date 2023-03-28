@@ -42,7 +42,7 @@ const HardSkills = () => {
 
     return (
         <div className="mt-24 lg:mt-32 mx-10 md:mx-16 xl:ml-28">
-            <span className='w-87.5 sm:w-125 lg:w-175 h-87.5 sm:h-125 lg:h-175 absolute top-0 sm:-top-5 lg:-top-32 left-0 sm:-left-5 lg:-left-40 bg-darkBlue opacity-30 blur-25 sm:blur-50 -z-10' />
+            <span className='w-75 s:w-87.5 sm:w-125 lg:w-17 h-75 s:h-87.5 sm:h-125 lg:h-175 absolute top-0 sm:-top-5 lg:-top-12 left-0 sm:-left-5 lg:-left-4 bg-darkBlue opacity-30 blur-25 -z-10' />
 
             <div
                 data-aos='fade-right'
@@ -95,7 +95,7 @@ const HardSkills = () => {
                     </div>
                 </div>
 
-                <span className='w-100 h-100 absolute top-[1100px] -left-[10%] bg-darkBlue opacity-30 blur-25 lg:blur-50 -z-10' />
+                <span className='w-75 s:w-100 h-75 s:h-100 absolute top-[1100px] -left-[10%] bg-darkBlue opacity-30 blur-25 lg:blur-50 -z-10' />
 
                 <div className='flex flex-wrap justify-between gap-6 mt-32 sm:mt-28 pb-28 border-b-4 border-zinc-900'>
                     {
@@ -105,6 +105,7 @@ const HardSkills = () => {
                                     key={technologie}
                                     href="#title"
                                     data-aos='fade-up'
+                                    className='mx-auto'
                                 >
                                     <TecnologiesCard
                                         technologie={technologie}
@@ -133,6 +134,7 @@ const HardSkills = () => {
                                     key={technologie}
                                     href="#title"
                                     data-aos='fade-up'
+                                    className='mx-auto'
                                 >
                                     <TecnologiesCard
                                         technologie={technologie}
@@ -147,9 +149,9 @@ const HardSkills = () => {
                 </div>
             </div>
 
-            <span className='w-87.5 h-87.5 absolute top-[2700px] -left-[10%] bg-darkBlue opacity-30 blur-25 lg:blur-50 -z-10' />
+            <span className='w-75 s:w-87.5 h-75 s:h-87.5 absolute top-[2500px] -left-[10%] bg-darkBlue opacity-30 blur-25 lg:blur-50 -z-10' />
 
-            <span className='w-87.5 sm:w-75 h-75 sm:h-96 absolute top-[3800px] xs:top-[3100px] sm:top-[2600px] left-[10%] xs:left-1/4 sm:left-[40%] bg-darkBlue opacity-30 blur-25 lg:blur-50 -z-10' />
+            <span className='w-75 s:w-87.5 sm:w-75 h-75 sm:h-96 absolute top-[3200px] sm:top-[2600px] md:top-[2400px] left-0 s:left-[10%] xs:left-1/4 sm:left-[40%] bg-darkBlue opacity-30 blur-25 lg:blur-50 -z-10' />
         </div>
     );
 };

@@ -3,7 +3,7 @@ import "aos/dist/aos.css";
 const SobreMim = () => {
     return (
         <div className="mt-24 lg:mt-32 mx-10 md:mx-16 xl:ml-28">
-            <span className='w-87.5 sm:w-125 lg:w-175 h-87.5 sm:h-125 lg:h-175 absolute top-0 sm:-top-5 lg:-top-32 left-0 sm:-left-5 lg:-left-40 bg-darkBlue opacity-30 blur-25 sm:blur-50 -z-10' />
+            <span className='w-75 s:w-87.5 sm:w-125 lg:w-17 h-75 s:h-87.5 sm:h-125 lg:h-175 absolute top-0 sm:-top-5 lg:-top-12 left-0 sm:-left-5 lg:-left-4 bg-darkBlue opacity-30 blur-25 -z-10' />
 
             <div
                 data-aos='fade-right'
@@ -41,7 +41,7 @@ const SobreMim = () => {
                 </p>
             </div>
 
-            <span className='block w-75 sm:w-100 lg:w-[550px] h-125 sm:h-87.5 lg:h-[450px] absolute top-250 md:top-250 left-1/4 md:left-2/4 bg-darkBlue opacity-30 blur-37.5 -z-10' />
+            <span className='block w-75 sm:w-100 lg:w-[550px] h-125 sm:h-87.5 lg:h-[450px] absolute top-250 md:top-250 left-[10%] s:left-1/4 md:left-2/4 bg-darkBlue opacity-30 blur-37.5 -z-10' />
         </div>
     );
 };

@@ -53,7 +53,7 @@ const TecnologiesCard = ({ setInfoTechnologie, technologie, stateTechnologie, po
             className='flex justify-center items-center w-36 h-36 bg-background border border-cyan rounded-md hover:scale-95 transition duration-300'
         >
             <div
-                style={{ gap: `${gap}px`}}
+                style={{ gap: `${gap}px` }}
                 className='flex flex-col justify-between items-center gap-2 py-1'
             >
                 <Image

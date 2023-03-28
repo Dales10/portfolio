@@ -83,7 +83,7 @@ const Contato = () => {
 
     return (
         <div className='mt-24 lg:mt-32 mx-10 md:mx-16 xl:ml-28'>
-            <span className='w-87.5 sm:w-125 lg:w-175 h-87.5 sm:h-125 lg:h-175 absolute top-0 sm:-top-5 lg:-top-32 left-0 sm:-left-5 lg:-left-40 bg-darkBlue opacity-30 blur-25 sm:blur-50 -z-10' />
+            <span className='w-75 s:w-87.5 sm:w-125 lg:w-17 h-75 s:h-87.5 sm:h-125 lg:h-175 absolute top-0 sm:-top-5 lg:-top-12 left-0 sm:-left-5 lg:-left-4 bg-darkBlue opacity-30 blur-25 -z-10' />
 
             <div
                 data-aos='fade-right'
@@ -191,7 +191,7 @@ const Contato = () => {
                 </div>
             </form>
 
-            <span className='block w-75 sm:w-100 h-125 sm:h-52 lg:h-[450px] absolute top-[600px] sm:top-[790px] left-1/4 md:left-2/4 bg-darkBlue opacity-30 blur-25 sm:blur-37.5 -z-10' />
+            <span className='block w-75 sm:w-100 h-100 s:h-125 sm:h-52 lg:h-[450px] absolute top-[600px] lg:top-[740px] left-0 s:left-[20%] md:left-2/4 bg-darkBlue opacity-30 blur-25 sm:blur-37.5 -z-10' />
 
             {
                 showMessage.status && (
