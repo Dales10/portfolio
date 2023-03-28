@@ -149,9 +149,9 @@ const HardSkills = () => {
                 </div>
             </div>
 
-            <span className='w-75 s:w-87.5 h-75 s:h-87.5 absolute top-[2500px] -left-[10%] bg-darkBlue opacity-30 blur-25 lg:blur-50 -z-10' />
+            <span className='w-75 s:w-87.5 h-75 s:h-87.5 absolute top-[2400px] -left-[10%] bg-darkBlue opacity-30 blur-25 lg:blur-50 -z-10' />
 
-            <span className='w-75 s:w-87.5 sm:w-75 h-75 sm:h-96 absolute top-[3200px] sm:top-[2600px] md:top-[2400px] left-0 s:left-[10%] xs:left-1/4 sm:left-[40%] bg-darkBlue opacity-30 blur-25 lg:blur-50 -z-10' />
+            <span className='w-75 s:w-87.5 sm:w-75 h-75 sm:h-96 absolute top-[3200px] sm:top-[2550px] md:top-[2400px] left-0 s:left-[10%] xs:left-1/4 sm:left-[40%] bg-darkBlue opacity-30 blur-25 lg:blur-50 -z-10' />
         </div>
     );
 };

@@ -59,7 +59,7 @@ const Skills = () => {
                 O mundo da tecnologia é muito amplo, todos os anos surgem novas ferramentas que deixam a criação de sites e softwares mais simples e eficiente. Citei apenas as que achei de maior relevância, como as principais bibliotecas por exemplo, mas estou sempre disposto em estudar ainda mais, desde que o momento permita.
             </p>
 
-            <span className='w-75 lg:w-100 h-52 lg:h-75 absolute top-[1600px] md:top-[1600px] lg:top-[1800px] -left-10 bg-darkBlue opacity-30 blur-25 lg:blur-50 -z-10' />
+            <span className='w-75 lg:w-100 h-52 lg:h-75 absolute top-[1600px] md:top-[1600px] lg:top-[1600px] -left-10 bg-darkBlue opacity-30 blur-25 lg:blur-50 -z-10' />
         </div>
     );
 };
