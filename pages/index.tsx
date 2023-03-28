@@ -1,7 +1,5 @@
 import "aos/dist/aos.css";
 
-import styles from '../styles/home.module.scss';
-
 import styleButton from '../styles/button.module.scss';
 
 const Home = () => {
@@ -10,7 +8,7 @@ const Home = () => {
       <span className='w-87.5 sm:w-125 lg:w-175 h-87.5 sm:h-125 lg:h-175 absolute top-0 sm:-top-5 lg:-top-32 left-0 sm:-left-5 lg:-left-40 bg-darkBlue opacity-30 blur-25 sm:blur-50 -z-10' />
 
       <div data-aos='fade-right'>
-        <h1 className={`${styles.title} flex flex-col flex-wrap text-4xl sm:text-5xl md:text-6xl lg:text-7xl text-center lg:text-left font-bold leading-none`}>
+        <h1 className='flex flex-col flex-wrap text-4xl sm:text-5xl md:text-6xl lg:text-7xl text-center lg:text-left font-bold leading-none'>
           <span>
             Oi, eu sou
           </span>

@@ -23,22 +23,18 @@ const Header = () => {
     }, [menu]);
 
     return (
-        <header className='h-10 flex justify-between items-center mt-10 mx-8 md:mx-16 xl:mx-28 text-xl'>
-            <h1 className={`${styles.name} text-base lg:text-xl`}>
-                Portfólio
-            </h1>
+        <header className='h-10 flex justify-between items-center mt-10 mx-8 md:mx-16 xl:mx-28 text-xl text-zinc-300'>
+            <Link href='/' legacyBehavior>
+                <a className={path === '/' ? styles.pageName : styles.normal}>
+                    <h1 className={`${styles.name} text-base lg:text-xl`}>
+                        Portfólio
+                    </h1>
+                </a>
+            </Link>
 
             <div className='hidden lg:block'>
                 <nav>
                     <ul className='flex gap-10 font-semibold'>
-                        <li>
-                            <Link href='/' legacyBehavior>
-                                <a className={path === '/' ? styles.pageName : styles.normal}>
-                                    Home
-                                </a>
-                            </Link>
-                        </li>
-
                         <li>
                             <Link href='/sobreMim' legacyBehavior>
                                 <a className={path === '/sobreMim' ? styles.pageName : styles.normal}>

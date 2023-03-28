@@ -11,7 +11,7 @@ const SoftSkills = () => {
                 data-aos='fade-right'
                 className='w-full flex flex-col items-center md:items-start text-center md:text-left'
             >
-                <h1 className={`${style.title} text-5xl sm:text-6xl md:text-7xl lg:text-7.5xl font-black leading-tight`}>
+                <h1 className='text-5xl sm:text-6xl md:text-7xl lg:text-7.5xl font-black leading-tight'>
                     Soft Skills
                 </h1>
 

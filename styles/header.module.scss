@@ -12,15 +12,11 @@
 }
 
 .normal {
-    color: #FFFFFF;
+    color: rgb(212 212 216);
+    transition: 300ms linear;
 }
 
 .pageName,
 .normal:hover {
-    display: inline-block;
-    background-image: linear-gradient(to right, #00DBDE, #4700BA);
-    background-clip: text;
-    -webkit-background-clip: text;
-    color: transparent;
-    transition: .3s ease-in-out;
+    color: #FFFFFF;
 }

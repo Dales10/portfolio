@@ -2,7 +2,6 @@ import "aos/dist/aos.css";
 
 import { useState, useEffect } from 'react';
 import styles from '../styles/contact.module.scss';
-import styleTitle from '../styles/title.module.scss';
 import styleButton from '../styles/button.module.scss';
 
 import { useForm } from 'react-hook-form';
@@ -90,7 +89,7 @@ const Contato = () => {
                 data-aos='fade-right'
                 className='w-full flex flex-col items-center md:items-start text-center md:text-left'
             >
-                <h1 className={`${styleTitle.title} text-5xl sm:text-6xl md:text-7xl lg:text-7.5xl font-black leading-tight`}>
+                <h1 className='text-5xl sm:text-6xl md:text-7xl lg:text-7.5xl font-black leading-tight'>
                     Contate-me
                 </h1>
 

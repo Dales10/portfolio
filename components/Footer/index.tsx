@@ -1,4 +1,3 @@
-import styles from '../../styles/footer.module.scss';
 import { MdArrowBackIos } from 'react-icons/md';
 
 const Footer = () => {
@@ -8,7 +7,7 @@ const Footer = () => {
 
     return (
         <footer className='h-56 lg:h-36 flex justify-center items-center relative bottom-0 pb-16 lg:pb-0 text-center bg-background border-t border-slate-800'>
-            <div className={styles.content}>
+            <div className='text-zinc-700 font-bold'>
                 <p>
                     By Dário Matias
                 </p>

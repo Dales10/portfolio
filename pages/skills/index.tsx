@@ -1,7 +1,6 @@
 import "aos/dist/aos.css";
 
 import Link from 'next/link';
-import styleTitle from '../../styles/title.module.scss';
 
 const Skills = () => {
     return (
@@ -12,7 +11,7 @@ const Skills = () => {
                 data-aos='fade-right'
                 className='w-full flex flex-col items-center md:items-start text-center md:text-left'
             >
-                <h1 className={`${styleTitle.title} text-5xl sm:text-6xl md:text-7xl lg:text-7.5xl font-black leading-tight`}>
+                <h1 className='text-5xl sm:text-6xl md:text-7xl lg:text-7.5xl font-black leading-tight'>
                     Minhas Skills
                 </h1>
 
@@ -30,12 +29,12 @@ const Skills = () => {
                         Escolha logo abaixo por qual quer começar:
                     </h2>
                     <div className='flex justify-center gap-12 md:gap-28 lg:gap-44 mt-24 mb-40 text-2xl md:text-3xl font-extrabold'>
-                        <h3 className={`${styleTitle.title} ${styleTitle.hover}`}>
+                        <h3 className='hover:scale-95'>
                             <Link href='/skills/softSkills'>
                                 Soft Skills
                             </Link>
                         </h3>
-                        <h3 className={`${styleTitle.title} ${styleTitle.hover}`}>
+                        <h3 className='hover:scale-95'>
                             <Link href='/skills/hardSkills'>
                                 Hard Skills
                             </Link>

@@ -3,7 +3,6 @@ import "aos/dist/aos.css";
 import { useData } from '@/components/Context';
 
 import styleButton from '../styles/button.module.scss';
-import styleTitle from '../styles/title.module.scss';
 
 import ProjectsCard from '@/components/ProjectsCard';
 
@@ -16,7 +15,7 @@ const Projetos = () => {
 
             <div data-aos='fade-right'>
                 <div className='w-full flex flex-col items-center md:items-start text-center md:text-left'>
-                    <h1 className={`${styleTitle.title} text-5xl sm:text-6xl md:text-7xl lg:text-7.5xl font-black leading-tight`}>
+                    <h1 className='text-5xl sm:text-6xl md:text-7xl lg:text-7.5xl font-black leading-tight'>
                         Meus Projetos
                     </h1>
 
