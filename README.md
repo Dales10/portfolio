@@ -47,7 +47,7 @@ As seguintes ferramentas foram usadas na construção desse projeto:
 
 ## Autor
 
-<img style="border-radius: 50%" src="./assets/my-photo.png" width="100px" alt="My photo"/>
+<img style="border-radius: 50%" src="./public/images/my-photo.png" width="100px" alt="My photo"/>
 
 <sub>
   <b>Dário Matias</b>

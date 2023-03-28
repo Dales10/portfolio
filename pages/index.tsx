@@ -22,9 +22,13 @@ const Home = () => {
           </span>
         </h1>
         <div className='flex justify-center lg:justify-start'>
-          <button className={`${styleButton.button} w-60 sm:w-[300px] h-20 sm:h-24 mt-24 md:mt-20 lg:mt-24  text-2xl sm:text-3xl`}>
-            Download CV
-          </button>
+            <a
+              href='./files/curriculo.pdf'
+              download='Currículo.pdf'
+              className={`${styleButton.button} flex justify-center items-center w-60 sm:w-[300px] h-20 sm:h-24 mt-24 md:mt-20 lg:mt-24  text-2xl sm:text-3xl`}
+            >
+              Download CV
+            </a>
         </div>
       </div>
 

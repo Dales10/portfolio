@@ -31,7 +31,7 @@ const SobreMim = () => {
 
             <div className='max-w-[1000px] flex flex-col gap-2 text-xl md:text-2xl text-justify font-bold mt-14 md:mt-32 lg:mr-52 mb-32 indent-10 leading-tight'>
                 <p data-aos='fade-up'>
-                    Atualmente a minha área de estudos é o desenvolvimento web, tanto o Frontend quanto o Backend das aplicações, mas assim que possível quero expandir para mobile, softwares, jogos, Inteligência Artificial, Deep Learning e entre outras.
+                    Atualmente a minha área de estudos é o desenvolvimento web, tanto o Frontend quanto o Backend das aplicações, mas assim que possível quero expandir para mobile, softwares, jogos, inteligência artificial, ciência de dados e entre outras.
                 </p>
 
                 <p data-aos='fade-up'>
