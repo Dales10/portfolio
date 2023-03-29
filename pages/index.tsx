@@ -2,10 +2,12 @@ import "aos/dist/aos.css";
 
 import styleButton from '../styles/button.module.scss';
 
+import MainGlowEffect from './../components/MainGlowEffect';
+
 const Home = () => {
   return (
     <div className="mt-32 lg:mt-36 mx-8 md:mx-16 xl:ml-28">
-      <span className='w-75 s:w-87.5 sm:w-125 lg:w-17 h-75 s:h-87.5 sm:h-125 lg:h-175 absolute top-0 sm:-top-5 lg:-top-12 left-0 sm:-left-5 lg:-left-4 bg-darkBlue opacity-30 blur-25 -z-10' />
+      <MainGlowEffect />
 
       <div data-aos='fade-right'>
         <h1 className='flex flex-col flex-wrap text-4xl sm:text-5xl md:text-6xl lg:text-7xl text-center lg:text-left font-bold leading-none'>

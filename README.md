@@ -7,7 +7,7 @@
 
 ## Projeto
 
-### O que irá encontrar em cada página:
+### O que irá encontrar:
 
 <p>
 • Home - página principal do portfólio, onde poderá fazer o download do meu currículo.
@@ -26,9 +26,9 @@ Veja esse projeto em execução: [demo](https://portfolio-dales10.vercel.app/).
 
 ## Screenshots
 <h3>Desktop</h3>
-<img style="width: 50%" src="./screenshots/desktop.png" alt="My photo"/>
+<img style="width: 50%" src="./public/screenshots/desktop.png" alt="Screenshot desktop"/>
 <h3>Mobile</h3>
-<img style="width: 50%;" src="./screenshots/mobile.png" width="100px;" alt="My photo"/>
+<img style="width: 50%;" src="./public/screenshots/mobile.png" width="100px;" alt="Screenshot mobile"/>
 
 
 ## 🛠 Tecnologias
@@ -58,19 +58,19 @@ As seguintes ferramentas foram usadas na construção desse projeto:
 <br/>
 <br/>
 
-<a href="https://www.linkedin.com/in/d%C3%A1rio-matias-dales-gamma-587785243/" target="_blank">
+<a href="https://www.linkedin.com/in/dariomatias-dev/" target="_blank">
   <img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white" />
 </a>
 
-<a href="https://www.instagram.com/dario_delta10/?theme=dark" target="_blank">
+<a href="https://www.instagram.com/dario_delta10/?theme=dark/" target="_blank">
   <img src="https://img.shields.io/badge/-Instagram-%23E4405F?style=for-the-badge&logo=instagram&logoColor=white" />
 </a>
 
-<a href="https://wa.me/5583986404371">
+<a href="https://wa.me/5583986404371/">
   <img src="https://img.shields.io/badge/WhatsApp-25D366?style=for-the-badge&logo=whatsapp&logoColor=white" />
 </a>
 
-<a href="https://twitter.com/matiasdario752" target="_blank">
+<a href="https://twitter.com/matiasdario752/" target="_blank">
   <img src="https://img.shields.io/badge/Twitter-1DA1F2?style=for-the-badge&logo=twitter&logoColor=white" />
 </a>
 
