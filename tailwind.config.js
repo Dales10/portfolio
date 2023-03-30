@@ -43,7 +43,6 @@ module.exports = {
       },
       blur: {
         '25': '6.25rem',
-        '37.5': '9.375rem',
         '50': '12.5rem',
       },
       animation: {

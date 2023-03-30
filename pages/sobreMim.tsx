@@ -43,7 +43,7 @@ const SobreMim = () => {
                 </p>
             </div>
 
-            <span className='block w-75 sm:w-100 lg:w-[550px] h-125 sm:h-87.5 lg:h-[450px] absolute top-250 md:top-250 left-[10%] s:left-1/4 md:left-2/4 bg-darkBlue opacity-30 blur-37.5 -z-10' />
+            <span className='block w-75 sm:w-100 lg:w-[550px] h-125 sm:h-87.5 lg:h-[450px] absolute top-250 md:top-250 left-[10%] s:left-1/4 md:left-2/4 bg-darkBlue opacity-30 blur-25 lg:blur-50 -z-10' />
         </div>
     );
 };

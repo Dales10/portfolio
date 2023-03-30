@@ -59,7 +59,7 @@ const Projetos = () => {
                 </div>
             </div>
 
-            <span className='block w-80 xs:w-100 h-80 xs:h-125 sm:h-52 lg:h-[450px] absolute top-[900px] xs:top-[800px] sm:top-[1100px] left-[5%] xs:left-[15%] md:left-1/4 bg-darkBlue opacity-30 blur-37.5 -z-10' />
+            <span className='block w-80 xs:w-100 h-80 xs:h-125 sm:h-52 lg:h-[450px] absolute top-[900px] xs:top-[800px] sm:top-[1100px] left-[5%] xs:left-[15%] md:left-1/4 bg-darkBlue opacity-30 blur-25 lg:blur-50 -z-10' />
         </div>
     );
 };
