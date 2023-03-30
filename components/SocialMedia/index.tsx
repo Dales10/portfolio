@@ -7,7 +7,7 @@ import { FaLinkedinIn } from 'react-icons/fa';
 const SocialMedia = () => {
     return (
         <div className='flex justify-center'>
-            <ul className='fixed flex lg:flex-col gap-3 lg:top-[14%] lg:right-4 bottom-0 lg:bottom-[unset] bg-background bg-opacity-80 lg:bg-transparent pb-3 p-4 border border-cyan-300 border-b-0 lg:border-0 rounded-tl-3xl rounded-tr-3xl z-10'>
+            <ul className='fixed flex lg:flex-col gap-3 lg:top-[15%] lg:right-4 bottom-0 lg:bottom-[unset] bg-background bg-opacity-80 lg:bg-transparent pb-3 p-4 border border-cyan-300 border-b-0 lg:border-0 rounded-tl-3xl rounded-tr-3xl z-10'>
                 <li>
                     <a
                         href="https://www.linkedin.com/in/d%C3%A1rio-matias-dales-gamma-587785243/"

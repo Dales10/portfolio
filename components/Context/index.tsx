@@ -9,11 +9,11 @@ import { SkillProps } from "@/@types/Skill";
 type DataProps = {
     projects: ProjectProps[];
     skills: SkillProps;
-}
+};
 
 type DataContextProps = {
     data: DataProps;
-}
+};
 
 const DataContext = createContext({} as DataContextProps);
 
@@ -41,7 +41,6 @@ export const DataProvider = ({ children }: DataProviderProps) => {
                 createdBy: skill.createdBy,
             };
         });
-
         setData({
             projects: collectProjectsData,
             skills: collectSkillsData,
