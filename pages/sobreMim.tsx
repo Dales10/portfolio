@@ -1,6 +1,6 @@
 import "aos/dist/aos.css";
 
-import MainGlowEffect from './../components/MainGlowEffect/index';
+import MainGlowEffect from '@/components/MainGlowEffect';
 
 const SobreMim = () => {
     return (

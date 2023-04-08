@@ -1,5 +1,9 @@
-.link:hover {
+.link {
     background-image: linear-gradient(to right, #00DBDE, #4700BA);
     color: #FFFFFF;
-    box-shadow: 0 0 30px rgba(71, 0, 186, 0.4);
+    border-radius: 50%;
+}
+
+.link:hover {
+    box-shadow: 0 0 30px 5px rgba(71, 0, 186, 0.2);
 }

@@ -1,10 +1,9 @@
 import "aos/dist/aos.css";
 
+import styleButton from '../styles/Button.module.scss';
+
 import { useData } from '@/components/Context';
-
-import styleButton from '../styles/button.module.scss';
-
-import MainGlowEffect from './../components/MainGlowEffect/index';
+import MainGlowEffect from '@/components/MainGlowEffect';
 import ProjectsCard from '@/components/ProjectsCard';
 
 const Projetos = () => {

@@ -1,7 +1,7 @@
 import { useState, useEffect, MouseEvent } from 'react';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
-import styles from '../../styles/header.module.scss';
+import styles from '../../styles/Header.module.scss';
 import { MdKeyboardArrowDown } from 'react-icons/md';
 
 const Header = () => {
