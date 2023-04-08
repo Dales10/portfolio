@@ -1,4 +1,4 @@
-import styles from '../../styles/SocialMedia.module.scss';
+import styles from '../../styles/socialMedia.module.scss';
 import { IconType } from 'react-icons/lib';
 
 type Props = {

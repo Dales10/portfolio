@@ -1,8 +1,8 @@
 import "aos/dist/aos.css";
 
 import { useState, useEffect } from 'react';
-import styles from '../styles/Contact.module.scss';
-import styleButton from '../styles/Button.module.scss';
+import styles from '../styles/contact.module.scss';
+import styleButton from '../styles/button.module.scss';
 
 import { useForm } from 'react-hook-form';
 import * as yup from 'yup';

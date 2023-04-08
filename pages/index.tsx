@@ -1,6 +1,6 @@
 import "aos/dist/aos.css";
 
-import styleButton from '../styles/Button.module.scss';
+import styleButton from '../styles/button.module.scss';
 
 import MainGlowEffect from '@/components/MainGlowEffect';
 
