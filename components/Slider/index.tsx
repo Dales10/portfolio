@@ -39,7 +39,6 @@ const Slider = ({ files }: Props) => {
                   />
                 )
               }
-
               {
                 file.type === 'video' && (
                   <video
@@ -54,7 +53,7 @@ const Slider = ({ files }: Props) => {
           );
         })
       }
-
+      
       <NavigationButtons />
     </Swiper>
   );

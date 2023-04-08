@@ -118,6 +118,14 @@ const HardSkills = () => {
                             )
                         })
                     }
+
+                    {
+                        currentSoftSkills.length === 0 && (
+                            <h1 className="text-center text-2xl sm:text-3xl font-bold my-20">
+                                Ocorreu algum problema ao buscar as informações das atuais skills. Por favor, reinicie o site ou volte mais tarde.
+                            </h1>
+                        )
+                    }
                 </div>
 
                 <h2
@@ -147,12 +155,26 @@ const HardSkills = () => {
                             )
                         })
                     }
+
+                    {
+                        futureSoftSkills.length === 0 && (
+                            <h1 className="text-center text-2xl sm:text-3xl font-bold my-20">
+                                Ocorreu algum problema ao buscar as informações das prováveis skills futuras. Por favor, reinicie o site ou volte mais tarde.
+                            </h1>
+                        )
+                    }
                 </div>
             </div>
 
-            <span className='w-75 s:w-87.5 h-75 s:h-87.5 absolute top-[2400px] -left-[10%] bg-darkBlue opacity-30 blur-25 lg:blur-50 -z-10' />
+            <span
+                style={futureSoftSkills.length === 0 ? { display: 'none'} : {}}
+                className='w-75 s:w-87.5 h-75 s:h-87.5 absolute top-[2400px] -left-[10%] bg-darkBlue opacity-30 blur-25 lg:blur-50 -z-10'
+            />
 
-            <span className='w-75 s:w-87.5 sm:w-75 h-75 sm:h-96 absolute top-[3200px] sm:top-[2550px] md:top-[2400px] left-0 s:left-[10%] xs:left-1/4 sm:left-[40%] bg-darkBlue opacity-30 blur-25 lg:blur-50 -z-10' />
+            <span
+                style={futureSoftSkills.length === 0 ? { display: 'none'} : {}}
+                className='w-75 s:w-87.5 sm:w-75 h-75 sm:h-96 absolute top-[3200px] sm:top-[2550px] md:top-[2400px] left-0 s:left-[10%] xs:left-1/4 sm:left-[40%] bg-darkBlue opacity-30 blur-25 lg:blur-50 -z-10'
+            />
         </div>
     );
 };

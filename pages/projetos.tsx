@@ -43,7 +43,7 @@ const Projetos = () => {
 
                 <div
                     id='lista'
-                    className='flex flex-wrap gap-2 justify-center'
+                    className='flex flex-wrap gap-8 justify-center'
                 >
                     {
                         data.projects.map((projectData, index) => {
@@ -54,6 +54,14 @@ const Projetos = () => {
                                 />
                             )
                         })
+                    }
+
+                    {
+                        data.projects.length === 0 && (
+                            <h1 className="text-center text-2xl sm:text-3xl font-bold my-10">
+                                Ocorreu algum problema ao buscar as informações dos projetos. Por favor, reinicie o site ou volte mais tarde.
+                            </h1>
+                        )
                     }
                 </div>
             </div>
