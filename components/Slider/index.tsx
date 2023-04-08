@@ -24,7 +24,7 @@ const Slider = ({ files }: Props) => {
         nextEl: '.next',
       }}
       effect='fade'
-      className="relative border-r border-zinc-900 cursor-grab"
+      className="border-r border-zinc-900 cursor-grab"
     >
       {
         files.map((file, index) => {
@@ -34,18 +34,18 @@ const Slider = ({ files }: Props) => {
                 file.type === 'img' && (
                   <img
                     src={file.url}
-                    className='w-full h-auto'
                     alt=''
                   />
                 )
               }
+
               {
                 file.type === 'video' && (
                   <video
                     src={file.url}
                     controls
                     autoPlay
-                    className='w-full h-auto'
+                    className='pb-4 bg-background'
                   />
                 )
               }
@@ -53,7 +53,7 @@ const Slider = ({ files }: Props) => {
           );
         })
       }
-      
+
       <NavigationButtons />
     </Swiper>
   );
