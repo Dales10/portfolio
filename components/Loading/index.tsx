@@ -1,7 +1,7 @@
 const Loading = () => {
     return (
         <>
-            <span className='block w-87.5 sm:w-125 lg:w-175 h-87.5 sm:h-125 lg:h-175 absolute top-0 sm:-top-5 lg:-top-32 left-0 sm:-left-5 lg:-left-[155px] bg-darkBlue opacity-30 blur-25 sm:blur-50 -z-10' />
+            <span className="block w-87.5 sm:w-125 lg:w-175 h-87.5 sm:h-125 lg:h-175 absolute top-0 sm:-top-5 lg:-top-32 left-0 sm:-left-5 lg:-left-[155px] bg-darkBlue opacity-30 blur-25 sm:blur-50 -z-10" />
 
             <div className="h-[70vh] flex justify-center items-center">
                 <div className="flex flex-col items-center gap-10">

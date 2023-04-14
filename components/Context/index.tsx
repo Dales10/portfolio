@@ -1,5 +1,11 @@
-import { useState, useEffect, useContext, createContext, ReactNode } from "react";
-import { db, collection, getDocs } from '../../services/firebase';
+import {
+    useState,
+    useEffect,
+    useContext,
+    createContext,
+    ReactNode,
+} from "react";
+import { db, collection, getDocs } from "../../services/firebase";
 
 import Loading from "../Loading";
 
@@ -26,14 +32,14 @@ export const DataProvider = ({ children }: DataProviderProps) => {
 
     const readDataFromDatabase = async () => {
         const collectProjectsData: ProjectProps[] = [];
-        const projectsDocs = await getDocs(collection(db, 'projects'));
-        projectsDocs.forEach(projectDoc => {
+        const projectsDocs = await getDocs(collection(db, "projects"));
+        projectsDocs.forEach((projectDoc) => {
             collectProjectsData.push(projectDoc.data() as ProjectProps);
         });
 
         const collectSkillsData: SkillProps = {};
-        const skillsDocs = await getDocs(collection(db, 'skills'));
-        skillsDocs.forEach(skillDoc => {
+        const skillsDocs = await getDocs(collection(db, "skills"));
+        skillsDocs.forEach((skillDoc) => {
             const skill = skillDoc.data();
             collectSkillsData[skill.technologie] = {
                 info: skill.info,
@@ -41,6 +47,7 @@ export const DataProvider = ({ children }: DataProviderProps) => {
                 createdBy: skill.createdBy,
             };
         });
+        
         setData({
             projects: collectProjectsData,
             skills: collectSkillsData,
@@ -51,8 +58,7 @@ export const DataProvider = ({ children }: DataProviderProps) => {
         readDataFromDatabase();
     }, []);
 
-    if (JSON.stringify(data) === '{}')
-        return <Loading />;
+    if (JSON.stringify(data) === "{}") return <Loading />;
 
     return (
         <DataContext.Provider
