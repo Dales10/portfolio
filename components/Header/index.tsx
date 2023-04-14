@@ -4,9 +4,11 @@ import { useRouter } from "next/router";
 import styles from "../../styles/header.module.scss";
 import { MdKeyboardArrowDown } from "react-icons/md";
 
+import LinkToAccessAnotherPage from "./../LinkToAccessAnotherPage";
+
 const Header = () => {
     const [menu, setMenu] = useState(false);
-    const [optionsSkills, setoptionsSkills] = useState(false);
+    const [optionsSkills, setOptionsSkills] = useState(false);
     const path = useRouter().pathname;
 
     const changeMenuStatus = (
@@ -17,9 +19,9 @@ const Header = () => {
     };
 
     const styleArrow = () => {
-        if (optionsSkills) {
+        if (optionsSkills)
             return { transform: "rotate(180deg)", color: "#FFFFFF" };
-        } else {
+        else {
             if (path === "/skills/softSkills" || path === "/skills/hardSkills")
                 return { color: "#FFFFFF" };
             else return { transform: "rotate(0)", color: "#a1a1aa" };
@@ -45,36 +47,23 @@ const Header = () => {
                 <nav>
                     <ul className="flex gap-10 font-semibold">
                         <li>
-                            <Link href="/sobreMim" legacyBehavior>
-                                <a
-                                    className={
-                                        path === "/sobreMim"
-                                            ? styles.pageName
-                                            : styles.normal
-                                    }
-                                >
-                                    Sobre Mim
-                                </a>
-                            </Link>
+                            <LinkToAccessAnotherPage
+                                pageName="Sobre mim"
+                                path="sobreMim"
+                            />
                         </li>
 
                         <li className="relative">
                             <div className="flex gap-2">
-                                <Link href="/skills" legacyBehavior>
-                                    <a
-                                        className={
-                                            path.includes("/skills")
-                                                ? styles.pageName
-                                                : styles.normal
-                                        }
-                                    >
-                                        Skills
-                                    </a>
-                                </Link>
+                                <LinkToAccessAnotherPage
+                                    pageName="Skills"
+                                    path="skills"
+                                    handleMenuChange={false}
+                                />
 
                                 <MdKeyboardArrowDown
                                     onClick={() =>
-                                        setoptionsSkills(!optionsSkills)
+                                        setOptionsSkills(!optionsSkills)
                                     }
                                     style={styleArrow()}
                                     className="w-7 h-7 mt-px text-zinc-400 transition duration-200"
@@ -87,45 +76,25 @@ const Header = () => {
                                 >
                                     <ul>
                                         <li>
-                                            <Link
-                                                href="/skills/softSkills"
-                                                legacyBehavior
-                                            >
-                                                <a
-                                                    onClick={() =>
-                                                        setoptionsSkills(false)
-                                                    }
-                                                    className={
-                                                        path ===
-                                                        "/skills/softSkills"
-                                                            ? styles.pageName
-                                                            : styles.normal
-                                                    }
-                                                >
-                                                    Soft Skills
-                                                </a>
-                                            </Link>
+                                            <LinkToAccessAnotherPage
+                                                pageName="Soft Skills"
+                                                path="skills/softSkills"
+                                                handleOptionsSkillsChange={true}
+                                                setOptionsSkills={
+                                                    setOptionsSkills
+                                                }
+                                            />
                                         </li>
 
                                         <li>
-                                            <Link
-                                                href="/skills/hardSkills"
-                                                legacyBehavior
-                                            >
-                                                <a
-                                                    onClick={() =>
-                                                        setoptionsSkills(false)
-                                                    }
-                                                    className={
-                                                        path ===
-                                                        "/skills/hardSkills"
-                                                            ? styles.pageName
-                                                            : styles.normal
-                                                    }
-                                                >
-                                                    Hard Skills
-                                                </a>
-                                            </Link>
+                                            <LinkToAccessAnotherPage
+                                                pageName="Hard Skills"
+                                                path="skills/hardSkills"
+                                                handleOptionsSkillsChange={true}
+                                                setOptionsSkills={
+                                                    setOptionsSkills
+                                                }
+                                            />
                                         </li>
                                     </ul>
                                 </div>
@@ -147,17 +116,10 @@ const Header = () => {
                         </li>
 
                         <li>
-                            <Link href="/contato" legacyBehavior>
-                                <a
-                                    className={
-                                        path === "/contato"
-                                            ? styles.pageName
-                                            : styles.normal
-                                    }
-                                >
-                                    Contato
-                                </a>
-                            </Link>
+                            <LinkToAccessAnotherPage
+                                pageName="Contato"
+                                path="contato"
+                            />
                         </li>
                     </ul>
                 </nav>
@@ -185,38 +147,26 @@ const Header = () => {
                         >
                             <ul className="flex flex-col gap-4 mt-4 ml-8 text-lg font-semibold">
                                 <li>
-                                    <Link href="/sobreMim" legacyBehavior>
-                                        <a
-                                            onClick={() => setMenu(false)}
-                                            className={
-                                                path === "/sobreMim"
-                                                    ? styles.pageName
-                                                    : styles.normal
-                                            }
-                                        >
-                                            Sobre Mim
-                                        </a>
-                                    </Link>
+                                    <LinkToAccessAnotherPage
+                                        pageName="Sobre Mim"
+                                        path="sobreMim"
+                                        handleMenuChange={true}
+                                        setMenu={setMenu}
+                                    />
                                 </li>
 
                                 <li>
                                     <div className="flex gap-1">
-                                        <Link href="/skills" legacyBehavior>
-                                            <a
-                                                onClick={() => setMenu(false)}
-                                                className={
-                                                    path.includes("/skills")
-                                                        ? styles.pageName
-                                                        : styles.normal
-                                                }
-                                            >
-                                                Skills
-                                            </a>
-                                        </Link>
+                                        <LinkToAccessAnotherPage
+                                            pageName="Skills"
+                                            path="skills"
+                                            handleMenuChange={true}
+                                            setMenu={setMenu}
+                                        />
 
                                         <MdKeyboardArrowDown
                                             onClick={() =>
-                                                setoptionsSkills(!optionsSkills)
+                                                setOptionsSkills(!optionsSkills)
                                             }
                                             style={
                                                 optionsSkills
@@ -234,51 +184,33 @@ const Header = () => {
                                         <div className="ml-4">
                                             <ul className="flex flex-col gap-1">
                                                 <li>
-                                                    <Link
-                                                        href="/skills/softSkills"
-                                                        legacyBehavior
-                                                    >
-                                                        <a
-                                                            onClick={() => {
-                                                                setoptionsSkills(
-                                                                    false
-                                                                );
-                                                                setMenu(false);
-                                                            }}
-                                                            className={
-                                                                path ===
-                                                                "/skills/softSkills"
-                                                                    ? styles.pageName
-                                                                    : styles.normal
-                                                            }
-                                                        >
-                                                            Soft Skills
-                                                        </a>
-                                                    </Link>
+                                                    <LinkToAccessAnotherPage
+                                                        pageName="Soft Skills"
+                                                        path="skills/softSkills"
+                                                        handleMenuChange={true}
+                                                        setMenu={setMenu}
+                                                        handleOptionsSkillsChange={
+                                                            true
+                                                        }
+                                                        setOptionsSkills={
+                                                            setOptionsSkills
+                                                        }
+                                                    />
                                                 </li>
 
                                                 <li>
-                                                    <Link
-                                                        href="/skills/hardSkills"
-                                                        legacyBehavior
-                                                    >
-                                                        <a
-                                                            onClick={() => {
-                                                                setoptionsSkills(
-                                                                    false
-                                                                );
-                                                                setMenu(false);
-                                                            }}
-                                                            className={
-                                                                path ===
-                                                                "/skills/hardSkills"
-                                                                    ? styles.pageName
-                                                                    : styles.normal
-                                                            }
-                                                        >
-                                                            Hard Skills
-                                                        </a>
-                                                    </Link>
+                                                    <LinkToAccessAnotherPage
+                                                        pageName="Hard Skills"
+                                                        path="skills/hardSkills"
+                                                        handleMenuChange={true}
+                                                        setMenu={setMenu}
+                                                        handleOptionsSkillsChange={
+                                                            true
+                                                        }
+                                                        setOptionsSkills={
+                                                            setOptionsSkills
+                                                        }
+                                                    />
                                                 </li>
                                             </ul>
                                         </div>
@@ -286,33 +218,21 @@ const Header = () => {
                                 </li>
 
                                 <li>
-                                    <Link href="/projetos" legacyBehavior>
-                                        <a
-                                            onClick={() => setMenu(false)}
-                                            className={
-                                                path === "/projetos"
-                                                    ? styles.pageName
-                                                    : styles.normal
-                                            }
-                                        >
-                                            Projetos
-                                        </a>
-                                    </Link>
+                                    <LinkToAccessAnotherPage
+                                        pageName="Projetos"
+                                        path="projetos"
+                                        handleMenuChange={true}
+                                        setMenu={setMenu}
+                                    />
                                 </li>
 
                                 <li>
-                                    <Link href="/contato" legacyBehavior>
-                                        <a
-                                            onClick={() => setMenu(false)}
-                                            className={
-                                                path === "/contato"
-                                                    ? styles.pageName
-                                                    : styles.normal
-                                            }
-                                        >
-                                            Contato
-                                        </a>
-                                    </Link>
+                                    <LinkToAccessAnotherPage
+                                        pageName="Contato"
+                                        path="contato"
+                                        handleMenuChange={true}
+                                        setMenu={setMenu}
+                                    />
                                 </li>
                             </ul>
 
