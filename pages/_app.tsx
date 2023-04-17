@@ -1,14 +1,14 @@
+import { useEffect } from "react";
 import type { AppProps } from "next/app";
 import "@/styles/globals.scss";
 
 import AOS from "aos";
 import "aos/dist/aos.css";
 
-import Header from "@/components/Header";
+import { DataProvider } from "@/components/Context";
 import Footer from "@/components/Footer";
-import SocialMedia from "./../components/SocialMedia";
-import { DataProvider } from "./../components/Context/index";
-import { useEffect } from "react";
+import NavBar from "@/components/NavBar";
+import SocialMedia from "@/components/SocialMedia";
 
 export default function App({ Component, pageProps }: AppProps) {
     useEffect(() => {
@@ -20,7 +20,7 @@ export default function App({ Component, pageProps }: AppProps) {
 
     return (
         <>
-            <Header />
+            <NavBar />
             <SocialMedia />
             <DataProvider>
                 <Component {...pageProps} />

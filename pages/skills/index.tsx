@@ -2,27 +2,21 @@ import "aos/dist/aos.css";
 
 import Link from "next/link";
 
-import MainGlowEffect from "./../../components/MainGlowEffect";
+import Header from "@/components/Header";
+import MainGlowEffect from "@/components/MainGlowEffect";
+
+const headerContent = {
+    title: "Minhas Skills",
+    introduction:
+        "Irei dividir as skills em dois grupos, sendo o primeiro das soft skills e o segundo das hard skills, para assim poder citá-las adequadamente.",
+};
 
 const Skills = () => {
     return (
         <div className="mt-24 lg:mt-32 mx-10 md:mx-16 xl:ml-28">
             <MainGlowEffect />
 
-            <div
-                data-aos="fade-right"
-                className="w-full flex flex-col items-center md:items-start text-center md:text-left"
-            >
-                <h1 className="text-5xl sm:text-6xl md:text-7xl lg:text-7.5xl font-black leading-tight">
-                    Minhas Skills
-                </h1>
-
-                <p className="max-w-125 md:max-w-175 lg:max-w-200 xl:max-w-225 mt-12 lg:mt-20 text-xl sm:text-2xl md:text-3xl lg:text-4xl text-justify lg:text-start font-bold leading-tight">
-                    Irei dividir as skills em dois grupos, sendo o primeiro das
-                    soft skills e o segundo das hard skills, para assim poder
-                    citá-las adequadamente.
-                </p>
-            </div>
+            <Header content={headerContent} />
 
             <div className="w-full lg:w-line border-y-4 border-zinc-900 mt-40 xs:mt-52 md:mt-72 mb-44">
                 <div data-aos="zoom-in" className="">
