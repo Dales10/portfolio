@@ -96,6 +96,7 @@ const HardSkills = () => {
                                 {showInfoTechnologie.technologie}
                             </span>
                         </h2>
+                        
                         <p className="text-base xs:text-lg text-justify xs:text-start">
                             {showInfoTechnologie.info}
                         </p>
@@ -103,6 +104,7 @@ const HardSkills = () => {
                             <span className="font-bold">Criado(a) por:</span>{" "}
                             {showInfoTechnologie.createdBy}.
                         </p>
+
                         <p>
                             <span className="font-bold">Lançado(a) em:</span>{" "}
                             {showInfoTechnologie.created}.

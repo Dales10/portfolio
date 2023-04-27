@@ -1,6 +1,7 @@
 import "aos/dist/aos.css";
 
 import styleButton from "../styles/button.module.scss";
+import { FiDownload } from "react-icons/fi";
 
 import MainGlowEffect from "@/components/MainGlowEffect";
 
@@ -12,17 +13,21 @@ const Home = () => {
             <div data-aos="fade-right">
                 <h1 className="flex flex-col flex-wrap text-4xl sm:text-5xl md:text-6xl lg:text-7xl text-center lg:text-left font-bold leading-none">
                     <span>Oi, eu sou</span>
+                    
                     <span className="text-4xl sm:text-6xl md:text-7xl lg:text-7.5xl font-black">
                         Dário Matias
                     </span>
+
                     <span>web developer</span>
                 </h1>
+
                 <div className="flex justify-center lg:justify-start">
                     <a
                         href="./files/curriculum.pdf"
                         download="Currículo.pdf"
-                        className={`${styleButton.button} flex justify-center items-center w-60 sm:w-[300px] h-20 sm:h-24 mt-24 md:mt-20 lg:mt-24  text-2xl sm:text-3xl`}
+                        className={`${styleButton.button} flex justify-center items-center gap-4 w-60 sm:w-[300px] h-20 sm:h-24 mt-24 md:mt-20 lg:mt-24 text-xl sm:text-2xl`}
                     >
+                        <FiDownload className="w-8 h-8" />
                         Download CV
                     </a>
                 </div>
@@ -47,6 +52,7 @@ const Home = () => {
                     online, e o outro para analisar o código-fonte no GitHub
                     caso tenha interesse.
                 </p>
+
                 <p data-aos="fade-up">
                     Então vamos lá conhecer o meu trabalho e quem eu sou?
                 </p>

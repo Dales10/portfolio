@@ -19,14 +19,16 @@ const Skills = () => {
             <Header content={headerContent} />
 
             <div className="w-full lg:w-line border-y-4 border-zinc-900 mt-40 xs:mt-52 md:mt-72 mb-44">
-                <div data-aos="zoom-in" className="">
+                <div data-aos="zoom-in">
                     <h2 className="text-4xl md:text-5xl text-center font-extrabold mt-44">
                         Escolha logo abaixo por qual quer começar:
                     </h2>
+
                     <div className="flex justify-center gap-12 md:gap-28 lg:gap-44 mt-24 mb-40 text-2xl md:text-3xl font-extrabold">
                         <h3 className="hover:scale-95">
                             <Link href="/skills/softSkills">Soft Skills</Link>
                         </h3>
+
                         <h3 className="hover:scale-95">
                             <Link href="/skills/hardSkills">Hard Skills</Link>
                         </h3>
