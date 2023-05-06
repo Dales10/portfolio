@@ -64,8 +64,12 @@ const TecnologiesCard = ({
             >
                 <Image
                     src={`/icons/${formattedTechnologyName}.svg`}
-                    width={size}
-                    height={size}
+                    width={0}
+                    height={0}
+                    style={{
+                        width: `${size}px`,
+                        height: 'auto',
+                    }}
                     alt={`${technologie} icon.`}
                 />
 

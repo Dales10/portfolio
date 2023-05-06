@@ -36,7 +36,6 @@ const Slider = ({ files }: Props) => {
                                 src={file.url}
                                 controls
                                 autoPlay
-                                className="pb-4 bg-background"
                             />
                         )}
                     </SwiperSlide>
