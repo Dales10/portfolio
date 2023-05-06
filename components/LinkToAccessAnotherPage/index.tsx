@@ -1,5 +1,6 @@
 import { Dispatch, SetStateAction } from "react";
 import Link from "next/link";
+import { useRouter } from "next/router";
 import styles from "../../styles/header.module.scss";
 
 type Props = {
@@ -19,6 +20,8 @@ const LinkToAccessAnotherPage = ({
     handleOptionsSkillsChange = false,
     setOptionsSkills,
 }: Props) => {
+    const pathname = useRouter().pathname;
+
     const setOnClick = () => {
         if (handleMenuChange && handleOptionsSkillsChange) {
             setMenu!(false);
@@ -33,7 +36,7 @@ const LinkToAccessAnotherPage = ({
             <a
                 onClick={setOnClick}
                 className={
-                    path.includes(`/${path}`) ? styles.pageName : styles.normal
+                    pathname === `/${path}` ? styles.pageName : styles.normal
                 }
             >
                 {pageName}

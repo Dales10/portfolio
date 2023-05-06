@@ -48,10 +48,6 @@ const HardSkills = () => {
     };
 
     useEffect(() => {
-        console.log(showInfoTechnologie)
-    }, [showInfoTechnologie])
-
-    useEffect(() => {
         setStateTechnologie(
             Array(currentSoftSkills.length + futureSoftSkills.length).fill(
                 false
