@@ -1,7 +1,7 @@
 import { Dispatch, SetStateAction } from "react";
 import Link from "next/link";
 import { useRouter } from "next/router";
-import styles from "../../styles/header.module.scss";
+import styles from "@/styles/header.module.scss";
 
 type Props = {
     pageName: string;

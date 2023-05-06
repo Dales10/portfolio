@@ -10,7 +10,7 @@ import TecnologiesCard from "@/components/TecnologiesCard";
 import {
     currentSoftSkills,
     futureSoftSkills,
-} from "../../constants/skills";
+} from "@/constants/skills";
 
 const headerContent = {
     title: "Hard Skills",
@@ -23,13 +23,11 @@ const HardSkills = () => {
     const { data } = useData();
 
     const [showInfoTechnologie, setShowInfoTechnologie] = useState({
-        technologie: "TypeScript",
         ...data.skills.TypeScript,
     });
 
     const setInfoTechnologie = (technologie: string, position: number) => {
         setShowInfoTechnologie({
-            technologie,
             ...data.skills[technologie as keyof typeof data.skills],
         });
 

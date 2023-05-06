@@ -1,8 +1,8 @@
 import "aos/dist/aos.css";
 
 import { useState, useEffect } from "react";
-import styles from "../styles/contact.module.scss";
-import styleButton from "../styles/button.module.scss";
+import styles from "@/styles/contact.module.scss";
+import styleButton from "@/styles/button.module.scss";
 
 import { useForm } from "react-hook-form";
 import * as yup from "yup";
@@ -11,7 +11,7 @@ import emailjs from "@emailjs/browser";
 
 import FeedbackMessage from "@/components/FeedbackMessage";
 import Header from "@/components/Header";
-import MainGlowEffect from "./../components/MainGlowEffect";
+import MainGlowEffect from "@/components/MainGlowEffect";
 
 const schema = yup
     .object({

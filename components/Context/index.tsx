@@ -5,16 +5,17 @@ import {
     createContext,
     ReactNode,
 } from "react";
-import { db, collection, getDocs } from "../../services/firebase";
+import { db, collection, getDocs } from "@/services/firebase";
 
 import Loading from "../Loading";
 
 import { ProjectProps } from "@/@types/Project";
+import { SkillsProps } from "@/@types/Skills";
 import { SkillProps } from "@/@types/Skill";
 
 type DataProps = {
     projects: ProjectProps[];
-    skills: SkillProps;
+    skills: SkillsProps;
 };
 
 type DataContextProps = {
@@ -37,17 +38,11 @@ export const DataProvider = ({ children }: DataProviderProps) => {
             collectProjectsData.push(projectDoc.data() as ProjectProps);
         });
 
-        const collectSkillsData: SkillProps = {};
+        const collectSkillsData: SkillsProps = {};
         const skillsDocs = await getDocs(collection(db, "skills"));
         skillsDocs.forEach((skillDoc) => {
             const skill = skillDoc.data();
-            collectSkillsData[skill.technologie] = {
-                info: skill.info,
-                created: skill.created,
-                createdBy: skill.createdBy,
-                gradient: skill.gradient,
-                officialSite: skill.officialSite,
-            };
+            collectSkillsData[skill.technologie] = { ...skill as SkillProps };
         });
 
         setData({

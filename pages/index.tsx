@@ -1,6 +1,6 @@
 import "aos/dist/aos.css";
 
-import styleButton from "../styles/button.module.scss";
+import styleButton from "@/styles/button.module.scss";
 import { FiDownload } from "react-icons/fi";
 
 import MainGlowEffect from "@/components/MainGlowEffect";
@@ -13,7 +13,7 @@ const Home = () => {
             <div data-aos="fade-right">
                 <h1 className="flex flex-col flex-wrap text-4xl sm:text-5xl md:text-6xl lg:text-7xl text-center lg:text-left font-bold leading-none">
                     <span>Oi, eu sou</span>
-                    
+
                     <span className="text-4xl sm:text-6xl md:text-7xl lg:text-7.5xl font-black">
                         Dário Matias
                     </span>

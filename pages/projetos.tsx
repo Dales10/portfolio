@@ -1,6 +1,6 @@
 import "aos/dist/aos.css";
 
-import styleButton from "../styles/button.module.scss";
+import styleButton from "@/styles/button.module.scss";
 
 import { useData } from "@/components/Context";
 import Header from "@/components/Header";
