@@ -45,6 +45,8 @@ export const DataProvider = ({ children }: DataProviderProps) => {
                 info: skill.info,
                 created: skill.created,
                 createdBy: skill.createdBy,
+                gradient: skill.gradient,
+                officialSite: skill.officialSite,
             };
         });
 

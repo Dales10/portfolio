@@ -10,7 +10,6 @@ import TecnologiesCard from "@/components/TecnologiesCard";
 import {
     currentSoftSkills,
     futureSoftSkills,
-    technologiesGradient,
 } from "../../constants/skills";
 
 const headerContent = {
@@ -26,17 +25,12 @@ const HardSkills = () => {
     const [showInfoTechnologie, setShowInfoTechnologie] = useState({
         technologie: "TypeScript",
         ...data.skills.TypeScript,
-        gradient: technologiesGradient.TypeScript,
     });
 
     const setInfoTechnologie = (technologie: string, position: number) => {
         setShowInfoTechnologie({
             technologie,
             ...data.skills[technologie as keyof typeof data.skills],
-            gradient:
-                technologiesGradient[
-                    technologie as keyof typeof technologiesGradient
-                ],
         });
 
         const amountOfActiveCards = (
@@ -54,10 +48,14 @@ const HardSkills = () => {
     };
 
     useEffect(() => {
+        console.log(showInfoTechnologie)
+    }, [showInfoTechnologie])
+
+    useEffect(() => {
         setStateTechnologie(
             Array(currentSoftSkills.length + futureSoftSkills.length).fill(
                 false
-            )
+            ),
         );
     }, []);
 
@@ -78,11 +76,11 @@ const HardSkills = () => {
                     Minhas Hard Skills
                 </h2>
 
-                <div className="h-75">
-                    <div
-                        data-aos="fade-right"
-                        className="max-w-175 flex flex-col gap-3 mt-24 font-normal"
-                    >
+                <div
+                    data-aos="fade-right"
+                    className="h-75 max-w-175 mt-24 font-normal"
+                >
+                    <a href={showInfoTechnologie.officialSite} target="_blank" className="flex flex-col gap-3">
                         <h2 className="text-2xl xs:text-3xl md:text-4xl text-center xs:text-start font-extrabold">
                             <span
                                 style={{
@@ -96,7 +94,6 @@ const HardSkills = () => {
                                 {showInfoTechnologie.technologie}
                             </span>
                         </h2>
-                        
                         <p className="text-base xs:text-lg text-justify xs:text-start">
                             {showInfoTechnologie.info}
                         </p>
@@ -104,12 +101,11 @@ const HardSkills = () => {
                             <span className="font-bold">Criado(a) por:</span>{" "}
                             {showInfoTechnologie.createdBy}.
                         </p>
-
                         <p>
                             <span className="font-bold">Lançado(a) em:</span>{" "}
                             {showInfoTechnologie.created}.
                         </p>
-                    </div>
+                    </a>
                 </div>
 
                 <span className="w-75 s:w-100 h-75 s:h-100 absolute top-[1100px] -left-[10%] bg-darkBlue opacity-30 blur-25 lg:blur-50 -z-10" />
@@ -165,7 +161,7 @@ const HardSkills = () => {
                                     setInfoTechnologie={setInfoTechnologie}
                                     stateTechnologie={
                                         stateTechnologies[
-                                            index + currentSoftSkills.length
+                                        index + currentSoftSkills.length
                                         ]
                                     }
                                     position={index + currentSoftSkills.length}
