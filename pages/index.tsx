@@ -25,7 +25,7 @@ const Home = () => {
                     <a
                         href="./files/curriculum.pdf"
                         download="Currículo.pdf"
-                        className={`${styleButton.button} flex justify-center items-center gap-4 w-60 sm:w-[300px] h-20 sm:h-20 mt-24 md:mt-20 lg:mt-24 text-xl sm:text-xl`}
+                        className={`${styleButton.button} flex justify-center items-center gap-4 w-60 sm:w-[300px] h-20 mt-24 md:mt-20 lg:mt-24 text-xl`}
                     >
                         <FiDownload className="w-8 h-8" />
                         Download CV

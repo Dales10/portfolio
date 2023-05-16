@@ -132,7 +132,7 @@ const Contato = () => {
                                 placeholder="Dário Matias"
                                 {...register("name")}
                                 style={errors.name?.message ? borderRed : {}}
-                                className="w-full h-14 bg-darkGray border pt-2 pl-4 placeholder:font-medium border-gray placeholder:text-gray hover:border-lightGray focus:border-cyan transition duration-300 outline-none"
+                                className="w-full h-14 bg-darkGray border pt-2 pl-4 placeholder:font-medium border-gray placeholder:text-gray hover:border-lightGray focus:border-cyan rounded-tr-[50px] md:rounded-tr-none transition duration-300 outline-none"
                             />
                             <label htmlFor="name">Nome:</label>
                         </div>
@@ -150,7 +150,7 @@ const Contato = () => {
                                 placeholder="seuemail@gmail.com"
                                 {...register("email")}
                                 style={errors.email?.message ? borderRed : {}}
-                                className="w-full h-14 bg-darkGray border pt-2 pl-4 placeholder:font-medium border-gray placeholder:text-gray hover:border-lightGray focus:border-cyan rounded-tr-[50px] transition duration-300 outline-none"
+                                className="w-full h-14 bg-darkGray border pt-2 pl-4 placeholder:font-medium border-gray placeholder:text-gray hover:border-lightGray focus:border-cyan rounded-tr-none md:rounded-tr-[50px] transition duration-300 outline-none"
                             />
                             <label htmlFor="email">Email:</label>
                         </div>
@@ -198,7 +198,7 @@ const Contato = () => {
 
                 <div className="w-full flex justify-center xs:justify-end">
                     <button
-                        className={`${styleButton.button} w-56 sm:w-64 h-20 sm:h-20 mt-8 text-2xl sm:text-3xl`}
+                        className={`${styleButton.button} w-56 sm:w-64 h-20 mt-8 text-2xl`}
                     >
                         Enviar
                     </button>

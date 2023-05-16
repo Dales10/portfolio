@@ -26,7 +26,9 @@ export default function App({ Component, pageProps }: AppProps) {
             <DataProvider>
                 <Component {...pageProps} />
             </DataProvider>
-            <BackToTopButton />
+            <div className="hidden xs:block">
+                <BackToTopButton />
+            </div>
             <Footer />
         </>
     );

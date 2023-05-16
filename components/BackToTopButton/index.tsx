@@ -21,7 +21,7 @@ const BackToTopButton = () => {
             type="button"
             style={showButton ? { display: "flex" } : { display: "none" }}
             onClick={returnToTop}
-            className="w-12 h-12 fixed right-10 bottom-10 justify-center items-center bg-neutral-900 bg-opacity-50 hover:bg-black text-white rounded-full border border-neutral-900 hover:border-zinc-500 transition duration-300 z-10"
+            className="w-12 h-12 xs:fixed right-2 xs:right-5 md:right-8 bottom-12 justify-center items-center bg-neutral-900 bg-opacity-50 hover:bg-black text-white rounded-full border border-neutral-900 hover:border-zinc-500 transition duration-300 z-10"
         >
             <MdOutlineKeyboardDoubleArrowUp className="w-6 h-6" />
         </button>
