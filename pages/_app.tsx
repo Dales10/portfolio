@@ -9,6 +9,7 @@ import { DataProvider } from "@/components/Context";
 import Footer from "@/components/Footer";
 import NavBar from "@/components/NavBar";
 import SocialMedia from "@/components/SocialMedia";
+import BackToTopButton from "@/components/BackToTopButton";
 
 export default function App({ Component, pageProps }: AppProps) {
     useEffect(() => {
@@ -25,6 +26,7 @@ export default function App({ Component, pageProps }: AppProps) {
             <DataProvider>
                 <Component {...pageProps} />
             </DataProvider>
+            <BackToTopButton />
             <Footer />
         </>
     );

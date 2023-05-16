@@ -150,7 +150,7 @@ const Contato = () => {
                                 placeholder="seuemail@gmail.com"
                                 {...register("email")}
                                 style={errors.email?.message ? borderRed : {}}
-                                className="w-full h-14 bg-darkGray border pt-2 pl-4 placeholder:font-medium border-gray placeholder:text-gray hover:border-lightGray focus:border-cyan transition duration-300 outline-none"
+                                className="w-full h-14 bg-darkGray border pt-2 pl-4 placeholder:font-medium border-gray placeholder:text-gray hover:border-lightGray focus:border-cyan rounded-tr-[50px] transition duration-300 outline-none"
                             />
                             <label htmlFor="email">Email:</label>
                         </div>
@@ -186,7 +186,7 @@ const Contato = () => {
                             placeholder="Vamos estudar programação."
                             {...register("message")}
                             style={errors.message?.message ? borderRed : {}}
-                            className="h-44 w-full bg-darkGray border pt-5 pl-4 placeholder:font-medium border-gray placeholder:text-gray hover:border-lightGray focus:border-cyan transition duration-300 outline-none"
+                            className="h-44 w-full bg-darkGray border pt-5 pl-4 placeholder:font-medium border-gray placeholder:text-gray hover:border-lightGray focus:border-cyan rounded-bl-[50px] transition duration-300 outline-none"
                         />
                         <label htmlFor="message">Mensagem:</label>
                     </div>
