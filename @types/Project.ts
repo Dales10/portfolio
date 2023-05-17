@@ -3,8 +3,11 @@ export type ProjectProps = {
     description: string;
     technologies: string[];
     links: {
+        code: {
+            frontend: string;
+            backend: string;
+        };
         demo: string;
-        code: string;
     };
     files: Array<{
         type: string;

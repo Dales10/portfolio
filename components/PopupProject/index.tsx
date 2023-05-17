@@ -43,34 +43,72 @@ const PopupProject = ({ setPopupProject, projectData }: Props) => {
                 <div className="mx-4 my-5">
                     <p className="text-zinc-100">{projectData.description}</p>
 
-                    <div className="flex flex-col gap-1 mt-6">
-                        <h2 className="flex items-center gap-2 text-lg font-semibold">
-                            <TfiWorld className="w-6 h-6" />
-                            Acessar projeto
-                        </h2>
+                    {
+                        projectData.links.demo && (
+                            <div className="flex flex-col gap-1 mt-6">
+                                <h2 className="flex items-center gap-2 text-lg font-semibold">
+                                    <TfiWorld className="w-6 h-6" />
+                                    Acessar projeto
+                                </h2>
 
-                        <a
-                            href={projectData.links.demo}
-                            target={"_blank"}
-                            className="underline text-blue-700"
-                        >
-                            {projectData.links.demo}
-                        </a>
-                    </div>
+                                <a
+                                    href={projectData.links.demo}
+                                    target={"_blank"}
+                                    className="underline text-blue-700"
+                                >
+                                    {projectData.links.demo}
+                                </a>
+                            </div>
+                        )
+                    }
 
                     <div className="flex flex-col gap-1 mt-2">
                         <h2 className="flex items-center gap-2 text-lg font-semibold">
                             <BsGithub className="w-6 h-6" />
                             Código fonte
                         </h2>
+                        {
+                            projectData.links.code.frontend && projectData.links.code.backend && (
+                                <div className="flex flex-col gap-1 pl-3">
+                                    <div>
+                                        <h3>
+                                            Frontend:
+                                        </h3>
+                                        <a
+                                            href={projectData.links.code.frontend}
+                                            target={"_blank"}
+                                            className="underline text-blue-700"
+                                        >
+                                            {projectData.links.code.frontend}
+                                        </a>
+                                    </div>
 
-                        <a
-                            href={projectData.links.code}
-                            target={"_blank"}
-                            className="underline text-blue-700"
-                        >
-                            {projectData.links.code}
-                        </a>
+                                    <div>
+                                        <h3>
+                                            Backend:
+                                        </h3>
+                                        <a
+                                            href={projectData.links.code.backend}
+                                            target={"_blank"}
+                                            className="underline text-blue-700"
+                                        >
+                                            {projectData.links.code.backend}
+                                        </a>
+                                    </div>
+                                </div>
+                            )
+                        }
+                        {
+                            !projectData.links.code.frontend || !projectData.links.code.backend && (
+                                <a
+                                    href={projectData.links.code.frontend || projectData.links.code.backend}
+                                    target={"_blank"}
+                                    className="underline text-blue-700"
+                                >
+                                    {projectData.links.code.frontend || projectData.links.code.backend}
+                                </a>
+                            )
+                        }
                     </div>
                 </div>
 

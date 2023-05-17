@@ -29,13 +29,14 @@ const Slider = ({ files }: Props) => {
             {files.map((file, index) => {
                 return (
                     <SwiperSlide key={index}>
-                        {file.type === "img" && <img src={file.url} alt="" />}
+                        {file.type === "img" && <img src={file.url} alt="Vídeo de demonstração do projeto." />}
 
                         {file.type === "video" && (
-                            <video
+                            <iframe
+                                height={280}
                                 src={file.url}
-                                controls
-                                autoPlay
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope"
+                                className="w-full"
                             />
                         )}
                     </SwiperSlide>

@@ -22,26 +22,27 @@
 <p>
 
 ## Link de acesso
+
 Veja esse projeto em execução: [demo](https://portfolio-dales10.vercel.app/).
 
 ## Screenshots
+
 <h3>Desktop</h3>
 <img style="width: 50%" src="./public/screenshots/desktop.png" alt="Screenshot desktop"/>
 <h3>Mobile</h3>
 <img style="width: 50%;" src="./public/screenshots/mobile.png" width="100px;" alt="Screenshot mobile"/>
 
-
 ## 🛠 Tecnologias
 
 As seguintes ferramentas foram usadas na construção desse projeto:
 
-- [TypeScript](https://www.typescriptlang.org/)
-- [Next.js](https://nextjs.org/)
-- [TailwindCSS](https://tailwindcss.com/)
-- [SASS](https://sass-lang.com/)
-- [Firebase](https://firebase.google.com/)
-- [React hook form](https://react-hook-form.com/api/useform/)
-- [Swiper](https://swiperjs.com/)
+-   [TypeScript](https://www.typescriptlang.org/)
+-   [Next.js](https://nextjs.org/)
+-   [TailwindCSS](https://tailwindcss.com/)
+-   [SASS](https://sass-lang.com/)
+-   [Firebase](https://firebase.google.com/)
+-   [React hook form](https://react-hook-form.com/api/useform/)
+-   [Swiper](https://swiperjs.com/)
 
 <br />
 

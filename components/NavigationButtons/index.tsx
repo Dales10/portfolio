@@ -26,7 +26,7 @@ const NavigationButtons = () => {
             <div
                 onClick={() => clickButtonPrev()}
                 style={styleButtonPrev}
-                className="prev absolute top-2/4 left-2 flex justify-center items-center pl-1 h-6 w-6 bg-zinc-400 hover:bg-zinc-200 text-black rounded-full z-10"
+                className="prev absolute top-2/4 left-2 flex justify-center items-center pl-1 h-6 w-6 bg-black bg-opacity-60 hover:bg-opacity-80 text-white rounded-full z-10"
             >
                 <MdArrowBackIos className="w-3 h-3 pointer-events-none" />
             </div>
@@ -34,7 +34,7 @@ const NavigationButtons = () => {
             <div
                 onClick={() => clickButtonNext()}
                 style={styleButtonNext}
-                className="next absolute top-2/4 right-2 flex justify-center items-center pr-1 h-6 w-6 bg-zinc-400 hover:bg-zinc-200 text-black rounded-full z-10"
+                className="next absolute top-2/4 right-2 flex justify-center items-center pr-1 h-6 w-6 bg-black bg-opacity-60 hover:bg-opacity-80 text-white rounded-full z-10"
             >
                 <MdArrowBackIos className="w-3 h-3 rotate-180 pointer-events-none focus:scale-95" />
             </div>
