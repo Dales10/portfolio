@@ -5,6 +5,7 @@ import styleButton from "@/styles/button.module.scss";
 import { useData } from "@/components/Context";
 import Header from "@/components/Header";
 import MainGlowEffect from "@/components/MainGlowEffect";
+import Partition from "@/components/Partition";
 import ProjectsCard from "@/components/ProjectsCard";
 
 const headerContent = {
@@ -21,7 +22,7 @@ const Projetos = () => {
             <MainGlowEffect />
 
             <div data-aos="fade-right">
-                <Header content={headerContent} />
+                <Header content={headerContent} userPartition={false} />
 
                 <div className="flex justify-center md:justify-start">
                     <button
@@ -37,9 +38,11 @@ const Projetos = () => {
                 </div>
             </div>
 
+            <Partition />
+
             <div
                 id="title"
-                className="w-full lg:w-line border-t-4 border-zinc-900 pt-44 xs:mt-20 mt-32 md:mt-72 mb-36"
+                className="w-full lg:w-line mb-28"
             >
                 <div id="lista" className="flex flex-wrap gap-8 justify-center">
                     {data.projects.map((projectData, index) => {

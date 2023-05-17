@@ -4,10 +4,11 @@ import styleButton from "@/styles/button.module.scss";
 import { FiDownload } from "react-icons/fi";
 
 import MainGlowEffect from "@/components/MainGlowEffect";
+import Partition from "@/components/Partition";
 
 const Home = () => {
     return (
-        <div className="mt-32 lg:mt-36 mx-8 md:mx-16 xl:ml-28">
+        <div className="mt-32 lg:mt-36 mx-8 md:mx-12 xl:ml-28">
             <MainGlowEffect />
 
             <div data-aos="fade-right">
@@ -33,7 +34,7 @@ const Home = () => {
                 </div>
             </div>
 
-            <div className="w-full lg:w-line h-1 bg-zinc-900 mt-44 mb-28" />
+            <Partition homePage={true} />
 
             <h2
                 data-aos="fade-up"

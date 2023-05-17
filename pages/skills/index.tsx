@@ -18,7 +18,7 @@ const Skills = () => {
 
             <Header content={headerContent} />
 
-            <div className="w-full lg:w-line border-y-4 border-zinc-900 mt-40 xs:mt-52 md:mt-72 mb-44">
+            <div className="w-full lg:w-line border-b-2 border-zinc-900 mb-44">
                 <div data-aos="zoom-in">
                     <h2 className="text-4xl md:text-5xl text-center font-extrabold mt-44">
                         Escolha logo abaixo por qual quer começar:

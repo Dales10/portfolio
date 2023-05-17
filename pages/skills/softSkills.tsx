@@ -16,17 +16,17 @@ const SoftSkills = () => {
 
             <Header content={headerContent} />
 
-            <div className="flex flex-col items-center w-full lg:w-line border-t-4 border-zinc-900 mt-40 xs:mt-52 md:mt-72 mb-28">
+            <div className="flex flex-col items-center w-full lg:w-line mb-28">
                 <h2
                     data-aos="fade-up"
-                    className="text-3xl sm:text-4xl md:text-5xl text-justify md:text-center font-extrabold mt-44"
+                    className="text-3xl sm:text-4xl md:text-5xl text-justify md:text-center font-extrabold"
                 >
                     Assim sendo, posso citar as minhas seguintes soft skills:
                 </h2>
 
                 <span className="w-100 h-100 absolute top-[1100px] right-1/4 bg-darkBlue opacity-30 blur-25 lg:blur-50 -z-10" />
 
-                <div className="w-full lg:w-line2 flex flex-col justify-center gap-2 text-base xs:text-lg sm:text-xl md:text-2xl text-justify font-medium mt-14 md:mt-32 leading-tight">
+                <div className="w-full lg:w-line flex flex-col justify-center gap-2 text-base xs:text-lg sm:text-xl md:text-2xl text-justify font-medium mt-14 md:mt-32 leading-tight">
                     <p data-aos="fade-up">
                         <span className="font-extrabold underline">
                             Comunicação

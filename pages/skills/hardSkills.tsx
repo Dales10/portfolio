@@ -11,6 +11,7 @@ import {
     currentSoftSkills,
     futureSoftSkills,
 } from "@/constants/skills";
+import Partition from "@/components/Partition";
 
 const headerContent = {
     title: "Hard Skills",
@@ -61,7 +62,7 @@ const HardSkills = () => {
 
             <div
                 id="title"
-                className="w-full lg:w-line border-t-4 border-zinc-900 pt-44 xs:mt-20 mt-32 md:mt-72 mb-36"
+                className="w-full lg:w-line mb-36"
             >
                 <h2
                     data-aos="fade-up"
@@ -104,7 +105,7 @@ const HardSkills = () => {
 
                 <span className="w-75 s:w-100 h-75 s:h-100 absolute top-[1100px] -left-[10%] bg-darkBlue opacity-30 blur-25 lg:blur-50 -z-10" />
 
-                <div className="flex flex-wrap justify-between gap-6 mt-32 sm:mt-28 pb-28 border-b-4 border-zinc-900">
+                <div className="flex flex-wrap justify-between gap-6 mt-32 sm:mt-28 -mb-34">
                     {currentSoftSkills.map((technologie, index) => {
                         return (
                             <a
@@ -131,6 +132,8 @@ const HardSkills = () => {
                         </h1>
                     )}
                 </div>
+
+                <Partition />
 
                 <h2
                     data-aos="fade-up"

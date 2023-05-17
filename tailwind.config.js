@@ -18,8 +18,7 @@ module.exports = {
         '100': '25rem',
         '125': '31.25rem',
         '175': '43.75rem',
-        'line': 'calc(100% - 100px)',
-        'line2': 'calc(100% - 200px)',
+        'line': 'calc(100% - 80px)',
       },
       maxWidth: {
         '125': '31.25rem',

@@ -116,12 +116,12 @@ const Contato = () => {
         <div className="mt-24 lg:mt-32 mx-10 md:mx-16 xl:ml-28">
             <MainGlowEffect />
 
-            <Header content={headerContent} />
+            <Header content={headerContent} userPartition={false} />
 
             <form
                 onSubmit={handleSubmit(sendEmail)}
                 data-aos="fade-up"
-                className="max-w-175 flex flex-col gap-3 mb-20 sm:mb-24 mt-20 xs:mt-28"
+                className="max-w-175 flex flex-col gap-3 mt-20 xs:mt-28 mb-20 sm:mb-24"
             >
                 <div className="flex flex-col md:flex-row gap-3">
                     <div className="w-full">

@@ -16,8 +16,6 @@ const SobreMim = () => {
 
             <Header content={headerContent} />
 
-            <span className="inline-block w-full lg:w-line h-1 bg-zinc-900 mt-40 xs:mt-52 md:mt-72 mb-28" />
-
             <h2
                 data-aos="fade-up"
                 className="text-4xl md:text-5xl font-extrabold"
