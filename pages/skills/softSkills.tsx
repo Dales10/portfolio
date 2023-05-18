@@ -32,7 +32,7 @@ const SoftSkills = () => {
                             Comunicação
                         </span>{" "}
                         - decidir como o projeto terá início, opinando sobre as
-                        tecnologias que serão usadas, o que terá que ser feito,
+                        tecnologias que serão usadas, o que terá que ser feito
                         e como teremos que prosseguir. Saber se comunicar
                         adequadamente é fundamental para a tomada de decisões
                         que são cruciais para a empresa, ou qualquer situação
@@ -44,11 +44,11 @@ const SoftSkills = () => {
                             Vontade de aprender
                         </span>{" "}
                         - buscar sempre novos conhecimentos para aprimorar os
-                        adquiridos, aumenta o leque de possibilidades que um
+                        que possue, aumenta o leque de possibilidades que um
                         desenvolvedor possuí ao iniciar um projeto. Não só isso,
-                        além de estar sempre buscando aprender mais, praticar
-                        também irá ajudar nesse processo, fixando melhor os
-                        conteúdos.
+                        além de estar sempre buscando aprender mais, praticar é
+                        igualmente vital, sendo um hábito que todos os desenvolverores
+                        devem desenvolver, por fixar melhor os conteúdos.
                     </p>
 
                     <p data-aos="fade-up">
@@ -58,8 +58,8 @@ const SoftSkills = () => {
                         - cada necessidade irá requisitar diferentes linguagens,
                         frameworks e bibliotecas para solucionar, e elas devem
                         ser escolhidas no momento do planejamento do projeto,
-                        não deixando ser influenciado pela que mais usa, a
-                        "preferida", porque nenhuma tecnologia é uma bala de
+                        não deixando ser influenciado pela que mais usa (preferida),
+                        porque nenhuma tecnologia é uma bala de
                         prata, possuem tanto os seus pontos fortes, como pontos
                         fracos.
                     </p>
@@ -71,8 +71,8 @@ const SoftSkills = () => {
                         - analisar a situação e ser autônomo em buscar soluções
                         para problemas que estejam atrapalhando a equipe, mas
                         também para rever soluções mais antigas, buscando
-                        aperfeiçoar o que já foi criado com novos recursos, como
-                        também expor o seu ponto de vista baseado em fatos,
+                        aperfeiçoar o que já foi criado com novos recursos, assim
+                        como expor o seu ponto de vista baseado em fatos,
                         opinando de forma objetiva e concreta.
                     </p>
 

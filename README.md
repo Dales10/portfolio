@@ -7,19 +7,29 @@
 
 ## Projeto
 
+### Propósito
+
+Reunir todos os meus mais relevantes projetos e contar um pouco quem eu sou.
+
 ### O que irá encontrar:
 
-<p>
-• Home - página principal do portfólio, onde poderá fazer o download do meu currículo.
-<p>
-• Sobre mim - nessa página encontrará uma breve explicação de quem sou.
-<p>
-• Skills - decidi dividir as skills em Soft Skills e Hard Skills para poder explicar e exemplificar cada uma adequadamente, concluindo com uma mensagem a respeito das skills.
-<p>
-• Projetos - nessa página estará os meus principais projetos criados até então.
-<p>
-• Contato - caso queira, poderá enviar-me um e-mail com a proposta que tiver.
-<p>
+<ul>
+  <li>
+    Home - página principal do portfólio, onde poderá fazer o download do meu currículo.
+  </li>
+  <li>
+    Sobre mim - nessa página encontrará uma breve explicação de quem sou.
+  </li>
+  <li>
+    Skills - decidi dividir as skills em Soft Skills e Hard Skills para poder explicar e exemplificar cada uma adequadamente, concluindo com uma mensagem a respeito das skills.
+  </li>
+  <li>
+    Projetos - nessa página estará os meus principais projetos criados até então.
+  </li>
+  <li>
+    Contato - caso queira, poderá enviar-me um e-mail com a proposta que tiver.
+  </li>
+</ul>
 
 ## Link de acesso
 
@@ -28,9 +38,9 @@ Veja esse projeto em execução: [demo](https://portfolio-dales10.vercel.app/).
 ## Screenshots
 
 <h3>Desktop</h3>
-<img style="width: 50%" src="./public/screenshots/desktop.png" alt="Screenshot desktop"/>
+<img style="width: 50%" src="./public/screenshots/desktop.png" alt="Screenshot desktop."/>
 <h3>Mobile</h3>
-<img style="width: 50%;" src="./public/screenshots/mobile.png" width="100px;" alt="Screenshot mobile"/>
+<img style="width: 50%" src="./public/screenshots/mobile.png" alt="Screenshot mobile."/>
 
 ## 🛠 Tecnologias
 
@@ -48,7 +58,7 @@ As seguintes ferramentas foram usadas na construção desse projeto:
 
 ## Autor
 
-<img style="border-radius: 50%" src="./public/images/my-photo.png" width="100px" alt="My photo"/>
+<img style="border-radius: 50%" src="./public/images/my-photo.png" width="100px" alt="My photo."/>
 
 <sub>
   <b>Dário Matias</b>

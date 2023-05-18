@@ -59,7 +59,7 @@ const Home = () => {
                 </p>
             </div>
 
-            <span className="w-100 lg:w-137 h-100 lg:h-[550px] absolute top-[900px] md:top-250 right-1/4 bg-darkBlue opacity-30 blur-25 lg:blur-50 -z-10" />
+            <span className="w-100 lg:w-137 h-100 lg:h-[550px] absolute top-[900px] md:top-[950px] right-1/4 bg-darkBlue opacity-30 blur-25 lg:blur-50 -z-10" />
         </div>
     );
 };
