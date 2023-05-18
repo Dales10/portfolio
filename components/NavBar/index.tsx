@@ -4,7 +4,8 @@ import { useRouter } from "next/router";
 import styles from "@/styles/header.module.scss";
 import { MdKeyboardArrowDown } from "react-icons/md";
 
-import LinkToAccessAnotherPage from "./../LinkToAccessAnotherPage";
+import GradientLine from "../GradientLine";
+import LinkToAccessAnotherPage from "../LinkToAccessAnotherPage";
 
 const NavBar = () => {
     const [menu, setMenu] = useState(false);
@@ -20,11 +21,11 @@ const NavBar = () => {
 
     const styleArrow = () => {
         if (optionsSkills)
-            return { transform: "rotate(180deg)", color: "#FFFFFF" };
+            return { transform: "rotate(180deg)" };
         else {
             if (path === "/skills/softSkills" || path === "/skills/hardSkills")
                 return { color: "#FFFFFF" };
-            else return { transform: "rotate(0)", color: "#a1a1aa" };
+            else return { transform: "rotate(0)" };
         }
     };
 
@@ -45,34 +46,46 @@ const NavBar = () => {
 
             <div className="hidden lg:block">
                 <ul className="flex gap-10 font-semibold">
-                    <li>
+                    <li className="flex flex-col items-center group">
                         <LinkToAccessAnotherPage
                             pageName="Sobre mim"
                             path="sobreMim"
                         />
+                        <GradientLine />
                     </li>
 
-                    <li className="relative">
-                        <div className="flex gap-2">
-                            <LinkToAccessAnotherPage
-                                pageName="Skills"
-                                path="skills"
-                                handleMenuChange={false}
-                            />
-
-                            <MdKeyboardArrowDown
-                                onClick={() => setOptionsSkills(!optionsSkills)}
-                                style={styleArrow()}
-                                className="w-7 h-7 mt-px text-zinc-400 transition duration-200"
-                            />
+                    <li
+                        onMouseEnter={() => setOptionsSkills(true)}
+                        onMouseLeave={() => setOptionsSkills(false)}
+                        className="relative"
+                    >
+                        <div className="flex flex-col items-center group">
+                            <div className="flex gap-1">
+                                <p>
+                                    Skills
+                                </p>
+                                <MdKeyboardArrowDown
+                                    style={styleArrow()}
+                                    className="w-7 h-7 mt-px text-white transition duration-200"
+                                />
+                            </div>
+                            <GradientLine />
                         </div>
 
                         {optionsSkills && (
                             <div
-                                className={`${styles.menu} absolute top-8 right-1 w-32 py-4 bg-background text-center rounded-lg`}
+                                className={`${styles.menu} absolute top-8 -right-1/4 w-32 py-4 bg-background text-center rounded-lg`}
                             >
                                 <ul>
-                                    <li>
+                                    <li className="hover:scale-95 transition duration-150">
+                                        <LinkToAccessAnotherPage
+                                            pageName="Sobre"
+                                            path="skills"
+                                            handleOptionsSkillsChange={false}
+                                        />
+                                    </li>
+
+                                    <li className="hover:scale-95 transition duration-150">
                                         <LinkToAccessAnotherPage
                                             pageName="Soft Skills"
                                             path="skills/softSkills"
@@ -81,7 +94,7 @@ const NavBar = () => {
                                         />
                                     </li>
 
-                                    <li>
+                                    <li className="hover:scale-95 transition duration-150">
                                         <LinkToAccessAnotherPage
                                             pageName="Hard Skills"
                                             path="skills/hardSkills"
@@ -94,7 +107,7 @@ const NavBar = () => {
                         )}
                     </li>
 
-                    <li>
+                    <li className="flex flex-col items-center group">
                         <Link href="/projetos" legacyBehavior>
                             <a
                                 className={
@@ -106,13 +119,15 @@ const NavBar = () => {
                                 Projetos
                             </a>
                         </Link>
+                        <GradientLine />
                     </li>
 
-                    <li>
+                    <li className="flex flex-col items-center group">
                         <LinkToAccessAnotherPage
                             pageName="Contato"
                             path="contato"
                         />
+                        <GradientLine />
                     </li>
                 </ul>
             </div>
@@ -163,9 +178,9 @@ const NavBar = () => {
                                             style={
                                                 optionsSkills
                                                     ? {
-                                                          transform:
-                                                              "rotate(180deg)",
-                                                      }
+                                                        transform:
+                                                            "rotate(180deg)",
+                                                    }
                                                     : { transform: "rotate(0)" }
                                             }
                                             className="w-6 h-6 mt-[3px] text-white"

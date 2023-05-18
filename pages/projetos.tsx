@@ -26,7 +26,7 @@ const Projetos = () => {
 
                 <div className="flex justify-center md:justify-start">
                     <button
-                        className={`${styleButton.button} w-60 sm:w-[300px] h-20 sm:h-24 mt-24 md:mt-20 lg:mt-24 text-2xl sm:text-3xl`}
+                        className={`${styleButton.button} w-60 sm:w-[300px] h-20 mt-24 md:mt-20 lg:mt-24 text-2xl`}
                     >
                         <a
                             href="#lista"
