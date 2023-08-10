@@ -7,7 +7,7 @@ import SocialMediaLink from "../SocialMediaLink";
 
 const socialMedias = [
     {
-        link: "https://www.linkedin.com/in/d%C3%A1rio-matias-dales-gamma-587785243/",
+        link: "https://www.linkedin.com/in/dariomatias-dev/",
         icon: FaLinkedinIn,
     },
     {
@@ -15,7 +15,7 @@ const socialMedias = [
         icon: FiGithub,
     },
     {
-        link: "https://www.instagram.com/dario_delta10/?theme=dark/",
+        link: "https://www.instagram.com/dariomatias_dev/?theme=dark/",
         icon: SiInstagram,
     },
     {
